@@ -40,6 +40,40 @@
 		}
 	}
 
+
+  // Outline-Color
+  &.outline-prim{
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: $prim;
+  }
+
+  &.outline-pink{
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: $pink;
+  }
+
+  &.outline-yellow{
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: $yellow;
+  }
+
+  &.outline-tgreen{
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: $tGreen;
+  }
+
+  &.outline-dark{
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: $dark;
+  }
+
+
+    // Card Contents
 	p {
 		padding: 16px;
 	}
@@ -105,10 +139,7 @@
 .whiteBG{
 	@include cardColor(#fff, $dark);
 }
-.vBGv{
 
-	@include cardColor(#2D566B);
-}
 
 .tqBG{
 	@include cardColor(#227586);
@@ -147,6 +178,13 @@
 .pinkBG{
 	@include cardColor($pink, white);
 }
+
+.primBG{
+	@include cardColor($prim, white);
+}
+
+
+
 
 
 /*//COLORS*/

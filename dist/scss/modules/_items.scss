@@ -4,14 +4,61 @@
     padding:0;
     margin:0;
     list-style: none;
+
+
+    // Size
+    &.ad-sm{
+      .ad-item{
+        padding: 8px 16px !important;
+      }
+    }
+
+
+    // Shape
+    &.ad-flat{
+      .ad-item{
+        &:before{
+            background-color:transparent;
+        }
+      }
+    }
+
+
+    &.ad-round{
+      .ad-item{
+        border-radius: 30px;
+        margin: 3px;
+      }
+    }
+
+
+
+    // Color
+    &.ad-strip{
+      .ad-item{
+        &:nth-child(even){
+        background-color: rgba($dark,.1);
+        }
+      }
+    }
+
+    &.ad-strip-white{
+      .ad-item{
+        &:nth-child(even){
+        background-color: rgba(white,.1);
+        }
+      }
+    }
+
+
 }
 
 
 .ad-item{
-    position:relative;
+    position: relative;
     list-style: none;
     padding: 16px;
-    margin:0;
+    margin: 0;
     @include transEase(0.3s);
 
 
@@ -21,9 +68,9 @@
 	display: block;
 
     bottom: 0;
-	left:16px;
-	right:16px;
-	height:1px;
+	left: 16px;
+	right: 16px;
+	height: 1px;
 
     background-color:rgba(black,0.2);
 
@@ -33,36 +80,32 @@
 
     &.ad-avatar:before, &.ad-thumbnail:before{
 
-	left:74px;
-	right:16px;
+	left: 74px;
+	right: 16px;
 
     }
 
 
 
     i{
-        margin-right:16px;
+        margin-right: 16px;
     }
 
     &.ad-badge{
         .badge{
-            position:absolute;
-            right:16px;
+            position: absolute;
+            right: 16px;
             font-size: $baseFontSize - 2;
             opacity: 0.7;
-            color:inherit;
+            color: inherit;
 
             &.clear{
-                background-color:transparent;
+                background-color: transparent;
 
             }
 
             &.date{
-
-                padding-top:10px;
-
-
-
+                padding-top: 10px;
             }
         }
     }
@@ -73,48 +116,51 @@
 
             display: inline-block;
             vertical-align: top;
-            color:inherit;
+            color: inherit;
             opacity: 0.8;
-            width:20px;
+            width: 20px;
             // background-color:red;
             // position:absolute;
         }
 
         input{
-            margin-left:36px;
+            margin-left: 36px;
         }
     }
 
     &.ad-button{
       .ad-btn{
-        position:absolute;
-        right:16px;
+        position: absolute;
+        right: 16px;
         opacity: 0.56;
-        padding-right:0;
+        padding-right: 0;
         &.fix{
-            top:16px;
+            top: 16px;
         }
       }
 
     }
+
+
+    // Avatar
     &.ad-avatar{
         img{
-            margin:0;
-            margin-right:16px;
+            margin: 0;
+            margin-right: 16px;
 
             display: inline-block;
             vertical-align: top;
             // background-color:$dark;
 
-            height:40px;
-            width:40px;
+            height: 40px;
+            width: 40px;
 
-            border-radius:50%;
+            border-radius: 50%;
             overflow: hidden;
             @include shadow(0px, 1px, 0.5px, 0.5px, rgba(black,0.1));
         }
         h2{
-            color:$baseFontColor;
+            // color:$baseFontColor;
 
             display: inline-block;
             vertical-align: top;
@@ -124,23 +170,23 @@
             text-transform: none;
             font-weight: normal;
 
-            position:absolute;
+            position: absolute;
 
             font-size: $baseFontSize;
 
             &~p{
-                top:20px;
+                top: 20px;
             }
         }
 
         p{
             opacity: 0.6;
             display: inline-block;
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
 
-            position:relative;
-            left:0;
+            position: relative;
+            left: 0;
 
             max-width: 85%;
             font-size: $baseFontSize - 2;
@@ -151,16 +197,16 @@
 
     }
 
-
+    // Thumbnail
     &.ad-thumbnail{
         img{
-            margin-right:16px;
+            margin-right: 16px;
             display: inline-block;
             vertical-align: top;
             // background-color:$dark;
 
-            height:40px;
-            width:40px;
+            height: 40px;
+            width: 40px;
 
             border-radius: 3px;
             overflow: hidden;
@@ -171,18 +217,18 @@
 
 
         h2{
-            color:inherit;
+            color: inherit;
             display: inline-block;
             vertical-align: top;
 
-            position:absolute;
+            position: absolute;
 
-            margin:0;
+            margin: 0;
             text-transform: none;
             font-weight: normal;
             font-size: $baseFontSize + 1;
             &~p{
-                top:20px;
+                top: 20px;
             }
 
         }
@@ -190,11 +236,11 @@
         p{
           opacity: 0.6;
           display: inline-block;
-          margin:0;
-          padding:0;
+          margin: 0;
+          padding: 0;
 
-          position:relative;
-          left:0;
+          position: relative;
+          left: 0;
 
           max-width: 85%;
           font-size: $baseFontSize - 2;
@@ -206,17 +252,17 @@
 
     //Item Type
     &.ad-round{
-        border-radius:30px;
-        margin:3px;
+        border-radius: 30px;
+        margin: 3px;
     }
 
     &.ad-flat{
         box-shadow: none;
-        text-shadow:none;
-        border:none;
+        text-shadow: none;
+        border: none;
 
         &:before{
-            background-color:transparent;
+            background-color: transparent;
         }
     }
 }

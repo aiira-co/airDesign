@@ -21,22 +21,32 @@
         height: 48px;
     }
     table {
-
+        border-spacing: 0;
+        border-collapse: collapse;
+        background-color: transparent;
         font-size: $baseFontSize;
+
+        min-height: .01%;
+        overflow-x: auto;
+
         thead th, td {
             opacity: 0.7;
         }
+
          th, td {
             padding: 14px 16px !important;
             max-height: 48px !important;
+            text-align: left;
 
             &.num {
                 text-align: right;
 
             }
+
             .ad-checkbox {
                 top: 8px;
             }
+
             &.action {
                 text-align: right;
                 padding: 0 !important;
@@ -46,6 +56,7 @@
                     // color:red;
                 }
             }
+
 
             .ad-icon-letter{
               background-color: $dark;
@@ -60,363 +71,211 @@
               vertical-align: middle;
 
             }
+
+
         }
+
+
+        & > thead > tr > th,
+        & > tbody > tr > th,
+        & > tfoot > tr > th,
+        & > thead > tr > td,
+        & > tbody > tr > td,
+        & > tfoot > tr > td {
+          padding: 8px;
+          line-height: 1.42857143;
+          vertical-align: top;
+          border-top: 1px solid #ddd;
+        }
+        & > thead > tr > th {
+          vertical-align: bottom;
+          border-bottom: 2px solid #ddd;
+        }
+
+        & > tbody + tbody {
+          border-top: 2px solid #ddd;
+        }
+
+        & table {
+          background-color: #fff;
+        }
+
+        & > tbody + tbody {
+          border-top: 2px solid #ddd;
+        }
+
+
+        .table > thead > tr > td.active,
+        .table > tbody > tr > td.active,
+        .table > tfoot > tr > td.active,
+        .table > thead > tr > th.active,
+        .table > tbody > tr > th.active,
+        .table > tfoot > tr > th.active,
+        .table > thead > tr.active > td,
+        .table > tbody > tr.active > td,
+        .table > tfoot > tr.active > td,
+        .table > thead > tr.active > th,
+        .table > tbody > tr.active > th,
+        .table > tfoot > tr.active > th {
+          background-color: #f5f5f5;
+        }
+
+
     }
 
 
 
+    // End of TABLE
 
-    .ad-cardView {
-      .ad-data {
-        width: 160px;
-        height: 200px;
-        margin: 5px;
-        overflow: hidden;
-
-        display: inline-block;
-        vertical-align: top;
-
-        @include transEase(.2s);
-
-        //FRONT OF CARD
-        .ad-front {
-           width: 100%;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-          position: relative;
-          top: 0;
-          // background-color:green;
-          cursor: pointer;
+    &.ad-sm table > thead > tr > th,
+    &.ad-sm table > tbody > tr > th,
+    &.ad-sm table > tfoot > tr > th,
+    &.ad-sm table > thead > tr > td,
+    &.ad-sm table > tbody > tr > td,
+    &.ad-sm table > tfoot > tr > td {
+      padding: 5px;
+    }
 
 
-          @include transEase(.2s);
-
-          &.ad-slideUp {
-            margin-top: -240px;
-          }
-
-
-
-          .ad-image {
-          // background-color:$dark;
-          margin: 0;
-          }
-          .ad-detail {
-            margin-top: -10px;
-            // background-color:red;
-
-            strong{
-              font-size: $baseFontSize + 2;
-              margin-bottom: 5px;
-              display: block;
-
-            }
-
-            span {
-              margin-bottom: 5px;
-              display: block;
-            }
-          }
-
-
-        }
-
-        //BACK OF CARD
-
-        .ad-back {
-          width: 100%;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-          position: relative;
-          top: 0;
-          // background-color:pink;
-
-          @include transEase(.2s);
-
-          p {
-            margin-bottom: 0;
-            // background-color:red;
-          }
-          .ad-btn {
-            margin-top: 0;
-          }
-        }
-
-
-        &:hover {
-          @include scale(1.05);
-        }
+    &.ad-striped > tbody > tr:nth-of-type(odd) {
+      background-color: #f9f9f9;
+    }
+    &.ad-hover > tbody {
+       tr:hover {
+         background-color: #f5f5f5;
+      }
+      & > tr > td.active:hover,
+      & > tr > th.active:hover,
+      & > tr.active:hover > td,
+      & > tr:hover > .active,
+      & > tr.active:hover > th {
+        background-color: #e8e8e8;
       }
     }
-}
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  background-color: transparent;
-}
-caption {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: #777;
-  text-align: left;
-}
-th {
-  text-align: left;
-}
-.table {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
 
 
-    .ad-item h2 {
 
-
-        font-size: 14px;
-        /*//background-color:red;*/
-        width:120px;
-    }
-
-    .ad-item p {
-        width: 120px;
-        margin-top: -10px;
-        margin-left: 0;
-    }
-
-    .ad-item.ad-avatar {
-        padding-left: 0;
-        min-width: 120px;
-        /*background-color:red;*/
-    }
 
 
 }
-.table > thead > tr > th,
-.table > tbody > tr > th,
-.table > tfoot > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > td,
-.table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.42857143;
-  vertical-align: top;
-  border-top: 1px solid #ddd;
-}
-.table > thead > tr > th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #ddd;
-}
-.table > caption + thead > tr:first-child > th,
-.table > colgroup + thead > tr:first-child > th,
-.table > thead:first-child > tr:first-child > th,
-.table > caption + thead > tr:first-child > td,
-.table > colgroup + thead > tr:first-child > td,
-.table > thead:first-child > tr:first-child > td {
-  border-top: 0;
-}
-.table > tbody + tbody {
-  border-top: 2px solid #ddd;
-}
-.table .table {
-  background-color: #fff;
-}
-.table-condensed > thead > tr > th,
-.table-condensed > tbody > tr > th,
-.table-condensed > tfoot > tr > th,
-.table-condensed > thead > tr > td,
-.table-condensed > tbody > tr > td,
-.table-condensed > tfoot > tr > td {
-  padding: 5px;
-}
-.table-bordered {
-  border: 1px solid #ddd;
-}
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-  border: 1px solid #ddd;
-}
-.table-bordered > thead > tr > th,
-.table-bordered > thead > tr > td {
-  border-bottom-width: 2px;
-}
-.table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f9f9f9;
-}
-.table-hover > tbody > tr:hover {
-  background-color: #f5f5f5;
-}
-table col[class*="col-"] {
-  position: static;
-  display: table-column;
-  float: none;
-}
-table td[class*="col-"],
-table th[class*="col-"] {
-  position: static;
-  display: table-cell;
-  float: none;
-}
-.table > thead > tr > td.active,
-.table > tbody > tr > td.active,
-.table > tfoot > tr > td.active,
-.table > thead > tr > th.active,
-.table > tbody > tr > th.active,
-.table > tfoot > tr > th.active,
-.table > thead > tr.active > td,
-.table > tbody > tr.active > td,
-.table > tfoot > tr.active > td,
-.table > thead > tr.active > th,
-.table > tbody > tr.active > th,
-.table > tfoot > tr.active > th {
-  background-color: #f5f5f5;
-}
-.table-hover > tbody > tr > td.active:hover,
-.table-hover > tbody > tr > th.active:hover,
-.table-hover > tbody > tr.active:hover > td,
-.table-hover > tbody > tr:hover > .active,
-.table-hover > tbody > tr.active:hover > th {
-  background-color: #e8e8e8;
-}
-.table > thead > tr > td.success,
-.table > tbody > tr > td.success,
-.table > tfoot > tr > td.success,
-.table > thead > tr > th.success,
-.table > tbody > tr > th.success,
-.table > tfoot > tr > th.success,
-.table > thead > tr.success > td,
-.table > tbody > tr.success > td,
-.table > tfoot > tr.success > td,
-.table > thead > tr.success > th,
-.table > tbody > tr.success > th,
-.table > tfoot > tr.success > th {
-  background-color: #dff0d8;
-}
-.table-hover > tbody > tr > td.success:hover,
-.table-hover > tbody > tr > th.success:hover,
-.table-hover > tbody > tr.success:hover > td,
-.table-hover > tbody > tr:hover > .success,
-.table-hover > tbody > tr.success:hover > th {
-  background-color: #d0e9c6;
-}
-.table > thead > tr > td.info,
-.table > tbody > tr > td.info,
-.table > tfoot > tr > td.info,
-.table > thead > tr > th.info,
-.table > tbody > tr > th.info,
-.table > tfoot > tr > th.info,
-.table > thead > tr.info > td,
-.table > tbody > tr.info > td,
-.table > tfoot > tr.info > td,
-.table > thead > tr.info > th,
-.table > tbody > tr.info > th,
-.table > tfoot > tr.info > th {
-  background-color: #d9edf7;
-}
-.table-hover > tbody > tr > td.info:hover,
-.table-hover > tbody > tr > th.info:hover,
-.table-hover > tbody > tr.info:hover > td,
-.table-hover > tbody > tr:hover > .info,
-.table-hover > tbody > tr.info:hover > th {
-  background-color: #c4e3f3;
-}
-.table > thead > tr > td.warning,
-.table > tbody > tr > td.warning,
-.table > tfoot > tr > td.warning,
-.table > thead > tr > th.warning,
-.table > tbody > tr > th.warning,
-.table > tfoot > tr > th.warning,
-.table > thead > tr.warning > td,
-.table > tbody > tr.warning > td,
-.table > tfoot > tr.warning > td,
-.table > thead > tr.warning > th,
-.table > tbody > tr.warning > th,
-.table > tfoot > tr.warning > th {
-  background-color: #fcf8e3;
-}
-.table-hover > tbody > tr > td.warning:hover,
-.table-hover > tbody > tr > th.warning:hover,
-.table-hover > tbody > tr.warning:hover > td,
-.table-hover > tbody > tr:hover > .warning,
-.table-hover > tbody > tr.warning:hover > th {
-  background-color: #faf2cc;
-}
-.table > thead > tr > td.danger,
-.table > tbody > tr > td.danger,
-.table > tfoot > tr > td.danger,
-.table > thead > tr > th.danger,
-.table > tbody > tr > th.danger,
-.table > tfoot > tr > th.danger,
-.table > thead > tr.danger > td,
-.table > tbody > tr.danger > td,
-.table > tfoot > tr.danger > td,
-.table > thead > tr.danger > th,
-.table > tbody > tr.danger > th,
-.table > tfoot > tr.danger > th {
-  background-color: #f2dede;
-}
-.table-hover > tbody > tr > td.danger:hover,
-.table-hover > tbody > tr > th.danger:hover,
-.table-hover > tbody > tr.danger:hover > td,
-.table-hover > tbody > tr:hover > .danger,
-.table-hover > tbody > tr.danger:hover > th {
-  background-color: #ebcccc;
-}
-.table-responsive {
-  min-height: .01%;
-  overflow-x: auto;
-}
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 767px) {
-  .table-responsive {
+  .ad-table table {
     width: 100%;
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
   }
-  .table-responsive > .table {
+  .ad-table table > table {
     margin-bottom: 0;
   }
-  .table-responsive > .table > thead > tr > th,
-  .table-responsive > .table > tbody > tr > th,
-  .table-responsive > .table > tfoot > tr > th,
-  .table-responsive > .table > thead > tr > td,
-  .table-responsive > .table > tbody > tr > td,
-  .table-responsive > .table > tfoot > tr > td {
-    white-space: nowrap;
-  }
-  .table-responsive > .table-bordered {
-    border: 0;
-  }
-  .table-responsive > .table-bordered > thead > tr > th:first-child,
-  .table-responsive > .table-bordered > tbody > tr > th:first-child,
-  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
-  .table-responsive > .table-bordered > thead > tr > td:first-child,
-  .table-responsive > .table-bordered > tbody > tr > td:first-child,
-  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
-    border-left: 0;
-  }
-  .table-responsive > .table-bordered > thead > tr > th:last-child,
-  .table-responsive > .table-bordered > tbody > tr > th:last-child,
-  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
-  .table-responsive > .table-bordered > thead > tr > td:last-child,
-  .table-responsive > .table-bordered > tbody > tr > td:last-child,
-  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
-    border-right: 0;
-  }
-  .table-responsive > .table-bordered > tbody > tr:last-child > th,
-  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
-  .table-responsive > .table-bordered > tbody > tr:last-child > td,
-  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
-    border-bottom: 0;
+
+}
+
+
+
+
+
+// CARD VIEW MUST GO WITH AD-LIST
+
+.ad-cardView {
+  .ad-data {
+    width: 160px;
+    height: 200px;
+    margin: 5px;
+    overflow: hidden;
+
+    display: inline-block;
+    vertical-align: top;
+
+    @include transEase(.2s);
+
+    //FRONT OF CARD
+    .ad-front {
+       width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      top: 0;
+      // background-color:green;
+      cursor: pointer;
+
+
+      @include transEase(.2s);
+
+      &.ad-slideUp {
+        margin-top: -240px;
+      }
+
+
+
+      .ad-image {
+      // background-color:$dark;
+      margin: 0;
+      }
+      .ad-detail {
+        margin-top: -10px;
+        // background-color:red;
+
+        strong{
+          font-size: $baseFontSize + 2;
+          margin-bottom: 5px;
+          display: block;
+
+        }
+
+        span {
+          margin-bottom: 5px;
+          display: block;
+        }
+      }
+
+
+    }
+
+    //BACK OF CARD
+
+    .ad-back {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      top: 0;
+      // background-color:pink;
+
+      @include transEase(.2s);
+
+      p {
+        margin-bottom: 0;
+        // background-color:red;
+      }
+      .ad-btn {
+        margin-top: 0;
+      }
+    }
+
+
+    &:hover {
+      @include scale(1.05);
+    }
   }
 }
+
+
+
 
 
 
@@ -433,6 +292,10 @@ table th[class*="col-"] {
     display: none;
   }
 }
+
+
+
+
 
 
 //User Components
@@ -537,289 +400,62 @@ table th[class*="col-"] {
 
 
 
-//Login Component
 
-.ad-login {
-    min-width: 400px;
-
-    max-width:  600px;
-    height: 250px;
-    margin: 0 auto;
-    background-color: white;
-}
-
-
-.luser {
-	// background: red;
-	width: 120px;
-	height: 120px;
-	margin: 0 auto;
-	position: relative;
-
-	top:50%;
-  margin-top:-60px;
-}
-.luser {
-    div {
-        position: absolute;
-        top: 0;
-        margin: 0 auto;
-
-    }
-
-    .ad-loading {
-              left: 50%;
-        margin-left: -62px;
-                top: 50%;
-        margin-top: -61px;
-
-        width: 120px;
-        height: 120px;
-
-    }
-    .ad-user {
-        transform: scale(0.9);
-        @include shadow(0, 2px, 2px, 2px, rgba(0,0,0,0.5));
-        left: 50%;
-        margin-left: -50px;
-        top: 50%;
-        margin-top: -50px;
-
-        &[ad-count]:after {
-            position: absolute;
-            content: attr(ad-count);;
-            width: 20px;
-            height: 20px;
-            background-color: $pink;
-            top: 20px;
-            right: 5px;
-            border: 2px solid rgba(0,0,0,0.4);
-            border-radius: 50%;
-            font-size: 12px;
-            font-weight: bold;
-            line-height: 1.9em;
-            text-align: center;
-            color: white;
-        }
-    }
-
-    .ad-loaded {
-        left:50%;
-        margin-left:-50px;
-        top:50%;
-        margin-top:-50px;
-
-    }
-
-    .lname {
-        top: 116%;
-        position: relative;
-        width: 150%;
-        text-align: center;
-        left:-25%;
-
-        text-transform: uppercase;
-    }
-}
-
-
-
-
-////Media Players
-
-
-//Video
-
-
-.ad-video {
-  background-color: red;
-  display: block;
-  margin: 8px 16px;
-  position: relative;
-
-  // opacity: .5;
-
-  overflow: hidden;
-  border-radius: 5px;
-  padding: 0 !important;
-  font-size: 0;
-
-  video {
-    width: 100%;
-    margin: 0 !important;
-    padding: 0;
-
-
-  }
-
-  &:hover {
-      .ad-controls {
-        background-color: $dark;
-        opacity: 1;
-      }
-    }
-  .ad-controls {
-
-    // width:100%;
-    margin: 0;
-    padding: 0;
-    opacity: .5;
-    // background-color:rgba(black,.6);
-    opacity: .6;
-    position: relative;
-    margin-top: -48px;
-    // display: none;
-    // height:48px;
-    // overflow: hidden;
-   padding: 8px 16px;
-   border-radius: 0 0 5px 5px;
-   @include transEase(.3s);
-
-
-
-    button {
-      background-color: transparent;
-      outline: none;
-      border: none;
-      text-shadow: 1px 0px 3px black;
-      width: 30px;
-      height: 30px;
-
-      color: white;
-      margin: 0;
-      display: inline-block;
-      font-family: inherit;
-      i[class^='flaticon2-']{
-        font-size: 20px;
-        font-weight: bold;
-        // background-color:red;
-      }
-    }
-
-
-    .timer{
-      display: inline-block;
-      visibility: visible;
-      color: white;
-      opacity: 1 !important;
-      padding-left: 8px;
-      text-shadow: 1px 1px 2px black;
-    }
-      //Range
-  input[type=range] {
-    -webkit-appearance: none;
-    margin: 0;
-    margin-bottom:0;
-  }
-
-  input[type=range]:focus {
-    outline: none;
-  }
-
-  input[type=range]::-webkit-slider-runnable-track {
-    @include rangeTrackMedia();
-    &:focus{
-      background-color: $tGreen;
-    }
-  }
-  input[type=range]::-webkit-slider-thumb {
-
-    @include rangeThumbMedia();
-  }
-
-  input[type=range]::-webkit-slider-thumb:focus {
-      background: $prim;
-
-    }
-
-
-    .seekRange {
-    //  background-color:red;
-    outline: none !important;
-
-    outline-color: transparent;
-    border-radius: 5px;
-     width: 50px;
-    }
-
-    .volumeRange {
-      width: 50px;
-      border-radius: 5px;
-    }
-  }
-}
 
 
 //PopUP Modal
 
-
+.ad-modal-trigger[ad-modal]{
+  position: static;
+  // top:0;
+}
 
 .ad-modal {
 
 	position: fixed;
-	top: 50%;
-	left: 50%;
+
+
+  // background-color: red;
 
   width: 60%;
 	max-width: 630px;
 	min-width: 320px;
 	height: auto;
 
-  border-radius: 5px;
-  color: inherit;
-  background-color: white;
-
+  transform: scale(.5);
   z-index: 300 !important;
 	visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
 
-  @include shadow(0,0,6px, 2px, rgba(0,0,0,0.5));
+
+
   @include transEase(0.3s);
   margin: 0;
   padding: 0;
 
-  .ad-head {
-    margin: 0;
-    padding: 8px 16px;
-    display: block;
-
-    h2 {
-      margin: 0;
-    }
-  }
-
-  .ad-content {
-    display: block;
-    margin: 0;
-    padding: 8px 16px;
-  }
-
-  .ad-foot {
-    display: block;
-    margin: 0;
-    padding: 8px 16px;
-  }
-
 
     //Effects
-  &.ad-effect-blur {
-
-
-      & ~ .wrapper-fluid {
-        background: rgba(180,46,32,0.5);
+    &.ad-blur{
+      // background: rgba(80,46,32,0.5);
+      & ~ .wrapper, & ~ .wrapper-fluid{
         -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    filter: blur(3px);
-    }
-    margin-top: -10%;
-      opacity: 0;
+      	-moz-filter: blur(3px);
+      	filter: blur(3px);
 
+        background-color: red;
+      }
+    }
+
+
+  &.ad-show{
+    top: 50%;
+  	left: 50%;
+    -webkit-transform: scale(1)  translateX(-50%) translateY(-50%);
+  	-moz-transform: scale(1)  translateX(-50%) translateY(-50%);
+  	-ms-transform: scale(1) translateX(-50%) translateY(-50%);
+  	transform: scale(1)  translateX(-50%) translateY(-50%);
   }
 }
 
@@ -827,6 +463,8 @@ table th[class*="col-"] {
 
 .ad-show {
 	visibility: visible;
+
+
 
   & ~ .ad-overlay {
     opacity: 1;
@@ -859,6 +497,9 @@ margin-top: 0;
 	background: rgba(0,0,0, 0.5);
 	@include transEase(0.3s);
 
+
+
+
 }
 
 @media screen and (max-width: 32em) {
@@ -881,6 +522,8 @@ margin-top: 0;
     padding: 0 1.2em;
     margin: 0;
     cursor: pointer;
+
+    border-bottom: 1px solid $prim;
 
     i {
       margin-right: 8px;
@@ -922,6 +565,7 @@ margin-top: 0;
   height: 600px;
   margin: 0;
   padding: 0;
+
 
   position: relative !important;
   background-color: black;
@@ -1034,6 +678,126 @@ margin-top: 0;
   }
 }
 
+
+
+
+
+// TABS
+
+.ad-tab {
+  // background-color: red;
+  display: block;
+  width: 100%;
+  .ad-head {
+    // background-color: yellow;
+    display: block;
+    width: 100%;
+    height: auto;
+    list-style: none;
+    margin:0;
+    padding: 0;
+
+    li {
+      background-color: transparent;
+      border-radius: 3px 3px 0 0;
+      border-bottom: 2px solid transparent;
+      opacity: .5;
+      display: inline-block;
+      line-height: 2.4em;
+      padding: 0 1.2em;
+      margin: 0;
+      vertical-align: top;
+
+      cursor: pointer;
+      @include transEase(0.3s);
+
+      &.active {
+        background-color: rgba(white,.5);
+        border-bottom: 2px solid $prim;
+        opacity: 1;
+      }
+    }
+  }
+
+
+  .ad-body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $prim;
+    margin-top: -1px;
+    .ad-content {
+      display: none;
+      margin: 0;
+      opacity: 0;
+      padding: 0;
+      width:100%;
+
+
+      @include transEase(0.3s);
+
+      &.ad-show {
+        background-color: rgba(white,.5);
+        display: flex;
+        opacity: 1;
+      }
+    }
+  }
+
+
+  &.ad-block {
+    .ad-head {
+
+      li{
+        border-radius: 0;
+
+        &.active{
+          border-color:transparent;
+        }
+      }
+
+    }
+
+    .ad-body {
+      border: none;
+      .ad-content {
+        &.ad-show{
+          // background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &.ad-round {
+    .ad-head {
+      border: 1px solid rgba($dark,.3);
+      border-radius: 20px;
+
+      li.active {
+        background-color: $dark;
+        color:white;
+        border-radius: 20px;
+        border-color:transparent;
+      }
+    }
+
+    .ad-body {
+      border:none;
+      .ad-content {
+        &.ad-show{
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// Code OUTPUT
 .ad-code {
   display: block;
   border-left: 5px solid $tGreen;
@@ -1093,107 +857,4 @@ margin-top: 0;
 
 
 
-}
-
-
-
-
-.ad-tab {
-  // background-color: red;
-  display: block;
-  width: 100%;
-  .ad-head {
-    // background-color: yellow;
-    display: block;
-    width: 100%;
-    height: auto;
-    list-style: none;
-    margin:0;
-    padding: 0;
-
-    li {
-      background-color: transparent;
-      border-radius: 3px 3px 0 0;
-      border-left: 2px solid transparent;
-      opacity: .5;
-      display: inline-block;
-      line-height: 2.4em;
-      padding: 0 1.2em;
-      margin: 0;
-      vertical-align: top;
-
-      cursor: pointer;
-      @include transEase(0.3s);
-
-      &.active {
-        background-color: rgba(white,.5);
-        border-left: 2px solid $prim;
-        opacity: 1;
-      }
-    }
-  }
-
-
-  .ad-body {
-    display: block;
-    margin: 0;
-    padding: 0;
-
-    .ad-content {
-      display: none;
-      margin: 0;
-      opacity: 0;
-      padding: 0;
-
-      @include transEase(0.3s);
-
-      &.ad-show {
-        background-color: rgba(white,.5);
-        display: block;
-        opacity: 1;
-      }
-    }
-  }
-
-
-  &.ad-block {
-    .ad-head {
-      border-top: 1px solid rgba($dark,.3);
-      border-bottom: 1px solid rgba($dark,.3);
-      li.active {
-        background-color: transparent;
-        border-color:transparent;
-      }
-    }
-
-    .ad-body {
-      .ad-content {
-        &.ad-show{
-          background-color: transparent;
-        }
-      }
-    }
-  }
-
-  &.ad-round {
-    .ad-head {
-      border: 1px solid rgba($dark,.3);
-      border-radius: 20px;
-
-      li.active {
-        background-color: $dark;
-        color:white;
-        border-radius: 20px;
-        border-color:transparent;
-      }
-    }
-
-    .ad-body {
-      .ad-content {
-        &.ad-show{
-          background-color: transparent;
-        }
-      }
-    }
-  }
 }

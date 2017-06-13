@@ -33,16 +33,19 @@ label {
   //SPAN ICON
   span {
     display: block;
+    position: absolute;
 
-    float: left;
-    height: 40px;
+    // float: left;
+    height: 34px;
 
-
+    // top:0;
   margin-right: 8px;
-  opacity: 0.4;
-  width: 40px;
+  opacity: 0.8;
+  width: 34px;
 
+  text-align: center;
 
+// background-color:red;
     text-align: center;
     line-height: 40px;
     i {
@@ -51,23 +54,19 @@ label {
       height: 16px;
       font-size: 14px;
       text-align: center;
-      margin: 12px;
-      padding: 0;    }
+      margin: 9px;
+      padding: 0;
 
-       & + input {
-        width: 90%;
-        margin-left: 0;
-        padding-right: 0;
-
-       & ~ u {
-         margin-left: 48px;
-       }
       }
 
-       & ~ small {
-        margin-left: 46px;
-        // color:red;
-        // background-color:gold;
+       & + input {
+        // width: 90%;
+        // margin-left: 0;
+        // padding-right: 0;
+        text-indent: 34px;
+
+
+
       }
 
 
@@ -79,7 +78,7 @@ label {
   input {
     /*input, textarea, keygen, select, button {*/
     text-rendering: auto;
-    color: initial;
+    color: inherit;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
@@ -97,16 +96,38 @@ label {
     outline: none;
     // box-shadow: inset 0 0 2px 0 grey;
     @include shadow-inset(0, 0, 2px, 0, grey);
+    @include transEase(.3s);
     background-color: rgba($dark, .05);
 
     font-family: inherit;
     font-size: inherit;
+
     &:focus{
       // box-shadow: inset 0 0 3px 0 $prim;
       @include shadow-inset(0, 0, 3px, 0, $prim);
+      background-color: rgba(white,.5);
+      color:$dark;
+
+      //We want to make icons more visbile when focused, and dimm when out of focus
+      & + .ad-input.ad-icon  span {
+        opacity: .1;
+      }
     }
 
 
+
+    // for icons
+
+    & + span{
+      right:-7px;
+      top:30px;
+      i{
+
+
+
+      }
+      // background-color: red;
+    }
 
 		&[type="search"] {
 		-webkit-box-sizing: border-box;
@@ -177,8 +198,8 @@ label {
   &.ad-round {
     input {
       border-radius: 16.5px;
-      padding: 0 4%;
-      width: 92%;
+      padding: 0 2%;
+      width: 96%;
 
     }
   }
@@ -288,6 +309,43 @@ label {
     }
 
   }
+
+
+
+  // Icons
+
+  &.ad-icon{
+      i{
+
+          display: inline-block;
+          vertical-align: top;
+          color: inherit;
+          opacity: 0.8;
+          width: 20px;
+          // background-color:red;
+          // position:absolute;
+      }
+
+      input{
+          // margin-left: 36px;
+      }
+  }
+
+  &.ad-button{
+    .ad-btn{
+      position: absolute;
+      right: 16px;
+      opacity: 0.56;
+      padding-right: 0;
+      &.fix{
+          top: 16px;
+      }
+    }
+
+  }
+
+
+
 
 }
 

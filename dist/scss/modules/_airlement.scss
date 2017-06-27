@@ -1,0 +1,149 @@
+
+ad-router{
+        display: block;
+        width:100%;
+        height:auto;
+        position: relative;
+        top:0;
+
+        transition: all .3s ease-out;
+
+        &.ad-disappear{
+          animation:dis 1.4s 1;
+        }
+      }
+
+
+
+      @keyframes dis {
+          0%{
+            opacity: 1;
+            top:0;
+          }
+
+          90%{
+            opacity: 0;
+            top: 10px;
+          }
+
+          95%{
+            opacity: 0;
+            top: 10px;
+          }
+
+          100%{
+            opacity: 1;
+            top: 0;
+          }
+      }
+
+// Headers
+ad-header{
+  @extend  .ad-header;
+
+  & h2{
+    @extend .ad-title;
+  }
+}
+
+ad-subheader{
+  @extend .ad-subheader;
+
+}
+
+
+ad-section{
+  @extend .ad-section;
+}
+
+// cardView
+
+ad-card{
+  @extend .ad-card, .whiteBG;
+
+
+}
+
+ad-modal{
+  @extend .ad-modal;
+}
+
+ad-table{
+  @extend .ad-card,.ad-table;
+}
+
+
+
+// List items
+
+ad-list{
+  @extend .ad-list;
+}
+
+ad-item{
+  @extend .ad-item;
+}
+
+ad-avatar{
+
+  @extend .ad-avatar;
+
+
+}
+
+ad-thumbnail{
+  @extend .ad-thumbnail;
+}
+
+
+//Accordian & Tabs & dropdown
+
+ad-accordian{
+  @extend .ad-accordian;
+}
+
+ad-tab{
+  @extend .ad-tab;
+}
+
+ad-dropdown{
+  @extend .ad-dropdown;
+}
+
+ad-head{
+  @extend .ad-head;
+}
+
+ad-body{
+  @extend .ad-body;
+}
+
+ad-content{
+  @extend .ad-content;
+}
+
+
+
+
+
+
+
+// forms
+ad-input{
+  @extend .ad-input;
+}
+
+
+
+//loading
+
+ad-loading{
+  @extend .ad-loading;
+}
+
+
+//Components
+
+ad-user{
+  @extend .ad-user;
+}

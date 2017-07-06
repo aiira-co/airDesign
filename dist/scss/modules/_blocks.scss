@@ -1,12 +1,12 @@
 .tool-tip{
-	
+
 	font-size: 12px;
 	color:$smoke;
 	opacity: 0.9;
 	background-color:$dark;
 	padding:10px 8px;
 	display: inline-block;
-	
+
 	margin-top:14px;
 	@include shadow(0px, 0.5px, 1px, 1px, rgba(0,0,0,0.25));
 }
@@ -24,13 +24,13 @@
   opacity: 0;
  /*max-width:auto;*/
   animation: ad-tipAnim 0.3s ease 0s 1;
-  
+
   @extend .tool-tip;
   opacity: .9;
-  
-  
+
+
   /*opacity: 0.9;*/
-  
+
 }
 
 
@@ -40,21 +40,21 @@
         opacity:0;
         margin-top:0px;
     }
-    
+
     from{
         height:auto;
         opacity:0.95;
         margin-top:20px;
         /*background-color:blue;*/
     }
-    
-    
+
+
 }
 
 
 
 
-.ad-file{ 
+.ad-file{
 
 	.ad-fab{
     top:-30px;
@@ -84,21 +84,28 @@
 
 
 .ad-snackbar{
+	display: block;
+	opacity: 0;
 	height:48px;
 	min-width: 288px;
 	max-width: 568px;
 	border-radius: 2px;
 	font-size: 14px;
-	
+
+	position: fixed;
+	bottom:24px;
+	right:-568px;
+
+
 	background-color:$dark;
 	padding:0;
 	color:white;
 	margin:0 auto;
 	z-index :1000;
-	
+
 	p{
 		padding:14px 24px;
-	
+
 		display: inline-block;
 		margin:0;
 		margin-top:2px;
@@ -109,59 +116,126 @@
 	}
 	.ad-btn{
 		font-size: 14px;
-		
+
 	}
-	
+
+	animation: notify 5s 1 ease;
 }
 
 
+@keyframes notify {
+	0%{
+		right:-568px;
+		display: block;
+		opacity: 0;
+	}
+
+	10%{
+		right:-568px;
+		display: block;
+		opacity: 0;
+	}
+	20%{
+		right:24px;
+		display: block;
+		opacity: 1;
+
+	}
+
+	90%{
+		right:24px;
+		display: block;
+		opacity: 1;
+
+	}
+
+	100%{
+		right:-568px;
+		display: none;
+		opacity: 0;
+	}
+
+}
 
 
-
-//Loading Divs
-
-
-//Spinner
 .ad-loading{
-	width:100px;
-	height:100px;
-	
-	margin:16px;
-	background-color:transparent;
-	position: relative;
-	border-radius: 50%;
-	border:2px solid #575758;
+	display: block;
+	position: fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100vw;
+	height:8px;
+	z-index: 1000;
+	background-color:rgba($prim,.2);
 
-	animation: loadingSpin 0.9s linear infinite;
-}
+	&::after{
+		position: absolute;
+		left:-5%;
+		content:' ';
+		// right:0;
+		width:10%;
+		height:8px;
+		bottom:0;
+		background-color:$prim;
+		animation: adLoading 1.5s infinite alternate ease-in;
 
-
-.ad-loading:before{
-	position: absolute;
-	top:0;
-	
-	content: '';
-	height:20%;
-	width:20%;
-	
-	background-color:#F0F0F0;
-	margin-left:40%;
-	margin-top:-5px;
-
-
-}
-
-
-@keyframes loadingSpin{
-	from{
-		@include rotate(0);
-	}
-
-	to{
-		@include rotate(360deg);
 	}
 }
 
+
+	@keyframes adLoading {
+		from{
+		left:-5%;
+	}
+		to{
+			left:95%;
+		}
+	}
+// //Loading Divs
+//
+//
+// //Spinner
+// .ad-loading{
+// 	width:100px;
+// 	height:100px;
+//
+// 	margin:16px;
+// 	background-color:transparent;
+// 	position: relative;
+// 	border-radius: 50%;
+// 	border:2px solid #575758;
+//
+// 	animation: loadingSpin 0.9s linear infinite;
+// }
+//
+//
+// .ad-loading:before{
+// 	position: absolute;
+// 	top:0;
+//
+// 	content: '';
+// 	height:20%;
+// 	width:20%;
+//
+// 	background-color:#F0F0F0;
+// 	margin-left:40%;
+// 	margin-top:-5px;
+//
+//
+// }
+//
+//
+// @keyframes loadingSpin{
+// 	from{
+// 		@include rotate(0);
+// 	}
+//
+// 	to{
+// 		@include rotate(360deg);
+// 	}
+// }
+//
 
 
 //File Loader
@@ -176,8 +250,8 @@
 	border-radius: 2px;
 	position:relative;
 	margin:16px;
-	
-	
+
+
 	&:before{
 		content:'';
 		position:absolute;
@@ -188,7 +262,7 @@
 		border-radius: 2px;
 		top:0;
 		left:0;
-		
+
 		animation: fileLoader 2s ease infinite;
 	}
 		&:after{
@@ -198,15 +272,15 @@
 		display:block;
 
 
-	
+
 		top:-14px;
 		right:0;
 	}
-	
+
 	span{
 		display: block;
 		margin-top:-14px;
-		
+
 	}
 }
 
@@ -214,13 +288,13 @@
 @keyframes fileLoader{
 	0%{
 		background-color: royalblue;
-	}	
-	
+	}
+
 	50%{
 		background-color: $prim - 20;
 	}
-	
-	
+
+
 	100%{
 		background-color: royalblue;
 	}
@@ -236,8 +310,8 @@
 	height:56px;
 	background-color:rgba($dark,.1);
 	margin:16px;
-	
-	
+
+
 	&:before{
 		content:'';
 		position:absolute;
@@ -249,7 +323,7 @@
 		margin:0;
 		padding:0;
 		opacity:.5;
-		
+
 		background-color:$green;
 		animation: fileLoader 2s ease infinite;
 	}
@@ -268,7 +342,7 @@
 				width:auto;
 			}
 	}
-	
+
 	span{
 		position:relative;
 		display: inline-block;
@@ -278,10 +352,10 @@
 		// background-color:red;
 		height:40px;
 		width:50%;
-		
+
 	}
-	
-	
+
+
 }
 
 //flower Loader
@@ -292,37 +366,37 @@
 	height:40px;
 	// background-color:red;
 	margin:16px;
-	
+
 	position:relative;
 	left:40px;
-	
+
 	&:before{
 		content:attr(ad-count);
 		position:absolute;
 		top:0;
 		bottom:0;
 		left:-44px;
-		
+
 		width:40px;
 		height:40px;
-		
+
 		background-color:$tGreen;
 		font-weight: bold;
 		text-align: center;
 		line-height: 3em;
-		
+
 		border-radius:50% 0 50% 50%;
 	}
-	
-	
-	
+
+
+
 	&:after{
 		content:'';
 		width:22%;
 		position:absolute;
 		bottom:0;
 		left:0;
-		
+
 		height:10px;
 		background-color:$tGreen;
 	}
@@ -354,7 +428,7 @@
 
 	to{
 		@include scale(1.5);
-		
+
 		opacity: 0.2;
 	}
 }

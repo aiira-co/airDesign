@@ -3,7 +3,7 @@
 .ad-btn{
    position:relative;
 
-     display: inline-block;
+  display: inline-block;
   padding: 6px 12px;
   margin: 8px;
 
@@ -84,9 +84,6 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset,
         line-height:42px;
         padding:0 25px;
          font-size: 16px;
-
-
-
     }
 
     &.ad-lg{
@@ -96,9 +93,11 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset,
 
     &.ad-full{
         display: block;
-        /*margin-left:0;
-        margin-right:0;*/
+        margin-left:0;
+        margin-right:0;
         width:100%;
+        padding-left:0;
+        padding-right:0;
 
     }
 

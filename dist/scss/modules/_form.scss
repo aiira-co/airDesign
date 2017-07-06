@@ -97,10 +97,10 @@ label {
     // box-shadow: inset 0 0 2px 0 grey;
     @include shadow-inset(0, 0, 2px, 0, grey);
     @include transEase(.3s);
-    background-color: rgba($dark, .05);
+    background-color: rgba($dark, .03);
 
     font-family: inherit;
-    font-size: inherit;
+    font-size: 14px;
 
     &:focus{
       // box-shadow: inset 0 0 3px 0 $prim;
@@ -173,8 +173,8 @@ label {
 	select {
 		@extend input;
 		background-color: transparent;
-    padding-top: .563em;
-		padding-bottom: .563em;
+    padding-top: .563em !important;
+		padding-bottom: .563em !important;
     width:100%;
 		&[multiple],
 		&[size] {

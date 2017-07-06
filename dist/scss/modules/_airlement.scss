@@ -1,3 +1,19 @@
+// grid system
+ad-wrapper{
+  @extend .wrapper;
+}
+
+ad-wrapper-fluid{
+  @extend .wrapper-fluid;
+}
+
+ad-row{
+  @extend .ad-row;
+}
+
+
+
+// router
 
 ad-router{
         display: block;
@@ -37,6 +53,10 @@ ad-router{
           }
       }
 
+
+[adRouter]{
+  cursor: pointer;
+}
 // Headers
 ad-header{
   @extend  .ad-header;
@@ -49,6 +69,10 @@ ad-header{
 ad-subheader{
   @extend .ad-subheader;
 
+}
+
+ad-nav{
+  @extend .ad-nav;
 }
 
 
@@ -146,4 +170,18 @@ ad-loading{
 
 ad-user{
   @extend .ad-user;
+}
+
+
+ad-notify{
+  @extend .ad-snackbar;
+}
+
+
+ad-left{
+  @extend .ad-left;
+}
+
+ad-right{
+  @extend .ad-right;
 }

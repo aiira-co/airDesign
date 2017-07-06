@@ -143,10 +143,10 @@
     }
 
 
-    &.ad-striped > tbody > tr:nth-of-type(odd) {
+    &.ad-strip > table > tbody > tr:nth-of-type(odd) {
       background-color: #f9f9f9;
     }
-    &.ad-hover > tbody {
+    &.ad-hover > table >tbody {
        tr:hover {
          background-color: #f5f5f5;
       }
@@ -289,9 +289,12 @@
 
 .ad-dropdown{
   position: relative;
+  display: inline-block;
   // background-color: red;
   .ad-content{
+    display: block;
     position: absolute;
+    min-width: 200px;
     // background-color: blue;
     top:50%;
     z-index: 500;
@@ -470,19 +473,13 @@
 .ad-show {
 	visibility: visible;
 
-
-
-  & ~ .ad-overlay {
+  & + .ad-overlay {
     opacity: 1;
 	  visibility: visible;
   }
 
-
-  //Effects
-  &.ad-effect-blur {
-margin-top: 0;
-	opacity: 1;
-
+  & + .ad-body, {
+    max-height: 500px;
   }
 
 }
@@ -522,6 +519,7 @@ margin-top: 0;
   padding: 0;
 
   .ad-head {
+    display: block;
     background-color: rgba(white,.5);
     // color:white;
     line-height: 2.4em;
@@ -529,7 +527,7 @@ margin-top: 0;
     margin: 0;
     cursor: pointer;
 
-    border-bottom: 1px solid $prim;
+    border-bottom: 1px solid rgba($dark,.2);
 
     i {
       margin-right: 8px;
@@ -537,17 +535,16 @@ margin-top: 0;
     }
 
      &.ad-show {
-
+       border-color: $prim;
        i {
          @include rotate(180deg);
        }
-        & + .ad-body {
-          max-height: 500px;
-        }
+
       }
   }
 
   .ad-body {
+    display: block;
     margin: 0;
     padding: 0;
     max-height: 0;
@@ -702,7 +699,11 @@ margin-top: 0;
     list-style: none;
     margin:0;
     padding: 0;
-
+    ul{
+      margin:0;
+      padding:0;
+      list-style: none;
+    }
     li {
       background-color: transparent;
       border-radius: 3px 3px 0 0;
@@ -730,7 +731,7 @@ margin-top: 0;
     display: block;
     margin: 0;
     padding: 0;
-    border-top: 1px solid $prim;
+    border-top: 1px solid rgba($dark,.2);
     margin-top: -1px;
     .ad-content {
       display: none;

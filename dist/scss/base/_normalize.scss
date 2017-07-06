@@ -82,16 +82,35 @@ a{
 
 
 
-.center {
+.text-center {
     text-align: center;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.text-right{
+	text-align: right;
 }
 
 
 // text format
-.upper{
+.text-upper{
 	text-transform: uppercase;
 }
 
-.lower{
+.text-lower{
 	text-transform: lowercase;
+}
+
+
+.ad-title{
+		font-size: 18px;
+		color:inherit;
+		margin:0;
+		margin-top:16px;
+		display: inline-block;
+		vertical-align: top;
+		font-weight: 500;
 }

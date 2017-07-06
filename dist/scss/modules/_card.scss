@@ -1,4 +1,5 @@
 .ad-card {
+  display: block;
   background-color: transparent;
   background-position: center;
   background-size: cover;
@@ -79,6 +80,7 @@
 	}
 
 	.title {
+
 		margin: 16px 16px;
 		margin-bottom: 0;
 		font-weight: 100;
@@ -87,6 +89,14 @@
 			padding-top: 0;
 		}
 	}
+
+  & > .ad-btn{
+    margin-left:16px;
+
+    &.ad-full{
+      // margin:auto 16px;
+    }
+  }
 
 
 	.ad-input {
@@ -148,7 +158,7 @@
 
 .greenBG{
 
-	@include cardColor(#00796B, black);
+	@include cardColor(#00796B, white);
 
 
 }
@@ -166,7 +176,7 @@
 
 .blueBG{
 
-	@include cardColor(#303F9F);
+	@include cardColor(#303F9F, white);
 
 }
 
@@ -183,6 +193,13 @@
 	@include cardColor($prim, white);
 }
 
+.tgreenBG{
+	@include cardColor($tGreen, white);
+}
+
+.yellowBG{
+  @include cardColor($yellow);
+}
 
 
 

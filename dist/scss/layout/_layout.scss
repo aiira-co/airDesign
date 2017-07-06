@@ -1,8 +1,11 @@
+
+
 //Right
 
-.left{
-
+.ad-left{
+    display: block;
     position: fixed;
+
     left: 0;
     top:0;
     bottom: 0;
@@ -21,17 +24,17 @@
       bottom:18px;
       height:300px;
       background-color:$cream;
-      
+
       z-index: 100;
     }
-    
-    
- 
+
+
+
 }
 
 
-.right{
-  
+.ad-right{
+    display: block;
     position:fixed;
     left:200px;
     right: 0;
@@ -83,7 +86,7 @@
 .ad-row {
   margin-right: -16px;
   margin-left: -16px;
-  
+
   .ad-row{
     margin:0;
   }

@@ -176,7 +176,7 @@
 
 .blueBG{
 
-	@include cardColor(#303F9F, white);
+	@include cardColor($blue, white);
 
 }
 
@@ -194,7 +194,7 @@
 }
 
 .tgreenBG{
-	@include cardColor($tGreen, white);
+	@include cardColor($tGreen);
 }
 
 .yellowBG{

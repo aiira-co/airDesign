@@ -24,28 +24,6 @@ $(document).ready(function () {
                     "20":"ad-content"
                   };
 
-console.log(airlement.size);
-// <ad-router>
-
-// <ad-header>
-// <ad-nav>
-// <ad-footer>
-
-// <ad-accordian>
-// <ad-tab>
-// <ad-head>
-// <ad-content>
-
-// <ad-section>
-// <ad-card>
-
-// <ad-avatar>
-// <ad-thumbnail>
-
-// <ad-list>
-// <ad-item>
-// <ad-input>
-
 
 
        //Header Fixed
@@ -154,15 +132,19 @@ wrapper.on('click','.ad-tab .ad-head li, ad-tab ad-head li',function(){
     //Dropdown
     wrapper.on('click','.ad-dropdown .ad-trigger, ad-dropdown .ad-trigger',function(e){
       e.stopPropagation();
-      $('.ad-dropdown .ad-content, ad-dropdown ad-content').removeClass('visible');
-      $(this).parent('.ad-dropdown, ad-dropdown').find('.ad-content, ad-content').addClass('visible');
+      $('.ad-dropdown .ad-content, ad-dropdown ad-content').removeClass('ad-show');
+      $(this).parent('.ad-dropdown, ad-dropdown').find('.ad-content, ad-content').addClass('ad-show');
 
+    });
+
+    wrapper.on('click','.ad-dropdown .ad-content, ad-dropdown ad-content', function(e){
+      e.stopPropagation();
     });
 
 
     // disable dropdown at body's click
     wrapper.click(function(){
-      $('.ad-dropdown .ad-content, ad-dropdown ad-content').removeClass('visible');
+      $('.ad-dropdown .ad-content, ad-dropdown ad-content').removeClass('ad-show');
     });
 
 

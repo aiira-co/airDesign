@@ -22,13 +22,18 @@ a{
 
 
 .hidden{
-  display: none !important;
+  visibility: collapse !important;
 }
 
 .visible{
-	display: block !important;
+	visibility: visible;
+
 }
 
+.ad-show{
+	display: block !important;
+	@extend .visible;
+}
 .padding{
 	padding:16px !important;
 }
@@ -82,6 +87,7 @@ a{
 
 
 
+// text format
 .text-center {
     text-align: center;
 }
@@ -95,7 +101,6 @@ a{
 }
 
 
-// text format
 .text-upper{
 	text-transform: uppercase;
 }
@@ -104,7 +109,11 @@ a{
 	text-transform: lowercase;
 }
 
+.text-normal{
+	text-transform: none;
+}
 
+// title
 .ad-title{
 		font-size: 18px;
 		color:inherit;

@@ -247,7 +247,9 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset,
 
 }
 
-
+.btn-purple{
+  @include btnColor(#871E6A);
+}
 //Shine BTN
 
 .shine-red{
@@ -274,4 +276,12 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset,
 
 .shine-pink{
      @include btnShine($pink);
+}
+
+.shine-dark{
+  @include btnShine($dark);
+}
+
+.shine-purple{
+  @include btnShine(#871E6A);
 }

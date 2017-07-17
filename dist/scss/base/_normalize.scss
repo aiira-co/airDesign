@@ -34,6 +34,8 @@ a{
 	display: block !important;
 	@extend .visible;
 }
+
+
 .padding{
 	padding:16px !important;
 }
@@ -113,6 +115,18 @@ a{
 	text-transform: none;
 }
 
+
+.ad-spread{
+	letter-spacing: 4px;
+}
+
+.ad-flat{
+	box-shadow: none !important; 
+}
+
+.ad-shadow{
+	@include shadow(0px, 5px, 16px, 3px,rgba(black,0.1));
+}
 // title
 .ad-title{
 		font-size: 18px;

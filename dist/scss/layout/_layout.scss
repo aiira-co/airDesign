@@ -16,6 +16,8 @@
     padding:0;
 
 
+    @include transEase(.3s);
+
     &.line:before{
       position:relative;
       left:20px;
@@ -28,10 +30,17 @@
       z-index: 100;
     }
 
+    &.ad-hide{
+      left:-200px;
+
+      &  + .ad-right{
+        left:0;
+      }
+    }
+
 
 
 }
-
 
 .ad-right{
     display: block;
@@ -43,6 +52,8 @@
     height: 100%;
 
     overflow: auto;
+
+    @include transEase(.3s);
 
 }
 

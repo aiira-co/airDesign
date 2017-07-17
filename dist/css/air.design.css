@@ -82,6 +82,19 @@ a {
 .text-normal {
   text-transform: none; }
 
+.ad-spread {
+  letter-spacing: 4px; }
+
+.ad-flat {
+  box-shadow: none !important; }
+
+.ad-shadow {
+  -webkit-box-shadow: 0px 5px 16px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 5px 16px 3px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 5px 16px 3px rgba(0, 0, 0, 0.1);
+  -mz-box-shadow: 0px 5px 16px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 16px 3px rgba(0, 0, 0, 0.1); }
+
 .ad-title, .ad-header .title, .ad-header-fixed .title, .ad-header-responsive .title, ad-header .title, .ad-subheader h1, ad-subheader h1, .ad-subheader h2, ad-subheader h2, ad-header h2 {
   font-size: 18px;
   color: inherit;
@@ -114,7 +127,11 @@ html, body {
   height: 100%;
   width: 200px;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s; }
   .ad-left.line:before, ad-left.line:before {
     position: relative;
     left: 20px;
@@ -124,6 +141,10 @@ html, body {
     height: 300px;
     background-color: #CCB6AF;
     z-index: 100; }
+  .ad-left.ad-hide, ad-left.ad-hide {
+    left: -200px; }
+    .ad-left.ad-hide + .ad-right, ad-left.ad-hide + .ad-right, .ad-left.ad-hide + ad-right, ad-left.ad-hide + ad-right {
+      left: 0; }
 
 .ad-right, ad-right {
   display: block;
@@ -133,7 +154,11 @@ html, body {
   top: 0;
   bottom: 0;
   height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s; }
 
 .wrapper, ad-wrapper {
   padding-right: 16px;
@@ -798,7 +823,12 @@ html, body {
   height: 56px;
   padding: 0 16px;
   margin: 0;
-  position: relative; }
+  position: relative;
+  -webkit-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.3);
+  -moz-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.3);
+  -o-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.3);
+  -mz-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.3);
+  box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.3); }
   .ad-header .down, .ad-header-fixed .down, .ad-header-responsive .down, ad-header .down {
     margin-top: 16px; }
   .ad-header.line:before, .line.ad-header-fixed:before, .line.ad-header-responsive:before, ad-header.line:before {
@@ -849,11 +879,11 @@ html, body {
   display: block;
   height: 48px;
   color: inherit;
-  -webkit-box-shadow: 0px 2px 2px 1px #a0a0a0;
-  -moz-box-shadow: 0px 2px 2px 1px #a0a0a0;
-  -o-box-shadow: 0px 2px 2px 1px #a0a0a0;
-  -mz-box-shadow: 0px 2px 2px 1px #a0a0a0;
-  box-shadow: 0px 2px 2px 1px #a0a0a0;
+  -webkit-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.5);
+  -moz-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.5);
+  -o-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.5);
+  -mz-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.5);
+  box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.5);
   padding: 0 16px; }
   .ad-subheader h1, ad-subheader h1, .ad-subheader h2, ad-subheader h2 {
     margin: 0;

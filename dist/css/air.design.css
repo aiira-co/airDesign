@@ -1319,7 +1319,7 @@ footer {
   .ad-item.ad-button .ad-btn, .ad-button.ad-avatar .ad-btn, ad-avatar.ad-button .ad-btn, .ad-button.ad-thumbnail .ad-btn, ad-thumbnail.ad-button .ad-btn, ad-item.ad-button .ad-btn {
     position: absolute;
     right: 16px;
-    opacity: 0.56;
+    opacity: 0.7;
     padding-right: 0; }
     .ad-item.ad-button .ad-btn.fix, .ad-button.ad-avatar .ad-btn.fix, ad-avatar.ad-button .ad-btn.fix, .ad-button.ad-thumbnail .ad-btn.fix, ad-thumbnail.ad-button .ad-btn.fix, ad-item.ad-button .ad-btn.fix {
       top: 16px; }

@@ -72,11 +72,58 @@ label {
 
   }
 
+  //Dynamically(JavaScript) add this class to 
+  //.ad-input to indicate error. i.e .ad-input.ad-error  
+  &.ad-error{
+    &>label{
+      font-weight: bold;
+      color:$red;
+    }
+    input{
+      border-color:$red !important;
+      color:$red;
+    }
+  }
 
+
+  //Dynamically(JavaScript) add this class to 
+  //.ad-input to indicate success. i.e .ad-input.ad-sucess  
+  &.ad-success{
+    &>label{
+      font-weight: bold;
+      color:$tGreen;
+    }
+    input{
+      border-color:$tGreen !important;
+      color:$tGreen;
+    }
+  }
+
+// &:before{
+  
+//     position: absolute;
+//     display: block;
+
+//     left:0;
+//     right:0;
+//     bottom:0;
+
+//     z-index: 1000;
+
+//     margin:0;
+//     padding:0;
+    
+//     width:100%;
+//     height: 2px;
+
+//     content:' ';
+//     background-color: rgba($dark, .3);
+// }
 
 
   input {
     /*input, textarea, keygen, select, button {*/
+    position: relative;
     text-rendering: auto;
     color: inherit;
     letter-spacing: normal;
@@ -95,24 +142,37 @@ label {
     border-radius: 3px;
     outline: none;
     // box-shadow: inset 0 0 2px 0 grey;
-    @include shadow-inset(0, 0, 2px, 0, grey);
+    // @include shadow-inset(0, 0, 2px, 0, grey);
+
+    border-bottom: 2px solid transparent;
     @include transEase(.3s);
-    background-color: rgba($dark, .03);
+    background-color: rgba($dark, .05);
 
     font-family: inherit;
     font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
 
     &:focus{
-      // box-shadow: inset 0 0 3px 0 $prim;
-      @include shadow-inset(0, 0, 3px, 0, $prim);
-      background-color: rgba(white,.5);
-      color:$dark;
-
-      //We want to make icons more visbile when focused, and dimm when out of focus
-      & + .ad-input.ad-icon  span {
-        opacity: .1;
-      }
+        border-color:$prim;
+      
+        & + .ad-iput>label{
+          color:$prim !important;
+        }
     }
+    // &:focus{
+    //   // box-shadow: inset 0 0 3px 0 $prim;
+    //   // @include shadow-inset(0, 0, 3px, 0, $prim);
+    //   // background-color: rgba(white,.5);
+    //   // color:$dark;
+    //   border-bottom: 2px solid $pink;
+
+    //   //We want to make icons more visbile when focused, and dimm when out of focus
+    //   & + .ad-input.ad-icon  span {
+    //     opacity: .1;
+    //   }
+    // }
 
 
 
@@ -152,6 +212,7 @@ label {
 		width: 100%;
     padding:0;
     box-shadow: none;
+    border:none;
     background-color: transparent;
 		}
 
@@ -172,7 +233,7 @@ label {
 
 	select {
 		@extend input;
-		background-color: transparent;
+		// background-color: transparent;
     padding-top: .563em !important;
 		padding-bottom: .563em !important;
     width:100%;
@@ -202,6 +263,11 @@ label {
       width: 96%;
 
     }
+
+    select{
+      width:100%;
+    }
+
   }
 	//Floating
 	&.ad-float {
@@ -399,7 +465,6 @@ input[type=range]::-moz-range-thumb {
 &:focus{
     background: $tGreen;
     border-color:$tGreen;
-    @include shadow(0, 0, 0, 0, rgba(0,0,0,0.2));
     @include scale(1);
   }
 }
@@ -437,10 +502,10 @@ input[type=range]:focus::-ms-fill-upper {
   .ad-toggle{
   position: relative;
   display: block;
-  height: 8px !important;
-  width: 24px;
+  height: 20px !important;
+  width: 40px;
   margin: 16px;
-  background: #898989;
+  background: #B5B3B3;
   border-radius: 100px;
   cursor: pointer;
   transition: all .3s ease;
@@ -520,10 +585,10 @@ input[type=range]:focus::-ms-fill-upper {
   transform: scale(0);
 }
 
-[type="checkbox"]:checked + .ad-checkbox:before{
-  border-color:$tGreen - 50 !important;
+[type="checkbox"]:rchecked + .ad-checkbox:before{
+  border-color:$prim - 50 !important;
   // opacity: 0;
-  background-color: $tGreen - 50;
+  background-color: $prim - 50;
 }
 [type="checkbox"]:checked + .ad-checkbox:after {
   opacity: 1;
@@ -534,14 +599,14 @@ input[type=range]:focus::-ms-fill-upper {
 [type="checkbox"]:disabled:not(:checked) + .ad-checkbox:before,
 [type="checkbox"]:disabled:checked + .ad-checkbox:before {
   box-shadow: none;
-  border-color: $tGreen - 50;
-  background-color: $tGreen - 50;
+  border-color: $prim - 50;
+  background-color: $prim - 50;
 
   pointer-events: none;
 }
 [type="checkbox"]:disabled:checked + .ad-checkbox:after {
   color: white;
-  // background-color:$tGreen;
+  // background-color:$prim;
 }
 [type="checkbox"]:disabled + .ad-checkbox {
   color: #aaa;
@@ -549,12 +614,12 @@ input[type=range]:focus::-ms-fill-upper {
 /* accessibility */
 [type="checkbox"]:checked:focus + .ad-checkbox:before,
 [type="checkbox"]:not(:checked):focus + .ad-checkbox:before {
-  border-color:$tGreen - 50;
+  border-color:$prim - 50;
 }
 
 /* hover style just for information */
 .ad-checkbox:hover:before {
-  border-color: $tGreen - 50 !important;
+  border-color: $prim - 50 !important;
 }
 
 
@@ -610,8 +675,8 @@ input[type=range]:focus::-ms-fill-upper {
   height:17px;
   // font-size: 18px;
   line-height: 0.8;
-  color:$tGreen - 50;
-  // background-color:$tGreen - 50;
+  color:$prim - 50;
+  // background-color:$prim - 50;
   transition: all .2s;
 }
 /* checked mark aspect changes */
@@ -621,7 +686,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 [type="radio"]:checked + .ad-radio:before{
-  border-color:$tGreen - 50 !important;
+  border-color:$prim - 50 !important;
   // opacity: 0;
 }
 [type="radio"]:checked + .ad-radio:after {
@@ -633,14 +698,14 @@ input[type=range]:focus::-ms-fill-upper {
 [type="radio"]:disabled:not(:checked) + .ad-radio:before,
 [type="radio"]:disabled:checked + .ad-radio:before {
   box-shadow: none;
-  border-color: $tGreen - 50;
-  background-color: $tGreen - 50;
+  border-color: $prim - 50;
+  background-color: $prim - 50;
 
   pointer-events: none;
 }
 [type="radio"]:disabled:checked + .ad-radio:after {
   color: white;
-  // background-color:$tGreen;
+  // background-color:$prim;
 }
 [type="radio"]:disabled + .ad-radio {
   color: #aaa;
@@ -648,12 +713,12 @@ input[type=range]:focus::-ms-fill-upper {
 /* accessibility */
 [type="radio"]:checked:focus + .ad-radio:before,
 [type="radio"]:not(:checked):focus + .ad-radio:before {
-  border-color:$tGreen - 50;
+  border-color:$prim - 50;
 }
 
 /* hover style just for information */
 .ad-radio:hover:before {
-  border-color: $tGreen - 50 !important;
+  border-color: $prim - 50 !important;
 }
 
 
@@ -663,10 +728,10 @@ input[type=range]:focus::-ms-fill-upper {
 
   //CheckBox Or RadioBTNs
 input[type="checkbox"]:checked ~ .ad-toggle{
-  background: $tGreen - 10;
+  background: $prim - 10;
   &:after{
     left: 20px;
-    background: $tGreen - 60;
+    background: $prim - 60;
   }
 }
 input[type="checkbox"]:disabled ~ .ad-toggle{
@@ -681,7 +746,55 @@ input[type="checkbox"]:disabled ~ .ad-toggle{
 
 
 
+form.ad-form, .ad-input{
 
+  &.input-pink{
+    @include inputLineColor($pink);
+  }
+
+  &.input-prim{
+    @include inputLineColor($prim);
+  }
+
+  &.input-tgreen{
+    @include inputLineColor($tGreen);
+  }
+
+
+  &.input-yellow{
+    @include inputLineColor($yellow);
+  }
+
+
+  &.input-blue{
+    @include inputLineColor($blue);
+  }
+
+  &.input-red{
+    @include inputLineColor($red);
+  }
+
+  &.input-green{
+    @include inputLineColor($green);
+  }
+  
+
+  &.input-purple{
+    @include inputLineColor(purple);
+  }
+
+  &.input-white{
+    @include inputLineColor(white);
+  }
+
+  &.input-dark{
+    @include inputLineColor($dark);
+  }
+
+  &.input-clear{
+    @include inputLineColor(transparent);
+  }
+}
 
 
 

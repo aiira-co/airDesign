@@ -1,11 +1,41 @@
 //Lists
 
+
+
 .ad-list{
   display: block;
     padding:0;
     margin:0;
     list-style: none;
 
+
+    &.ad-hover{
+        .ad-item{
+            cursor: pointer;
+            &:after{
+                content: '';
+                position: absolute;
+                display: block;
+            
+                bottom: 0;
+                left: 16px;
+                right: 100%;
+                // width:0%;
+                height: 2px;
+            
+                background-color:$prim;
+            
+                @include transEase(.3s);
+            
+                }
+    
+                &:hover{
+                    &:after{
+                        right:16px;
+                    }
+                }
+        }
+    }
 
     // Size
     &.ad-sm{
@@ -80,6 +110,34 @@
 
     }
 
+
+    &.ad-hover{
+        cursor:pointer;
+        &:after{
+            content: '';
+            position: absolute;
+            display: block;
+        
+            bottom: 0;
+            left: 16px;
+            right: 100%;
+            // width:0%;
+            height: 2px;
+        
+            background-color:$prim;
+        
+            @include transEase(.3s);
+        
+            }
+
+            &:hover{
+                &:after{
+                    right:16px;
+                }
+            }
+    }
+
+
     &.ad-avatar:before, &.ad-thumbnail:before{
 
 	left: 74px;
@@ -87,6 +145,12 @@
 
     }
 
+    &.ad-avatar.ad-hover:after, &.ad-thumbnailad-hover:after{
+        
+            left: 74px;
+            // right: 16px;
+        
+            }
 
 
     i{
@@ -167,6 +231,8 @@
     // Avatar
     .ad-avatar{
       @extend .ad-item;
+
+      
         img{
             margin: 0;
             margin-right: 16px;
@@ -273,4 +339,135 @@
 
         }
 
+    }
+
+
+
+    // hover line color
+
+    .ad-list.ad-hover{
+
+
+        &.hover-prim{
+            .ad-item, .ad-avatar, .ad-thumbnail{
+                @include itemHoverColor($prim);
+            }
+        }
+
+        &.hover-pink{
+            .ad-item, .ad-avatar, .ad-thumbnail{
+
+                @include itemHoverColor($pink);
+            }
+        }
+
+        &.hover-tgreen{
+            .ad-item, .ad-avatar, .ad-thumbnail{
+
+                @include itemHoverColor($tGreen);   
+            }
+        }
+
+        &.hover-yellow{
+            .ad-item, .ad-avatar, .ad-thumbnail{
+
+                @include itemHoverColor($yellow);   
+            }
+        }
+
+        &.hover-blue{
+            .ad-item, .ad-avatar, .ad-thumbnail{
+
+                @include itemHoverColor($blue);   
+            }
+        }
+
+        &.hover-red{
+            .ad-item, .ad-avatar, .ad-thumbnail{
+
+                @include itemHoverColor($red);   
+            }
+        }
+
+        &.hover-green{
+            .ad-item, .ad-avatar, .ad-thumbnail{
+
+                @include itemHoverColor($green);   
+            }
+        }
+
+
+        &.hover-dark{
+            .ad-item, .ad-avatar, .ad-thumbnail{
+
+                @include itemHoverColor($dark);   
+            }
+        }
+
+        &.hover-white{
+            .ad-item, .ad-avatar, .ad-thumbnail{
+
+                @include itemHoverColor(white);   
+            }
+        }
+    }
+
+
+
+    .ad-item.ad-hover, .ad-avatar.ad-hover, .ad-thumbnail.ad-hover{
+    
+        &.hover-prim{
+                @include itemHoverColor($prim);
+            
+        }
+
+        &.hover-pink{
+
+            @include itemHoverColor($pink);
+            
+        }
+
+        &.hover-tgreen{
+
+            @include itemHoverColor($tGreen);   
+            
+        }
+
+        &.hover-yellow{
+
+            @include itemHoverColor($yellow);   
+            
+        }
+
+        &.hover-blue{
+
+            @include itemHoverColor($blue);   
+            
+        }
+
+        &.hover-red{
+
+            @include itemHoverColor($red);   
+            
+        }
+
+        &.hover-green{
+
+            @include itemHoverColor($green);   
+            
+        }
+
+
+        &.hover-dark{
+
+            @include itemHoverColor($dark);   
+            
+        }
+
+        &.hover-white{
+
+            @include itemHoverColor(white);   
+            
+        }
+    
     }

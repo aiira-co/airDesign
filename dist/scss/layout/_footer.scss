@@ -2,12 +2,13 @@ footer{
 	background-color:transparent;
 	color:$dark;
     opacity:.5;
+		
 	text-align:center;
 	padding:20px 0;
     position:relative;
 
     .return{
-        
+
         position:absolute;
         right:10%;
         bottom:0;
@@ -21,19 +22,19 @@ footer{
 
         &:hover{
             background-color:$prim - 40;
-            
+
         }
 
         i{
             margin-top:15px;
             cursor:pointer;
-         
+
         }
     }
 }
 
 .mod-footer {
-    
+
     background-color: $dark - 20;
     color: $smoke - 30;
 

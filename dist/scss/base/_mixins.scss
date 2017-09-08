@@ -137,7 +137,7 @@
 
  @include scale(.8);
 
- @include shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0));
+//  @include shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0));
   border: 3px solid grey + 50;
   height: 24px;
   width: 24px;
@@ -152,13 +152,13 @@
   @include transEase(0.5s);
 
   &:hover{
-     background: $tGreen;
-  border-color:$tGreen;
-  @include shadow(0px, 0px, 0px, 10px, rgba(0,0,0,0.1));
-  }
-
+      background: grey + 50;
+      //   @include shadow(0px, 0px, 0px, 10px, rgba(0,0,0,0.1));
+    }
+    
 	&:active{
-		background: grey + 50;
+        background: $prim;
+        border-color:$prim;
 	}
 
 }
@@ -208,4 +208,23 @@ border:none;
   }
 
 
+}
+
+
+
+// input focus color
+
+@mixin inputLineColor($color){
+    input:focus, select:focus ,textarea:focus{
+        border-color:$color;
+      }
+}
+
+
+// item hover line color
+
+@mixin itemHoverColor($color){
+    &:after{
+        background-color: $color;
+    }
 }

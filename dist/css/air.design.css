@@ -2680,8 +2680,8 @@ label.output {
     .ad-input input + .rFloat, ad-input input + .rFloat, .ad-input select + .rFloat, .ad-input ad-input select + .rFloat, ad-input select + .rFloat, .ad-input textarea + .rFloat, .ad-input ad-input textarea + .rFloat, ad-input textarea + .rFloat {
       opacity: .5; }
   .ad-input select, ad-input select {
-    padding-top: .563em !important;
-    padding-bottom: .563em !important;
+    padding-top: .465em !important;
+    padding-bottom: .465em !important;
     width: 100%; }
     .ad-input select[multiple], ad-input select[multiple], .ad-input select[size], ad-input select[size] {
       height: auto; }

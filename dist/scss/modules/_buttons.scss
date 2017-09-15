@@ -66,6 +66,12 @@ box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset,
 0px 0px 0px 1px $prim;
 }
 
+
+&:disabled{
+    opacity: .5;
+    cursor:  not-allowed;
+}
+
 &.ad-shadow{
     @extend .ad-shadow;
 }

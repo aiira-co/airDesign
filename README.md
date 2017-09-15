@@ -22,7 +22,7 @@ Include in your head tag a link referecing to air.design.css file location and t
 
 airDesign comes with some default values for some CSS properties. These values were set for the purpose of our design principles width web application design in mind. Some web projects might find these values inappropriate and we advice that you overwrite these defaults with your own css file after the library has been linked.
 
-```CSS
+```css
 Font-family: Bariol. 
 Font-Size: 14px; 
 Background-color:whitesmoke; 

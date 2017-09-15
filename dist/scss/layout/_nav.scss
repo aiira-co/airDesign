@@ -1,116 +1,77 @@
-
 // NAVIGATION
-
-
-   .ad-nav{
+.ad-nav {
     //    background-color:red;
-       width:100%;
-       height:48px;
-
-       display: flex;
-       z-index: 100;
-
-       .ad-logo{
-           background-color:black;
-           width:48px;
-           height:48px;
-           margin:0;
-           padding:0;
-
-            display: inline-block;
-            vertical-align: top;
-
-            img{
-                height:100%;
-            }
-       }
-
-
-       .ad-menu{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    z-index: 100;
+    .ad-logo {
+        background-color: black;
+        width: 48px;
+        height: 48px;
+        margin: 0;
+        padding: 0;
         display: inline-block;
         vertical-align: top;
-
-        width:auto;
-        height:48px;
-
-        // background-color:blue;
-
-
-        ul{
+        img {
+            height: 100%;
+        }
+    }
+    .ad-menu {
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        height: 48px; // background-color:blue;
+        ul {
             list-style: none;
-            width:100%;
-            margin:0;
-            padding:0;
-            margin-top:12px;
-
-
-            li{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            margin-top: 12px;
+            li {
                 list-style: none;
-                float:left;
-                // background-color:green;
-                padding:5px 7px;
+                float: left; // background-color:green;
+                padding: 5px 7px;
                 opacity: .8;
                 cursor: pointer;
                 @include transEase(0.3s);
-
-                &:hover{
-                  opacity: 1;
+                &:hover {
+                    opacity: 1;
                 }
             }
-
-
         }
-       }
-
-       .ad-menuTrigger{
-           display: inline-block;
-           width:48px;
-           height:48px;
-        //    background-color:white;
-           text-align:center;
-
-           i{
-                margin-top:40%;
-           }
-       }
-
-       //Positioning
-       //Positioning
-       //Positioning
-
-       &.ad-fixed{
-           position:fixed;
-           left:0;
-           top:0;
-           right:0;
-       }
-
-       &.ad-fixedAbsolute{
-
-       }
-
-
-
-
-       //Navigation Behavior
-       //Navigation Behavior
-       //Navigation Behavior
-       //Navigation Behavior
-
-       &.spread{
-           .ad-menu{
-               width:80%;
-               ul{
-                   li{
-                       margin:0 5%;
-                   }
-               }
-           }
-       }
-
-       &.center{
-
-       }
-
-
-   }
+    }
+    .ad-menuTrigger {
+        display: inline-block;
+        width: 48px;
+        height: 48px; //    background-color:white;
+        text-align: center;
+        i {
+            margin-top: 40%;
+        }
+    } //Positioning
+    //Positioning
+    //Positioning
+    &.ad-fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    &.ad-fixedAbsolute {}
+    //Navigation Behavior
+    //Navigation Behavior
+    //Navigation Behavior
+    //Navigation Behavior
+    &.spread {
+        .ad-menu {
+            width: 80%;
+            ul {
+                li {
+                    margin: 0 5%;
+                }
+            }
+        }
+    }
+    &.center {}
+}

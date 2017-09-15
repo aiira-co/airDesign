@@ -1,227 +1,168 @@
 .ad-card {
-  display: block;
-  background-color: transparent;
-  background-position: center;
-  background-size: cover;
-  border-radius: 5px;
-  margin: 8px;
-  margin-bottom: 0;
-  padding: 0;
-  overflow: hidden;
-
-	@include shadow(0, 1px, 3px, 1px, rgba(0,0,0,0.1));
-
-	&.ad-full {
-		margin: 8px 0;
-	}
-
-
-
-	//Card Type
+    display: block;
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    margin: 8px;
+    margin-bottom: 0;
+    padding: 0;
+    overflow: hidden;
+    @include shadow(0, 1px, 3px, 1px, rgba(0, 0, 0, 0.1));
+    &.ad-full {
+        margin: 8px 0;
+    } //Card Type
     &.ad-round {
         border-radius: 10px;
     }
-
-	&.ad-block {
-		border-radius: 0;
-	}
-
+    &.ad-block {
+        border-radius: 0;
+    }
     &.ad-flat {
         box-shadow: none;
         text-shadow: none;
         border: none;
     }
-
-	&.ad-img {
-		font-size: 0;
-		img {
-			margin: 0;
-			padding: 0;
-			font-size: 0;
-		}
-	}
-
-
-  // Outline-Color
-  &.outline-prim{
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: $prim;
-  }
-
-  &.outline-pink{
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: $pink;
-  }
-
-  &.outline-yellow{
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: $yellow;
-  }
-
-  &.outline-tgreen{
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: $tGreen;
-  }
-
-  &.outline-dark{
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: $dark;
-  }
-
-
-    // Card Contents
-	p {
-		padding: 16px;
-	}
-
-	.title {
-
-		margin: 16px 16px;
-		margin-bottom: 0;
-		font-weight: 100;
-
-		& + p {
-			padding-top: 0;
-		}
-	}
-
-  & > .ad-btn{
-    margin-left:16px;
-
-    &.ad-full{
-      // margin:auto 16px;
+    &.ad-img {
+        font-size: 0;
+        img {
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
+    } // Outline-Color
+    &.outline-prim {
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: $prim;
     }
-  }
-
-
-	.ad-input {
-		margin: 16px;
-	}
-
-
+    &.outline-pink {
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: $pink;
+    }
+    &.outline-yellow {
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: $yellow;
+    }
+    &.outline-tgreen {
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: $tGreen;
+    }
+    &.outline-dark {
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: $dark;
+    } // Card Contents
+    p {
+        padding: 16px;
+    }
+    .title {
+        margin: 16px 16px;
+        margin-bottom: 0;
+        font-weight: 100;
+        &+p {
+            padding-top: 0;
+        }
+    }
+    &>.ad-btn {
+        margin-left: 16px;
+        &.ad-full {
+            // margin:auto 16px;
+        }
+    }
+    .ad-input {
+        margin: 16px;
+    }
 }
 
-
-.ad-tile{
-	background-color:transparent;
-	background-position: center;
+.ad-tile {
+    background-color: transparent;
+    background-position: center;
     background-size: cover;
-
-    margin:0;
-
-
+    margin: 0;
 }
-
-
-
-
 
 //FLOWERS
-
-
-.flower{
-
-    img{
+.flower {
+    img {
         border-radius: 50% 0 50% 50% !important;
     }
 }
 
-
-
-.ad-flower{
-	border-radius: 50% 0 50% 50% !important;
-	overflow: hidden;
-	width:230px;
-	height:230px;
+.ad-flower {
+    border-radius: 50% 0 50% 50% !important;
+    overflow: hidden;
+    width: 230px;
+    height: 230px;
 }
-
-
-
-
 
 //BACKGROUND COLORS HERE
-
-.whiteBG{
-	@include cardColor(#fff, $dark);
+.whiteBG {
+    @include cardColor(#fff, $dark);
 }
 
-
-.tqBG{
-	@include cardColor(#227586);
-
+.tqBG {
+    @include cardColor(#227586);
 }
 
-.greenBG{
-
-	@include cardColor(#00796B, white);
-
-
-}
-.purpleBG{
-
-	@include cardColor(#871E6A);
-
+.greenBG {
+    @include cardColor(#00796B, white);
 }
 
-.bg-color{
-
-	@include cardColor(#AB1656);
+.purpleBG {
+    @include cardColor(#871E6A);
 }
 
-
-.blueBG{
-
-	@include cardColor($blue, white);
-
+.bg-color {
+    @include cardColor(#AB1656);
 }
 
-
-.darkBG{
-	@include cardColor($dark, white);
+.blueBG {
+    @include cardColor($blue, white);
 }
 
-.pinkBG{
-	@include cardColor($pink, white);
+.darkBG {
+    @include cardColor($dark, white);
 }
 
-.primBG{
-	@include cardColor($prim, white);
+.pinkBG {
+    @include cardColor($pink, white);
 }
 
-.tgreenBG{
-	@include cardColor($tGreen);
+.primBG {
+    @include cardColor($prim, white);
 }
 
-.yellowBG{
-  @include cardColor($yellow);
+.tgreenBG {
+    @include cardColor($tGreen);
 }
 
-
+.yellowBG {
+    @include cardColor($yellow);
+}
 
 
 /*//COLORS*/
 
-.colorPink{
-	color:$pink;
+.colorPink {
+    color: $pink;
 }
 
-.colorDark{
-	color:$dark;
+.colorDark {
+    color: $dark;
 }
 
-.colorPrim{
-	color:$prim;
+.colorPrim {
+    color: $prim;
 }
 
-.colorTgreen{
-	color:$tGreen;
+.colorTgreen {
+    color: $tGreen;
 }
 
-.colorYellow{
-	color:$yellow;
+.colorYellow {
+    color: $yellow;
 }

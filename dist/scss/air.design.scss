@@ -5,6 +5,7 @@
 
 */
 
+
 /* BASE-- base, variables, mixins, normalize */
 
 @import "base/_variables.scss";
@@ -13,6 +14,7 @@
 @import "base/_base.scss";
 
 /* LAYOUTS --- Page layout styles*/
+
 @import "layout/_layout.scss";
 @import "layout/_header.scss";
 @import "layout/_nav.scss";
@@ -20,6 +22,7 @@
 // @import "layout/_template.scss";
 
 /* MODULES --- Individual site components  */
+
 @import "modules/_typography.scss";
 @import "modules/_blocks.scss";
 @import "modules/_items.scss";
@@ -31,7 +34,7 @@
 @import "modules/_mobile.scss";
 @import "modules/_airlement.scss";
 
-
 /*VENDOR -- exrternally included css*/
+
 // @import "vendor/_modalwindow.scss";
 // @import "vendor/_flaticon.scss";

@@ -1,473 +1,331 @@
 //Lists
-
-
-
-.ad-list{
-  display: block;
-    padding:0;
-    margin:0;
+.ad-list {
+    display: block;
+    padding: 0;
+    margin: 0;
     list-style: none;
-
-
-    &.ad-hover{
-        .ad-item{
+    &.ad-hover {
+        .ad-item {
             cursor: pointer;
-            &:after{
+            &:after {
                 content: '';
                 position: absolute;
                 display: block;
-            
                 bottom: 0;
                 left: 16px;
-                right: 100%;
-                // width:0%;
+                right: 100%; // width:0%;
                 height: 2px;
-            
-                background-color:$prim;
-            
+                background-color: $prim;
                 @include transEase(.3s);
-            
+            }
+            &:hover {
+                &:after {
+                    right: 16px;
                 }
-    
-                &:hover{
-                    &:after{
-                        right:16px;
-                    }
-                }
+            }
+        }
+    } // Size
+    &.ad-sm {
+        .ad-item {
+            padding: 8px 16px !important;
+        }
+    } // Shape
+    &.ad-flat {
+        .ad-item {
+            &:before {
+                background-color: transparent;
+            }
         }
     }
-
-    // Size
-    &.ad-sm{
-      .ad-item{
-        padding: 8px 16px !important;
-      }
-    }
-
-
-    // Shape
-    &.ad-flat{
-      .ad-item{
-        &:before{
-            background-color:transparent;
+    &.ad-round {
+        .ad-item {
+            border-radius: 30px;
+            margin: 3px;
         }
-      }
-    }
-
-
-    &.ad-round{
-      .ad-item{
-        border-radius: 30px;
-        margin: 3px;
-      }
-    }
-
-
-
-    // Color
-    &.ad-strip{
-      .ad-item{
-        &:nth-child(even){
-        background-color: rgba($dark,.1);
+    } // Color
+    &.ad-strip {
+        .ad-item {
+            &:nth-child(even) {
+                background-color: rgba($dark, .1);
+            }
         }
-      }
     }
-
-    &.ad-strip-white{
-      .ad-item{
-        &:nth-child(even){
-        background-color: rgba(white,.1);
+    &.ad-strip-white {
+        .ad-item {
+            &:nth-child(even) {
+                background-color: rgba(white, .1);
+            }
         }
-      }
     }
-
-
 }
 
-
-.ad-item{
+.ad-item {
     display: block;
     position: relative;
     list-style: none;
     padding: 16px;
     margin: 0;
     @include transEase(0.3s);
-
-
-    &:before{
-	content: '';
-	position: absolute;
-	display: block;
-
-    bottom: 0;
-	left: 16px;
-	right: 16px;
-	height: 1px;
-
-    background-color:rgba(black,0.2);
-
-
-
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 16px;
+        right: 16px;
+        height: 1px;
+        background-color: rgba(black, 0.2);
     }
-
-
-    &.ad-hover{
-        cursor:pointer;
-        &:after{
+    &.ad-hover {
+        cursor: pointer;
+        &:after {
             content: '';
             position: absolute;
             display: block;
-        
             bottom: 0;
             left: 16px;
-            right: 100%;
-            // width:0%;
+            right: 100%; // width:0%;
             height: 2px;
-        
-            background-color:$prim;
-        
+            background-color: $prim;
             @include transEase(.3s);
-        
+        }
+        &:hover {
+            &:after {
+                right: 16px;
             }
-
-            &:hover{
-                &:after{
-                    right:16px;
-                }
-            }
+        }
     }
-
-
-    &.ad-avatar:before, &.ad-thumbnail:before{
-
-	left: 74px;
-	right: 16px;
-
+    &.ad-avatar:before,
+    &.ad-thumbnail:before {
+        left: 74px;
+        right: 16px;
     }
-
-    &.ad-avatar.ad-hover:after, &.ad-thumbnailad-hover:after{
-        
-            left: 74px;
-            // right: 16px;
-        
-            }
-
-
-    i{
+    &.ad-avatar.ad-hover:after,
+    &.ad-thumbnailad-hover:after {
+        left: 74px; // right: 16px;
+    }
+    i {
         margin-right: 16px;
     }
-
-    &.ad-badge{
-        .badge{
+    &.ad-badge {
+        .badge {
             position: absolute;
             right: 16px;
             font-size: $baseFontSize - 2;
             opacity: 0.7;
             color: inherit;
-
-            &.clear{
+            &.clear {
                 background-color: transparent;
-
             }
-
-            &.date{
+            &.date {
                 padding-top: 10px;
             }
         }
     }
-
-
-    &.ad-icon{
-        i{
-
+    &.ad-icon {
+        i {
             display: inline-block;
             vertical-align: top;
             color: inherit;
             opacity: 0.8;
-            width: 20px;
-            // background-color:red;
+            width: 20px; // background-color:red;
             // position:absolute;
         }
-
-        input{
+        input {
             margin-left: 36px;
         }
     }
-
-    &.ad-button{
-      .ad-btn{
-        position: absolute;
-        right: 16px;
-        opacity: 0.7;
-        padding-right: 0;
-        &.fix{
-            top: 16px;
+    &.ad-button {
+        .ad-btn {
+            position: absolute;
+            right: 16px;
+            opacity: 0.7;
+            padding-right: 0;
+            &.fix {
+                top: 16px;
+            }
         }
-      }
-
-    }
-
-
-    //Item Type
-    &.ad-round{
+    } //Item Type
+    &.ad-round {
         border-radius: 30px;
         margin: 3px;
     }
-
-    &.ad-flat{
+    &.ad-flat {
         box-shadow: none;
         text-shadow: none;
         border: none;
-
-        &:before{
+        &:before {
             background-color: transparent;
+        }
+    }
+} // Avatar
+.ad-avatar {
+    @extend .ad-item;
+    img {
+        margin: 0;
+        margin-right: 16px;
+        display: inline-block;
+        vertical-align: top; // background-color:$dark;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        @include shadow(0px, 1px, 0.5px, 0.5px, rgba(black, 0.1));
+    }
+    h2 {
+        // color:$baseFontColor;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        text-transform: none;
+        font-weight: normal;
+        position: absolute;
+        font-size: $baseFontSize;
+        &+p {
+            top: 20px;
+        }
+    }
+    p {
+        opacity: 0.6;
+        display: inline-block;
+        margin: 0;
+        padding: 0 !important;
+        position: relative;
+        left: 0;
+        max-width: 85%;
+        font-size: $baseFontSize - 2;
+    }
+} // Thumbnail
+.ad-thumbnail {
+    @extend .ad-item;
+    img {
+        margin-right: 16px;
+        display: inline-block;
+        vertical-align: top; // background-color:$dark;
+        height: 40px;
+        width: 40px;
+        border-radius: 3px;
+        overflow: hidden;
+        @include shadow(0, 1px, 2px, 2px, rgba(black, 0.1));
+    }
+    h2 {
+        color: inherit;
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        margin: 0;
+        text-transform: none;
+        font-weight: normal;
+        font-size: $baseFontSize + 1;
+        &~p {
+            top: 20px;
+        }
+    }
+    p {
+        opacity: 0.6;
+        display: inline-block;
+        margin: 0;
+        padding: 0 !important;
+        position: relative;
+        left: 0;
+        max-width: 85%;
+        font-size: $baseFontSize - 2;
+    }
+} // hover line color
+.ad-list.ad-hover {
+    &.hover-prim {
+        .ad-item,
+        .ad-avatar,
+        .ad-thumbnail {
+            @include itemHoverColor($prim);
+        }
+    }
+    &.hover-pink {
+        .ad-item,
+        .ad-avatar,
+        .ad-thumbnail {
+            @include itemHoverColor($pink);
+        }
+    }
+    &.hover-tgreen {
+        .ad-item,
+        .ad-avatar,
+        .ad-thumbnail {
+            @include itemHoverColor($tGreen);
+        }
+    }
+    &.hover-yellow {
+        .ad-item,
+        .ad-avatar,
+        .ad-thumbnail {
+            @include itemHoverColor($yellow);
+        }
+    }
+    &.hover-blue {
+        .ad-item,
+        .ad-avatar,
+        .ad-thumbnail {
+            @include itemHoverColor($blue);
+        }
+    }
+    &.hover-red {
+        .ad-item,
+        .ad-avatar,
+        .ad-thumbnail {
+            @include itemHoverColor($red);
+        }
+    }
+    &.hover-green {
+        .ad-item,
+        .ad-avatar,
+        .ad-thumbnail {
+            @include itemHoverColor($green);
+        }
+    }
+    &.hover-dark {
+        .ad-item,
+        .ad-avatar,
+        .ad-thumbnail {
+            @include itemHoverColor($dark);
+        }
+    }
+    &.hover-white {
+        .ad-item,
+        .ad-avatar,
+        .ad-thumbnail {
+            @include itemHoverColor(white);
         }
     }
 }
 
-
-
-
-    // Avatar
-    .ad-avatar{
-      @extend .ad-item;
-
-      
-        img{
-            margin: 0;
-            margin-right: 16px;
-
-            display: inline-block;
-            vertical-align: top;
-            // background-color:$dark;
-
-            height: 40px;
-            width: 40px;
-
-            border-radius: 50%;
-            overflow: hidden;
-            @include shadow(0px, 1px, 0.5px, 0.5px, rgba(black,0.1));
-        }
-        h2{
-            // color:$baseFontColor;
-
-            display: inline-block;
-            vertical-align: top;
-
-            margin:0;
-
-            text-transform: none;
-            font-weight: normal;
-
-            position: absolute;
-
-
-            font-size: $baseFontSize;
-
-            &+p{
-                top: 20px;
-            }
-        }
-
-        p{
-            opacity: 0.6;
-            display: inline-block;
-            margin: 0;
-            padding: 0 !important;
-
-            position: relative;
-            left: 0;
-
-            max-width: 85%;
-            font-size: $baseFontSize - 2;
-
-
-        }
-
-
+.ad-item.ad-hover,
+.ad-avatar.ad-hover,
+.ad-thumbnail.ad-hover {
+    &.hover-prim {
+        @include itemHoverColor($prim);
     }
-
-    // Thumbnail
-    .ad-thumbnail{
-      @extend .ad-item;
-        img{
-            margin-right: 16px;
-            display: inline-block;
-            vertical-align: top;
-            // background-color:$dark;
-
-            height: 40px;
-            width: 40px;
-
-            border-radius: 3px;
-            overflow: hidden;
-
-            @include shadow(0, 1px, 2px, 2px, rgba(black, 0.1));
-
-        }
-
-
-        h2{
-            color: inherit;
-            display: inline-block;
-            vertical-align: top;
-
-            position: absolute;
-
-            margin: 0;
-            text-transform: none;
-            font-weight: normal;
-            font-size: $baseFontSize + 1;
-            &~p{
-                top: 20px;
-            }
-
-        }
-
-        p{
-          opacity: 0.6;
-          display: inline-block;
-          margin: 0;
-          padding: 0 !important;
-
-          position: relative;
-          left: 0;
-
-          max-width: 85%;
-          font-size: $baseFontSize - 2;
-
-
-        }
-
+    &.hover-pink {
+        @include itemHoverColor($pink);
     }
-
-
-
-    // hover line color
-
-    .ad-list.ad-hover{
-
-
-        &.hover-prim{
-            .ad-item, .ad-avatar, .ad-thumbnail{
-                @include itemHoverColor($prim);
-            }
-        }
-
-        &.hover-pink{
-            .ad-item, .ad-avatar, .ad-thumbnail{
-
-                @include itemHoverColor($pink);
-            }
-        }
-
-        &.hover-tgreen{
-            .ad-item, .ad-avatar, .ad-thumbnail{
-
-                @include itemHoverColor($tGreen);   
-            }
-        }
-
-        &.hover-yellow{
-            .ad-item, .ad-avatar, .ad-thumbnail{
-
-                @include itemHoverColor($yellow);   
-            }
-        }
-
-        &.hover-blue{
-            .ad-item, .ad-avatar, .ad-thumbnail{
-
-                @include itemHoverColor($blue);   
-            }
-        }
-
-        &.hover-red{
-            .ad-item, .ad-avatar, .ad-thumbnail{
-
-                @include itemHoverColor($red);   
-            }
-        }
-
-        &.hover-green{
-            .ad-item, .ad-avatar, .ad-thumbnail{
-
-                @include itemHoverColor($green);   
-            }
-        }
-
-
-        &.hover-dark{
-            .ad-item, .ad-avatar, .ad-thumbnail{
-
-                @include itemHoverColor($dark);   
-            }
-        }
-
-        &.hover-white{
-            .ad-item, .ad-avatar, .ad-thumbnail{
-
-                @include itemHoverColor(white);   
-            }
-        }
+    &.hover-tgreen {
+        @include itemHoverColor($tGreen);
     }
-
-
-
-    .ad-item.ad-hover, .ad-avatar.ad-hover, .ad-thumbnail.ad-hover{
-    
-        &.hover-prim{
-                @include itemHoverColor($prim);
-            
-        }
-
-        &.hover-pink{
-
-            @include itemHoverColor($pink);
-            
-        }
-
-        &.hover-tgreen{
-
-            @include itemHoverColor($tGreen);   
-            
-        }
-
-        &.hover-yellow{
-
-            @include itemHoverColor($yellow);   
-            
-        }
-
-        &.hover-blue{
-
-            @include itemHoverColor($blue);   
-            
-        }
-
-        &.hover-red{
-
-            @include itemHoverColor($red);   
-            
-        }
-
-        &.hover-green{
-
-            @include itemHoverColor($green);   
-            
-        }
-
-
-        &.hover-dark{
-
-            @include itemHoverColor($dark);   
-            
-        }
-
-        &.hover-white{
-
-            @include itemHoverColor(white);   
-            
-        }
-    
+    &.hover-yellow {
+        @include itemHoverColor($yellow);
     }
+    &.hover-blue {
+        @include itemHoverColor($blue);
+    }
+    &.hover-red {
+        @include itemHoverColor($red);
+    }
+    &.hover-green {
+        @include itemHoverColor($green);
+    }
+    &.hover-dark {
+        @include itemHoverColor($dark);
+    }
+    &.hover-white {
+        @include itemHoverColor(white);
+    }
+}

@@ -1,197 +1,155 @@
-.ad-left{
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-
-    width:200px;
-    background-color:$dark;
+.ad-left {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    background-color: $dark;
     z-index: 10;
-
     overflow: hidden;
     @include transEase(0.3s);
-
-
-    .ad-divider{
+    .ad-divider {
         @include transEase(0.3s);
     }
-
-    &.ad-closed{
+    &.ad-closed {
         width: 48px;
-
-        .ad-person{
-            .user{
-                width:38px;
-                height:38px;
-                margin-left:4.5px;
+        .ad-person {
+            .user {
+                width: 38px;
+                height: 38px;
+                margin-left: 4.5px;
             }
         }
-
-        .ad-divider{
-            opacity:0;
+        .ad-divider {
+            opacity: 0;
         }
     }
-
-
-    .ad-logo{
-        width:200px;
-        height:48px;
-        background-color:white;
-        color:$pink;
-
-        .logo{
+    .ad-logo {
+        width: 200px;
+        height: 48px;
+        background-color: white;
+        color: $pink;
+        .logo {
             // background:green;
             display: inline-block;
             vertical-align: middle;
-
-            width:48px;
-            height:48px;
-            margin:0;
-            padding:0;
+            width: 48px;
+            height: 48px;
+            margin: 0;
+            padding: 0;
             text-align: center;
-
             font-size: $baseFontSize + 7;
-            i{
-                margin-top:12px;
+            i {
+                margin-top: 12px;
             }
         }
     }
-
-    .menu{
-      width:200px;
-      margin:0;
-      padding:0;
-
-      .ad-item{
-          &:hover{
-              opacity:.7;
-              cursor:pointer;
-          }
-      }
-    }
-
-    .ad-person{
+    .menu {
         width: 200px;
-
-        .user{
+        margin: 0;
+        padding: 0;
+        .ad-item {
+            &:hover {
+                opacity: .7;
+                cursor: pointer;
+            }
+        }
+    }
+    .ad-person {
+        width: 200px;
+        .user {
             @include transEase(0.3s);
         }
     }
 }
 
-
-.ad-right{
-    position:fixed;
-    top:0;
-    bottom:0;
-    right:0;
-    left:200px;
-
-    // background-color:red;
+.ad-right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 200px; // background-color:red;
     overflow: auto;
-
     z-index: 20;
     @include transEase(0.3s);
-
-    &.ad-closed{
-        left:48px;
+    &.ad-closed {
+        left: 48px;
     }
-
-    .ad-middle{
-        background-color:white;
-
-        position:absolute;
-        left:0;
-        top:0;
-        bottom:0;
-
-        width:0;
-        z-index:30;
+    .ad-middle {
+        background-color: white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        z-index: 30;
         overflow: hidden;
-
-         @include transEase(0.3s,0.2s);
-
-        //  .ad-item{
+        @include transEase(0.3s, 0.2s); //  .ad-item{
         //      opacity: 0;
         //  }
     }
-
-        .ad-workspace{
+    .ad-workspace {
         // background-color:blue;
-
-        position:absolute;
-        left:0;
-        top:0;
-        bottom:0;
-        right:0;
-
-        z-index:20;
-        @include transEase(0.3s,0.2s);
-
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 20;
+        @include transEase(0.3s, 0.2s);
     }
 }
 
-
-
-
-
 //Login Component
-
 .ad-login {
     min-width: 400px;
-
-    max-width:  600px;
+    max-width: 600px;
     height: 250px;
     margin: 0 auto;
     background-color: white;
 }
 
-
 .luser {
-	// background: red;
-	width: 120px;
-	height: 120px;
-	margin: 0 auto;
-	position: relative;
-
-	top:50%;
-  margin-top:-60px;
+    // background: red;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    margin-top: -60px;
 }
+
 .luser {
     div {
         position: absolute;
         top: 0;
         margin: 0 auto;
-
     }
-
     .ad-loading {
-              left: 50%;
+        left: 50%;
         margin-left: -62px;
-                top: 50%;
+        top: 50%;
         margin-top: -61px;
-
         width: 120px;
         height: 120px;
-
     }
     .ad-user {
         transform: scale(0.9);
-        @include shadow(0, 2px, 2px, 2px, rgba(0,0,0,0.5));
+        @include shadow(0, 2px, 2px, 2px, rgba(0, 0, 0, 0.5));
         left: 50%;
         margin-left: -50px;
         top: 50%;
         margin-top: -50px;
-
         &[ad-count]:after {
             position: absolute;
-            content: attr(ad-count);;
+            content: attr(ad-count);
+            ;
             width: 20px;
             height: 20px;
             background-color: $pink;
             top: 20px;
             right: 5px;
-            border: 2px solid rgba(0,0,0,0.4);
+            border: 2px solid rgba(0, 0, 0, 0.4);
             border-radius: 50%;
             font-size: 12px;
             font-weight: bold;
@@ -200,22 +158,18 @@
             color: white;
         }
     }
-
     .ad-loaded {
-        left:50%;
-        margin-left:-50px;
-        top:50%;
-        margin-top:-50px;
-
+        left: 50%;
+        margin-left: -50px;
+        top: 50%;
+        margin-top: -50px;
     }
-
     .lname {
         top: 116%;
         position: relative;
         width: 150%;
         text-align: center;
-        left:-25%;
-
+        left: -25%;
         text-transform: uppercase;
     }
 }

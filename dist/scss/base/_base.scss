@@ -12,3 +12,21 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+::-webkit-scrollbar {
+    background-color: rgba(white, 0.6);
+    width: 8px;
+    @include transEase(.3s);
+}
+
+ ::-webkit-scrollbar:hover {
+    width: 10px;
+    box-shadow: 0 0 2px 2px rgba($dark, .4);
+    opacity: 1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    // border-radius: 2.5px;
+    background-color: rgba($dark, .8);
+
+}

@@ -20,12 +20,14 @@ label {
         display: block;
         position: absolute; // float: left;
         height: 34px; // top:0;
-        margin-right: 8px;
+        // margin-right: 8px;
         opacity: 0.8;
-        width: 34px;
-        text-align: center; // background-color:red;
-        text-align: center;
+        padding-left: 8px; // width: 34px;
+        // padding-left:;
+        // background-color:red;
+        // text-align: center;
         line-height: 40px;
+        z-index: 100;
         i {
             // background-color:red;
             width: 16px;
@@ -39,7 +41,7 @@ label {
             // width: 90%;
             // margin-left: 0;
             // padding-right: 0;
-            text-indent: 34px;
+            text-indent: 40px;
         }
     } //Dynamically(JavaScript) add this class to 
     //.ad-input to indicate error. i.e .ad-input.ad-error  
@@ -89,6 +91,7 @@ label {
         text-shadow: none;
         display: block !important;
         text-align: start;
+        text-indent: 10px;
         margin: 0em 0em 0em 0em;
         /*font-size: 13.3333px;*/
         width: 97.6%;
@@ -264,6 +267,7 @@ label {
             color: inherit;
             opacity: 0.8;
             width: 20px; // background-color:red;
+            // background-color:green;
             // position:absolute;
         }
         input {
@@ -273,11 +277,14 @@ label {
     &.ad-button {
         .ad-btn {
             position: absolute;
-            right: 16px;
-            opacity: 0.56;
-            padding-right: 0;
-            &.fix {
-                top: 16px;
+            right: 4px;
+            margin: 0; // opacity: 0.56;
+            // padding-right: 0;
+            top: 2px;
+        }
+        &.ad-label {
+            .ad-btn {
+                top: 30px;
             }
         }
     }

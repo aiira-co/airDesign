@@ -114,6 +114,7 @@ a {
 }
 
 .ad-shadow {
+    box-shadow: none;
     @include shadow(0px, 5px, 16px, 3px, rgba(black, 0.1));
 }
 
@@ -126,4 +127,77 @@ a {
     display: inline-block;
     vertical-align: top;
     font-weight: 500;
+}
+
+//BACKGROUND COLORS HERE
+.whiteBG {
+    @include cardColor(#fff, $dark);
+}
+
+.tqBG {
+    @include cardColor(#227586);
+}
+
+.greenBG {
+    @include cardColor(#00796B, white);
+}
+
+.purpleBG {
+    @include cardColor(#871E6A);
+}
+
+.bg-color {
+    @include cardColor(#AB1656);
+}
+
+.blueBG {
+    @include cardColor($blue, white);
+}
+
+.darkBG {
+    @include cardColor($dark, white);
+    .ad-input {
+        input {
+            background-color: rgba(white, .05);
+        }
+    }
+}
+
+.pinkBG {
+    @include cardColor($pink, white);
+}
+
+.primBG {
+    @include cardColor($prim, white);
+}
+
+.tgreenBG {
+    @include cardColor($tGreen);
+}
+
+.yellowBG {
+    @include cardColor($yellow, $dark);
+}
+
+
+/*//COLORS*/
+
+.colorPink {
+    color: $pink;
+}
+
+.colorDark {
+    color: $dark;
+}
+
+.colorPrim {
+    color: $prim;
+}
+
+.colorTgreen {
+    color: $tGreen;
+}
+
+.colorYellow {
+    color: $yellow;
 }

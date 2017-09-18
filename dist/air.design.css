@@ -95,7 +95,7 @@ a {
 .ad-spread {
   letter-spacing: 4px; }
 
-.ad-flat, .ad-btn-group.ad-flat .ad-btn {
+.ad-flat {
   box-shadow: none !important; }
 
 .ad-shadow, .ad-card.ad-shadow, ad-card.ad-shadow, ad-table.ad-shadow, .ad-btn.ad-shadow {
@@ -221,7 +221,7 @@ ad-subheader h2, ad-header h2 {
 
 .yellowBG {
   background-color: #fff600;
-  color: #222c37; }
+  color: white; }
   .yellowBG.hover:hover {
     -webkit-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
@@ -1538,7 +1538,7 @@ footer {
     left: 74px; }
   .ad-list.ad-sm .ad-item, ad-list.ad-sm .ad-item, .ad-list.ad-sm .ad-avatar, ad-list.ad-sm .ad-avatar, .ad-list.ad-sm ad-avatar, ad-list.ad-sm ad-avatar, .ad-list.ad-sm .ad-thumbnail, ad-list.ad-sm .ad-thumbnail, .ad-list.ad-sm ad-thumbnail, ad-list.ad-sm ad-thumbnail, .ad-list.ad-sm ad-item, ad-list.ad-sm ad-item {
     padding: 8px 16px !important; }
-  .ad-list.ad-flat .ad-item:before, .ad-btn-group.ad-flat .ad-list.ad-btn .ad-item:before, .ad-btn-group.ad-flat ad-list.ad-btn .ad-item:before, ad-list.ad-flat .ad-item:before, .ad-list.ad-flat .ad-avatar:before, .ad-btn-group.ad-flat .ad-list.ad-btn .ad-avatar:before, .ad-btn-group.ad-flat ad-list.ad-btn .ad-avatar:before, ad-list.ad-flat .ad-avatar:before, .ad-list.ad-flat ad-avatar:before, .ad-btn-group.ad-flat .ad-list.ad-btn ad-avatar:before, .ad-btn-group.ad-flat ad-list.ad-btn ad-avatar:before, ad-list.ad-flat ad-avatar:before, .ad-list.ad-flat .ad-thumbnail:before, .ad-btn-group.ad-flat .ad-list.ad-btn .ad-thumbnail:before, .ad-btn-group.ad-flat ad-list.ad-btn .ad-thumbnail:before, ad-list.ad-flat .ad-thumbnail:before, .ad-list.ad-flat ad-thumbnail:before, .ad-btn-group.ad-flat .ad-list.ad-btn ad-thumbnail:before, .ad-btn-group.ad-flat ad-list.ad-btn ad-thumbnail:before, ad-list.ad-flat ad-thumbnail:before, .ad-list.ad-flat ad-item:before, .ad-btn-group.ad-flat .ad-list.ad-btn ad-item:before, .ad-btn-group.ad-flat ad-list.ad-btn ad-item:before, ad-list.ad-flat ad-item:before {
+  .ad-list.ad-flat .ad-item:before, ad-list.ad-flat .ad-item:before, .ad-list.ad-flat .ad-avatar:before, ad-list.ad-flat .ad-avatar:before, .ad-list.ad-flat ad-avatar:before, ad-list.ad-flat ad-avatar:before, .ad-list.ad-flat .ad-thumbnail:before, ad-list.ad-flat .ad-thumbnail:before, .ad-list.ad-flat ad-thumbnail:before, ad-list.ad-flat ad-thumbnail:before, .ad-list.ad-flat ad-item:before, ad-list.ad-flat ad-item:before {
     background-color: transparent; }
   .ad-list.ad-round .ad-item, ad-list.ad-round .ad-item, .ad-list.ad-round .ad-avatar, ad-list.ad-round .ad-avatar, .ad-list.ad-round ad-avatar, ad-list.ad-round ad-avatar, .ad-list.ad-round .ad-thumbnail, ad-list.ad-round .ad-thumbnail, .ad-list.ad-round ad-thumbnail, ad-list.ad-round ad-thumbnail, .ad-list.ad-round ad-item, ad-list.ad-round ad-item {
     border-radius: 30px;
@@ -1609,32 +1609,23 @@ footer {
     width: 20px; }
   .ad-item.ad-icon input, .ad-icon.ad-avatar input, ad-avatar.ad-icon input, .ad-icon.ad-thumbnail input, ad-thumbnail.ad-icon input, ad-item.ad-icon input, .ad-item.ad-icon .ad-input select, .ad-input .ad-item.ad-icon select, .ad-icon.ad-avatar .ad-input select, .ad-input .ad-icon.ad-avatar select, ad-avatar.ad-icon .ad-input select, .ad-input ad-avatar.ad-icon select, .ad-icon.ad-thumbnail .ad-input select, .ad-input .ad-icon.ad-thumbnail select, ad-thumbnail.ad-icon .ad-input select, .ad-input ad-thumbnail.ad-icon select, ad-item.ad-icon .ad-input select, .ad-input ad-item.ad-icon select, .ad-item.ad-icon ad-input select, ad-input .ad-item.ad-icon select, .ad-icon.ad-avatar ad-input select, ad-input .ad-icon.ad-avatar select, ad-avatar.ad-icon ad-input select, ad-input ad-avatar.ad-icon select, .ad-icon.ad-thumbnail ad-input select, ad-input .ad-icon.ad-thumbnail select, ad-thumbnail.ad-icon ad-input select, ad-input ad-thumbnail.ad-icon select, ad-item.ad-icon ad-input select, ad-input ad-item.ad-icon select, .ad-item.ad-icon .ad-input textarea, .ad-input .ad-item.ad-icon textarea, .ad-icon.ad-avatar .ad-input textarea, .ad-input .ad-icon.ad-avatar textarea, ad-avatar.ad-icon .ad-input textarea, .ad-input ad-avatar.ad-icon textarea, .ad-icon.ad-thumbnail .ad-input textarea, .ad-input .ad-icon.ad-thumbnail textarea, ad-thumbnail.ad-icon .ad-input textarea, .ad-input ad-thumbnail.ad-icon textarea, ad-item.ad-icon .ad-input textarea, .ad-input ad-item.ad-icon textarea, .ad-item.ad-icon ad-input textarea, ad-input .ad-item.ad-icon textarea, .ad-icon.ad-avatar ad-input textarea, ad-input .ad-icon.ad-avatar textarea, ad-avatar.ad-icon ad-input textarea, ad-input ad-avatar.ad-icon textarea, .ad-icon.ad-thumbnail ad-input textarea, ad-input .ad-icon.ad-thumbnail textarea, ad-thumbnail.ad-icon ad-input textarea, ad-input ad-thumbnail.ad-icon textarea, ad-item.ad-icon ad-input textarea, ad-input ad-item.ad-icon textarea {
     margin-left: 36px; }
-  .ad-item.ad-button > .ad-btn, .ad-button.ad-avatar > .ad-btn, ad-avatar.ad-button > .ad-btn, .ad-button.ad-thumbnail > .ad-btn, ad-thumbnail.ad-button > .ad-btn, ad-item.ad-button > .ad-btn {
+  .ad-item.ad-button .ad-btn, .ad-button.ad-avatar .ad-btn, ad-avatar.ad-button .ad-btn, .ad-button.ad-thumbnail .ad-btn, ad-thumbnail.ad-button .ad-btn, ad-item.ad-button .ad-btn {
     position: absolute;
     right: 16px;
     opacity: 0.7;
-    padding-right: 0;
-    top: 0; }
-  .ad-item.ad-button > .ad-btn-group, .ad-button.ad-avatar > .ad-btn-group, ad-avatar.ad-button > .ad-btn-group, .ad-button.ad-thumbnail > .ad-btn-group, ad-thumbnail.ad-button > .ad-btn-group, ad-item.ad-button > .ad-btn-group {
-    position: absolute;
-    right: 16px;
-    opacity: 0.7;
-    padding-right: 0;
-    top: 0; }
+    padding-right: 0; }
+    .ad-item.ad-button .ad-btn.fix, .ad-button.ad-avatar .ad-btn.fix, ad-avatar.ad-button .ad-btn.fix, .ad-button.ad-thumbnail .ad-btn.fix, ad-thumbnail.ad-button .ad-btn.fix, ad-item.ad-button .ad-btn.fix {
+      top: 16px; }
   .ad-item.ad-round, .ad-round.ad-avatar, ad-avatar.ad-round, .ad-round.ad-thumbnail, ad-thumbnail.ad-round, ad-item.ad-round {
     border-radius: 30px;
     margin: 3px; }
-  .ad-item.ad-flat, .ad-flat.ad-avatar, .ad-btn-group.ad-flat .ad-avatar.ad-btn, .ad-btn-group.ad-flat ad-avatar.ad-btn, ad-avatar.ad-flat, .ad-flat.ad-thumbnail, .ad-btn-group.ad-flat .ad-thumbnail.ad-btn, .ad-btn-group.ad-flat ad-thumbnail.ad-btn, ad-thumbnail.ad-flat, .ad-btn-group.ad-flat .ad-item.ad-btn, .ad-btn-group.ad-flat ad-item.ad-btn, ad-item.ad-flat {
+  .ad-item.ad-flat, .ad-flat.ad-avatar, ad-avatar.ad-flat, .ad-flat.ad-thumbnail, ad-thumbnail.ad-flat, ad-item.ad-flat {
     box-shadow: none;
     text-shadow: none;
     border: none; }
-    .ad-item.ad-flat:before, .ad-flat.ad-avatar:before, .ad-btn-group.ad-flat .ad-avatar.ad-btn:before, .ad-btn-group.ad-flat ad-avatar.ad-btn:before, ad-avatar.ad-flat:before, .ad-flat.ad-thumbnail:before, .ad-btn-group.ad-flat .ad-thumbnail.ad-btn:before, .ad-btn-group.ad-flat ad-thumbnail.ad-btn:before, ad-thumbnail.ad-flat:before, .ad-btn-group.ad-flat .ad-item.ad-btn:before, .ad-btn-group.ad-flat ad-item.ad-btn:before, ad-item.ad-flat:before {
+    .ad-item.ad-flat:before, .ad-flat.ad-avatar:before, ad-avatar.ad-flat:before, .ad-flat.ad-thumbnail:before, ad-thumbnail.ad-flat:before, ad-item.ad-flat:before {
       background-color: transparent; }
 
-.ad-avatar.ad-button > .ad-btn, ad-avatar.ad-button > .ad-btn {
-  top: auto; }
-.ad-avatar.ad-button > .ad-btn-group, ad-avatar.ad-button > .ad-btn-group {
-  top: auto; }
 .ad-avatar img, ad-avatar img {
   margin: 0;
   margin-right: 16px;
@@ -1669,10 +1660,6 @@ footer {
   max-width: 85%;
   font-size: 12px; }
 
-.ad-thumbnail.ad-button > .ad-btn, ad-thumbnail.ad-button > .ad-btn {
-  top: auto; }
-.ad-thumbnail.ad-button > .ad-btn-group, ad-thumbnail.ad-button > .ad-btn-group {
-  top: auto; }
 .ad-thumbnail img, ad-thumbnail img {
   margin-right: 16px;
   display: inline-block;
@@ -1855,6 +1842,7 @@ ad-thumbnail.ad-hover.hover-white:after {
 
 .ad-card, ad-card, ad-table {
   display: block;
+  background-color: transparent;
   background-position: center;
   background-size: cover;
   border-radius: 5px;
@@ -1873,7 +1861,7 @@ ad-thumbnail.ad-hover.hover-white:after {
     border-radius: 10px; }
   .ad-card.ad-block, ad-card.ad-block, ad-table.ad-block {
     border-radius: 0; }
-  .ad-card.ad-flat, .ad-btn-group.ad-flat .ad-card.ad-btn, .ad-btn-group.ad-flat ad-card.ad-btn, .ad-btn-group.ad-flat ad-table.ad-btn, ad-card.ad-flat, ad-table.ad-flat {
+  .ad-card.ad-flat, ad-card.ad-flat, ad-table.ad-flat {
     box-shadow: none;
     text-shadow: none;
     border: none; }
@@ -1973,8 +1961,7 @@ ad-thumbnail.ad-hover.hover-white:after {
     opacity: .5;
     cursor: not-allowed; }
   .ad-btn i {
-    padding: 0;
-    margin-right: 12px; }
+    padding-left: 3px; }
   .ad-btn.ad-xs {
     padding: 5px 8px;
     font-size: 10px;
@@ -2005,7 +1992,7 @@ ad-thumbnail.ad-hover.hover-white:after {
       background-color: whitesmoke; }
   .ad-btn.ad-round {
     border-radius: 30px; }
-  .ad-btn.ad-flat, .ad-btn-group.ad-flat .ad-btn {
+  .ad-btn.ad-flat {
     box-shadow: none;
     text-shadow: none;
     border: none; }
@@ -2044,7 +2031,7 @@ ad-thumbnail.ad-hover.hover-white:after {
   .ad-fab.ad-mini {
     width: 40px;
     height: 40px; }
-  .ad-fab.ad-flat, .ad-btn-group.ad-flat .ad-fab.ad-btn {
+  .ad-fab.ad-flat {
     box-shadow: none;
     text-shadow: none;
     border: none; }
@@ -2053,26 +2040,6 @@ ad-thumbnail.ad-hover.hover-white:after {
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transition: rotate(45deg); }
-
-.ad-btn-group {
-  margin: 8px;
-  border-radius: 3px;
-  border-radius: 0; }
-  .ad-btn-group .ad-btn {
-    margin: 0 -2px;
-    border-radius: 0; }
-    .ad-btn-group .ad-btn i {
-      margin: 0; }
-    .ad-btn-group .ad-btn:first-child {
-      border-radius: 3px 0 0 3px; }
-    .ad-btn-group .ad-btn:last-child {
-      border-radius: 0 3px 3px 0; }
-  .ad-btn-group.ad-block .ad-btn {
-    border-radius: 0; }
-  .ad-btn-group.ad-round .ad-btn:first-child {
-    border-radius: 30px 0 0 30px; }
-  .ad-btn-group.ad-round .ad-btn:last-child {
-    border-radius: 0 30px 30px 0; }
 
 .btn-prim {
   background-color: #28d0ea;

@@ -46,10 +46,26 @@
 @mixin btnColor($color, $text:white) {
     background-color: $color;
     color: $text;
-    &:hover {
+    outline: none;
+    &:hover,
+    &:focus {
         background-color: $color - 20;
         color: $text;
         box-shadow: none;
+    }
+    &:active {
+        color: $text;
+        background-color: $color - 10;
+        // &:after {
+        //     position: absolute;
+        //     content: '';
+        //     left: 0;
+        //     right: 0;
+        //     width: 100%;
+        //     bottom: 0;
+        //     top: 0;
+        //     background-color: $text;
+        // }
     }
     &.clear {
         color: $color;
@@ -102,8 +118,7 @@
 }
 
 @mixin rangeThumb() {
-    @include scale(.8);
-    //  @include shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0));
+    @include scale(.8); //  @include shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0));
     border: 3px solid grey + 50;
     height: 24px;
     width: 24px;

@@ -160,6 +160,16 @@ a {
         input {
             background-color: rgba(white, .05);
         }
+        select {
+            option {
+                color: white;
+                background-color: $dark;
+                &[selected] {
+                    color: black;
+                    background-color: $prim;
+                }
+            }
+        }
     }
 }
 

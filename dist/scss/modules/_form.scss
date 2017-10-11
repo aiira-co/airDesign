@@ -198,6 +198,9 @@ label {
         select {
             width: 100%;
         }
+        textarea{
+            padding-top: 8px;
+        }
     } //Floating
     &.ad-float {
         position: relative;

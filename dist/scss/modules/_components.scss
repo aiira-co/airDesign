@@ -7,9 +7,7 @@
             font-weight: normal;
             font-size: $baseFontSize + 5;
         }
-        .rFloat {
-            // margin-top:-40px;
-        }
+        
     }
     .ad-footer {
         height: 48px;
@@ -269,7 +267,7 @@
             font-weight: bold;
             font-size: 12px;
             z-index: 1000;
-            clip-depth: 3;
+            clip-rule: 3;
         }
     }
     &.ad-sm {
@@ -398,86 +396,6 @@
     }
 }
 
-.ad-slider {
-    width: 100%;
-    height: 600px;
-    margin: 0;
-    padding: 0;
-    position: relative !important;
-    background-color: black;
-    z-index: 10;
-    overflow: hidden;
-    .ad-slide {
-        display: block;
-        width: 100%;
-        height: 100%; // background-color: red;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        @include transEase(2s);
-    }
-    .ad-slide-pager {
-        // background-color:red;
-        height: 20px;
-        width: 300px;
-        display: inline-block;
-        position: absolute;
-        z-index: 100;
-        bottom: 10%;
-        left: 50%;
-        margin-left: -150px;
-        text-align: center;
-        div {
-            width: 20%;
-            height: 5px;
-            background-color: black;
-            opacity: 0.3;
-            border-radius: 5px;
-            margin: 1.5%;
-            padding: 0;
-            display: inline-block;
-            vertical-align: top;
-            cursor: pointer;
-            @include transEase(2s);
-            &.active {
-                opacity: .5;
-            }
-        }
-    }
-    .ad-slide-nav {
-        // background-color?:red;
-        height: 1px;
-        width: 100%;
-        display: inline-block;
-        position: absolute;
-        z-index: 100;
-        bottom: 55%;
-        text-align: center;
-        .nav-arrow {
-            width: 40px;
-            height: 40px;
-            background-color: white;
-            opacity: .2;
-            cursor: pointer;
-            border-radius: 100%;
-            display: inline-block;
-            vertical-align: top;
-            float: left;
-            margin: 20px;
-            @include shadow(0, 0, 1px, 0px, black);
-            @include transEase(.3s);
-            &:hover {
-                opacity: .7;
-            }
-            i {
-                margin-top: 35%;
-            }
-            &:nth-child(2) {
-                float: right;
-            }
-        }
-    }
-}
 
 // TABS
 .ad-tab {
@@ -510,7 +428,7 @@
             cursor: pointer;
             @include transEase(0.3s);
             &.active {
-                background-color: rgba(white, .5);
+                // background-color: rgba(white, .5);
                 border-bottom: 2px solid $prim;
                 opacity: 1;
             }
@@ -530,7 +448,7 @@
             width: 100%;
             @include transEase(0.3s);
             &.ad-show {
-                background-color: rgba(white, .5);
+                // background-color: rgba(white, .5);
                 display: flex;
                 opacity: 1;
             }
@@ -547,11 +465,7 @@
         }
         .ad-body {
             border: none;
-            .ad-content {
-                &.ad-show {
-                    // background-color: transparent;
-                }
-            }
+            
         }
     }
     &.ad-round {

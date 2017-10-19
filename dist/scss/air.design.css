@@ -1565,40 +1565,8 @@ footer {
   -moz-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s; }
-  .ad-item h1, .ad-avatar h1, ad-avatar h1, .ad-thumbnail h1, ad-thumbnail h1, ad-item h1,
-  .ad-item h2,
-  .ad-avatar h2,
-  ad-avatar h2,
-  .ad-thumbnail h2,
-  ad-thumbnail h2,
-  ad-item h2,
-  .ad-item h3,
-  .ad-avatar h3,
-  ad-avatar h3,
-  .ad-thumbnail h3,
-  ad-thumbnail h3,
-  ad-item h3,
-  .ad-item h4,
-  .ad-avatar h4,
-  ad-avatar h4,
-  .ad-thumbnail h4,
-  ad-thumbnail h4,
-  ad-item h4,
-  .ad-item h5,
-  .ad-avatar h5,
-  ad-avatar h5,
-  .ad-thumbnail h5,
-  ad-thumbnail h5,
-  ad-item h5,
-  .ad-item h6,
-  .ad-avatar h6,
-  ad-avatar h6,
-  .ad-thumbnail h6,
-  ad-thumbnail h6,
-  ad-item h6 {
-    font-weight: normal;
-    padding: 0;
-    margin: 0; }
+  .ad-item h2, .ad-avatar h2, ad-avatar h2, .ad-thumbnail h2, ad-thumbnail h2, ad-item h2 {
+    font-weight: normal; }
   .ad-item:before, .ad-avatar:before, ad-avatar:before, .ad-thumbnail:before, ad-thumbnail:before, ad-item:before {
     content: '';
     position: absolute;
@@ -2016,8 +1984,6 @@ ad-thumbnail.ad-hover.hover-white:after {
   .ad-btn i {
     padding: 0;
     margin-right: 12px; }
-  .ad-btn.ad-icon i {
-    margin: 0 4px; }
   .ad-btn.ad-xs {
     padding: 5px 8px;
     font-size: 10px;
@@ -2747,21 +2713,21 @@ ad-thumbnail.ad-hover.hover-white:after {
     .ad-accordian .ad-body p, ad-accordian .ad-body p, .ad-accordian ad-body p, ad-accordian ad-body p {
       padding: 16px; }
 
-.ad-tab-group, ad-tab-group {
+.ad-tab, ad-tab {
   display: block;
   width: 100%; }
-  .ad-tab-group .ad-head, ad-tab-group .ad-head, .ad-tab-group ad-head, ad-tab-group ad-head {
+  .ad-tab .ad-head, ad-tab .ad-head, .ad-tab ad-head, ad-tab ad-head {
     display: block;
     width: 100%;
     height: auto;
     list-style: none;
     margin: 0;
     padding: 0; }
-    .ad-tab-group .ad-head ul, ad-tab-group .ad-head ul, .ad-tab-group ad-head ul, ad-tab-group ad-head ul {
+    .ad-tab .ad-head ul, ad-tab .ad-head ul, .ad-tab ad-head ul, ad-tab ad-head ul {
       margin: 0;
       padding: 0;
       list-style: none; }
-    .ad-tab-group .ad-head li, ad-tab-group .ad-head li, .ad-tab-group ad-head li, ad-tab-group ad-head li {
+    .ad-tab .ad-head li, ad-tab .ad-head li, .ad-tab ad-head li, ad-tab ad-head li {
       background-color: transparent;
       border-radius: 3px 3px 0 0;
       border-bottom: 2px solid transparent;
@@ -2776,47 +2742,42 @@ ad-thumbnail.ad-hover.hover-white:after {
       -moz-transition: all 0.3s ease-out 0s;
       -o-transition: all 0.3s ease-out 0s;
       transition: all 0.3s ease-out 0s; }
-      .ad-tab-group .ad-head li.active, ad-tab-group .ad-head li.active, .ad-tab-group ad-head li.active, ad-tab-group ad-head li.active {
+      .ad-tab .ad-head li.active, ad-tab .ad-head li.active, .ad-tab ad-head li.active, ad-tab ad-head li.active {
         border-bottom: 2px solid #28d0ea;
         opacity: 1; }
-  .ad-tab-group .ad-tab, ad-tab-group .ad-tab,
-  .ad-tab-group ad-tab,
-  ad-tab-group ad-tab {
+  .ad-tab .ad-body, ad-tab .ad-body, .ad-tab ad-body, ad-tab ad-body {
+    display: block;
     margin: 0;
     padding: 0;
     border-top: 1px solid rgba(34, 44, 55, 0.2);
-    margin-top: -1px;
-    opacity: 0;
-    display: none;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s; }
-    .ad-tab-group .ad-tab.ad-show, ad-tab-group .ad-tab.ad-show,
-    .ad-tab-group ad-tab.ad-show,
-    ad-tab-group ad-tab.ad-show {
-      display: flex;
-      opacity: 1; }
-  .ad-tab-group.ad-block .ad-head li, ad-tab-group.ad-block .ad-head li, .ad-tab-group.ad-block ad-head li, ad-tab-group.ad-block ad-head li {
+    margin-top: -1px; }
+    .ad-tab .ad-body .ad-content, ad-tab .ad-body .ad-content, .ad-tab ad-body .ad-content, ad-tab ad-body .ad-content, .ad-tab .ad-body ad-content, ad-tab .ad-body ad-content, .ad-tab ad-body ad-content, ad-tab ad-body ad-content {
+      display: none;
+      margin: 0;
+      opacity: 0;
+      padding: 0;
+      width: 100%;
+      -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s; }
+      .ad-tab .ad-body .ad-content.ad-show, ad-tab .ad-body .ad-content.ad-show, .ad-tab ad-body .ad-content.ad-show, ad-tab ad-body .ad-content.ad-show, .ad-tab .ad-body ad-content.ad-show, ad-tab .ad-body ad-content.ad-show, .ad-tab ad-body ad-content.ad-show, ad-tab ad-body ad-content.ad-show {
+        display: flex;
+        opacity: 1; }
+  .ad-tab.ad-block .ad-head li, ad-tab.ad-block .ad-head li, .ad-tab.ad-block ad-head li, ad-tab.ad-block ad-head li {
     border-radius: 0; }
-    .ad-tab-group.ad-block .ad-head li.active, ad-tab-group.ad-block .ad-head li.active, .ad-tab-group.ad-block ad-head li.active, ad-tab-group.ad-block ad-head li.active {
+    .ad-tab.ad-block .ad-head li.active, ad-tab.ad-block .ad-head li.active, .ad-tab.ad-block ad-head li.active, ad-tab.ad-block ad-head li.active {
       border-color: transparent; }
-  .ad-tab-group.ad-block .ad-tab, ad-tab-group.ad-block .ad-tab,
-  .ad-tab-group.ad-block ad-tab,
-  ad-tab-group.ad-block ad-tab {
+  .ad-tab.ad-block .ad-body, ad-tab.ad-block .ad-body, .ad-tab.ad-block ad-body, ad-tab.ad-block ad-body {
     border: none; }
-  .ad-tab-group.ad-round .ad-head li.active, ad-tab-group.ad-round .ad-head li.active, .ad-tab-group.ad-round ad-head li.active, ad-tab-group.ad-round ad-head li.active {
+  .ad-tab.ad-round .ad-head li.active, ad-tab.ad-round .ad-head li.active, .ad-tab.ad-round ad-head li.active, ad-tab.ad-round ad-head li.active {
     background-color: #222c37;
     color: white;
     border-radius: 20px;
     border-color: transparent; }
-  .ad-tab-group.ad-round .ad-tab, ad-tab-group.ad-round .ad-tab,
-  .ad-tab-group.ad-round ad-tab,
-  ad-tab-group.ad-round ad-tab {
+  .ad-tab.ad-round .ad-body, ad-tab.ad-round .ad-body, .ad-tab.ad-round ad-body, ad-tab.ad-round ad-body {
     border: none; }
-    .ad-tab-group.ad-round .ad-tab.ad-show, ad-tab-group.ad-round .ad-tab.ad-show,
-    .ad-tab-group.ad-round ad-tab.ad-show,
-    ad-tab-group.ad-round ad-tab.ad-show {
+    .ad-tab.ad-round .ad-body .ad-content.ad-show, ad-tab.ad-round .ad-body .ad-content.ad-show, .ad-tab.ad-round ad-body .ad-content.ad-show, ad-tab.ad-round ad-body .ad-content.ad-show, .ad-tab.ad-round .ad-body ad-content.ad-show, ad-tab.ad-round .ad-body ad-content.ad-show, .ad-tab.ad-round ad-body ad-content.ad-show, ad-tab.ad-round ad-body ad-content.ad-show {
       background-color: transparent; }
 
 .ad-code {

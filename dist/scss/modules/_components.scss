@@ -7,7 +7,6 @@
             font-weight: normal;
             font-size: $baseFontSize + 5;
         }
-        
     }
     .ad-footer {
         height: 48px;
@@ -396,9 +395,8 @@
     }
 }
 
-
 // TABS
-.ad-tab {
+.ad-tab-group {
     // background-color: red;
     display: block;
     width: 100%;
@@ -434,24 +432,19 @@
             }
         }
     }
-    .ad-body {
-        display: block;
+    .ad-tab,
+    ad-tab {
         margin: 0;
         padding: 0;
         border-top: 1px solid rgba($dark, .2);
         margin-top: -1px;
-        .ad-content {
-            display: none;
-            margin: 0;
-            opacity: 0;
-            padding: 0;
-            width: 100%;
-            @include transEase(0.3s);
-            &.ad-show {
-                // background-color: rgba(white, .5);
-                display: flex;
-                opacity: 1;
-            }
+        opacity: 0;
+        display: none;
+        @include transEase(0.3s);
+        &.ad-show {
+            // background-color: rgba(white, .5);
+            display: flex;
+            opacity: 1;
         }
     }
     &.ad-block {
@@ -463,9 +456,9 @@
                 }
             }
         }
-        .ad-body {
+        .ad-tab,
+        ad-tab {
             border: none;
-            
         }
     }
     &.ad-round {
@@ -479,12 +472,11 @@
                 border-color: transparent;
             }
         }
-        .ad-body {
+        .ad-tab,
+        ad-tab {
             border: none;
-            .ad-content {
-                &.ad-show {
-                    background-color: transparent;
-                }
+            &.ad-show {
+                background-color: transparent;
             }
         }
     }

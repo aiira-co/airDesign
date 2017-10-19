@@ -51,12 +51,20 @@
     &.ad-shadow {
         @extend .ad-shadow;
     }
+
     i {
         padding:0;
         // margin:0;
         margin-right:12px;
         // background-color:red;
         // padding-left: 3px;
+    }
+
+    &.ad-icon{
+        i{
+            margin:0 4px;
+            // background-color:red;
+        }
     }
     &.ad-xs {
         padding: 5px 8px;

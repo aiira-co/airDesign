@@ -70,6 +70,17 @@
     padding: 16px;
     margin: 0;
     @include transEase(0.3s);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
+        padding: 0;
+        // background-color: red;
+        margin: 0;
+    }
     &:before {
         content: '';
         position: absolute;
@@ -215,7 +226,6 @@
 } // Thumbnail
 .ad-thumbnail {
     @extend .ad-item;
-
     &.ad-button {
         &>.ad-btn {
             top: auto;
@@ -224,7 +234,6 @@
             top: auto;
         }
     }
-    
     img {
         margin-right: 16px;
         display: inline-block;

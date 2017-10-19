@@ -6,8 +6,8 @@
     display: flex;
     z-index: 100;
     .ad-logo {
-        background-color: black;
-        width: 48px;
+        // background-color: black;
+        width: auto;
         height: 48px;
         margin: 0;
         padding: 0;
@@ -15,6 +15,7 @@
         vertical-align: top;
         img {
             height: 100%;
+            width:auto;
         }
     }
     .ad-menu {

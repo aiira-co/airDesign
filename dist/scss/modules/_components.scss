@@ -379,6 +379,10 @@
             i {
                 @include rotate(180deg);
             }
+
+            & + .ad-body{
+                max-height: 1000px;
+            }
         }
     }
     .ad-body {

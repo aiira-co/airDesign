@@ -2,29 +2,6 @@ $(document).ready(function () {
 
 
     var wrapper = $('body');
-    // var airlement = { "1":"ad-router",
-    //                   "2":"ad-loading",
-    //                   "3":"ad-header",
-    //                   "4":"ad-subheader",
-    //                   "5":"ad-nav",
-    //                   "6":"ad-footer",
-    //                   "7":"ad-section",
-    //                   "8":"ad-card",
-    //                   "9":"ad-modal",
-    //                   "10":"ad-table",
-    //                   "11":"ad-list",
-    //                   "12":"ad-item",
-    //                   "13":"ad-avatar",
-    //                   "14":"ad-thumbnail",
-    //                   "15":"ad-input",
-    //                   "16":"ad-tab",
-    //                   "17":"ad-accordian",
-    //                   "18":"ad-head",
-    //                   "19":"ad-body",
-    //                   "20":"ad-content"
-    //                 };
-    //
-    //
 
     // Button to hide and show the sideMenu
     $('#ad-menu-toggle').click(function () {
@@ -36,7 +13,7 @@ $(document).ready(function () {
         var header = $('.scrollFixed'),
             scroll = $(window).scrollTop();
 
-        if (scroll >= 40) {
+        if (scroll >= 58) {
             header.addClass('ad-fixed');
             $('.logo1').css('display', 'none');
             $('.logo2').css('display', 'block');
@@ -46,6 +23,24 @@ $(document).ready(function () {
             $('.logo1').css('display', 'block');
             $('.logo2').css('display', 'none');
         }
+    });
+
+    // Nav
+
+    function checkNav() {
+        if ($('.ad-nav').length != 0) {
+            console.log('nav found');
+            var adLogo = $('.ad-nav .ad-logo').html();
+            var adMenu = $('.ad-nav .ad-menu').html();
+            wrapper.prepend('<div class="menuTriggered"><div class="ad-logo">' + adLogo + '</div>' + adMenu + '</div>');
+        }
+    }
+
+    checkNav();
+
+
+    $('#menuTrigger').click(function () {
+        $('.menuTriggered').toggleClass('ad-show');
     });
 
 
@@ -95,7 +90,7 @@ $(document).ready(function () {
     });
 
     wrapper.on('click', '.ad-close-modal', function () {
-        console.log('clicked');
+        // console.log('clicked');
         var $modal = $('.ad-modal, ad-modal');
         $modal.removeClass('ad-show');
         $modal.removeAttr('style');
@@ -110,7 +105,12 @@ $(document).ready(function () {
 
     //ad-accordian
 
-    wrapper.on('click', '.ad-accordian .ad-head, ad-accordian ad-head', function () {
+    wrapper.on('click', '.ad-accordian .ad-head', function () {
+        var $this = $(this);
+        $this.toggleClass('ad-show');
+    });
+
+    wrapper.on('click', 'ad-accordian ad-head', function () {
         var $this = $(this);
         $this.toggleClass('ad-show');
     });
@@ -119,26 +119,37 @@ $(document).ready(function () {
     // ad-tab-group
 
     // Scan DOM for ad-tab-group and construct the ad-head
-    $('.ad-tab-group, ad-tab-group').each(function () {
+    function constructTab() {
 
-        let adTab = $(this).find('.ad-tab[label], ad-tab[label]');
-        
-        let list = '';
-        adTab.each(function () {
-            // console.log($(this).attr('label'));
-            if ($(this).hasClass('ad-show')) {
-                list += '<li class="active">' + $(this).attr('label') + '</li>';
-            } else {
+        $('.ad-tab-group, ad-tab-group').each(function () {
 
-                list += '<li>' + $(this).attr('label') + '</li>';
+            // Check is the .ad-head is not already generated
+            if ($(this).find('.ad-head').length == 0) {
+
+                let adTab = $(this).find('.ad-tab[label], ad-tab[label]');
+
+                let list = '';
+                adTab.each(function () {
+                    // console.log($(this).attr('label'));
+                    if ($(this).hasClass('ad-show')) {
+                        list += '<li class="active">' + $(this).attr('label') + '</li>';
+                    } else {
+
+                        list += '<li>' + $(this).attr('label') + '</li>';
+                    }
+
+                });
+
+                let head = '<div class="ad-head"><ul>' + list + '</ul></div>';
+                $(this).prepend(head);
             }
 
         });
+    }
 
-        let head = '<div class="ad-head"><ul>' + list + '</ul></div>';
-        $(this).prepend(head);
-
-    });
+    // better to check if there has been aan ajax request, 
+    // then rescan the doc to construct tab
+    constructTab();
 
     wrapper.on('click', '.ad-tab-group .ad-head li, ad-tab-group .ad-head li', function () {
         var $this = $(this);

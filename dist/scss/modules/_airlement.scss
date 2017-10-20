@@ -12,7 +12,7 @@ ad-row {
 }
 
 // router
-ad-router {
+router-outlet {
     display: block;
     width: 100%;
     height: auto;
@@ -43,7 +43,7 @@ ad-router {
     }
 }
 
-[adRouter] {
+[routerLink] {
     cursor: pointer;
 }
 

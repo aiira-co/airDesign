@@ -1,7 +1,7 @@
 # airDesign
-Create Beautiful Apps.
+###Code Beautiful
 For full documentation, visit http://airdesign.co.nf
-![airdesign Doc](http://airdesign.co.nf/media/images/logo/logo.png)
+
 ## GETTING STARTED
 
 Dowload the library from this page. it comes bundled in a zip file containing, a css folder, js folder and a fonts folder. The css folder contains the air.design.css and font-awesome libraries which can be downloaded directly from their website http://fontawesome.io. The js folder contains air.design.js which is used for events and enhances list-items class in the libraries. The fonts folder keeps our default font-family 'Bariol' by atipo (www.atipo.es) and font-awesome's files.

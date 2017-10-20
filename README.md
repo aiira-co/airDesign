@@ -1,6 +1,6 @@
 # airDesign
-###Code Beautiful
-For full documentation, visit http://airdesign.co.nf
+* Code Beautiful
+* For full documentation, visit http://airdesign.co.nf
 
 ## GETTING STARTED
 

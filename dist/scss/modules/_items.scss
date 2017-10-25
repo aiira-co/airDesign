@@ -1,11 +1,97 @@
-//Lists
-.ad-list {
-    display: block;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    &.ad-hover {
-        .ad-item {
+    //Lists
+    .ad-list {
+        display: block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        &.ad-hover {
+            .ad-item {
+                cursor: pointer;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    bottom: 0;
+                    left: 16px;
+                    right: 100%; // width:0%;
+                    height: 2px;
+                    background-color: $prim;
+                    @include transEase(.3s);
+                }
+                &:hover {
+                    &:after {
+                        right: 16px;
+                    }
+                }
+            }
+            .ad-avatar:after,
+            .ad-thumbnail:after {
+                left: 74px; // right: 16px;
+            }
+        } // Size
+        &.ad-sm {
+            .ad-item {
+                padding: 8px 16px !important;
+            }
+        } // Shape
+        &.ad-flat {
+            .ad-item {
+                &:before {
+                    background-color: transparent;
+                }
+            }
+        }
+        &.ad-round {
+            .ad-item {
+                border-radius: 30px;
+                margin: 3px;
+            }
+        } // Color
+        &.ad-strip {
+            .ad-item {
+                &:nth-child(even) {
+                    background-color: rgba($dark, .1);
+                }
+            }
+        }
+        &.ad-strip-white {
+            .ad-item {
+                &:nth-child(even) {
+                    background-color: rgba(white, .1);
+                }
+            }
+        }
+    }
+
+    .ad-item {
+        display: block;
+        position: relative;
+        list-style: none;
+        padding: 16px;
+        margin: 0;
+        @include transEase(0.3s);
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+            padding: 0;
+            text-transform: none; // background-color: red;
+            margin: 0;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 16px;
+            right: 16px;
+            height: 1px;
+            background-color: rgba(black, 0.2);
+        }
+        &.ad-hover {
             cursor: pointer;
             &:after {
                 content: '';
@@ -24,344 +110,319 @@
                 }
             }
         }
-        .ad-avatar:after,
-        .ad-thumbnail:after {
+        &.ad-avatar:before {
+            left: 74px;
+            right: 16px;
+        }
+        &.ad-thumbnail:before {
+            left: 104px;
+            right: 16px;
+        }
+        &.ad-avatar.ad-hover:after {
             left: 74px; // right: 16px;
         }
-    } // Size
-    &.ad-sm {
-        .ad-item {
-            padding: 8px 16px !important;
+        &.ad-thumbnail.ad-hover:after {
+            left: 104px; // right: 16px;
         }
-    } // Shape
-    &.ad-flat {
-        .ad-item {
+        i {
+            margin-right: 16px;
+        }
+        &.ad-badge {
+            .badge {
+                position: absolute;
+                right: 16px;
+                font-size: $baseFontSize - 2;
+                opacity: 0.7;
+                color: inherit;
+                &.clear {
+                    background-color: transparent;
+                }
+                &.date {
+                    padding-top: 10px;
+                }
+            }
+        }
+        &.ad-icon {
+            i {
+                display: inline-block;
+                vertical-align: top;
+                color: inherit;
+                opacity: 0.8;
+                width: 20px; // background-color:red;
+                // position:absolute;
+            }
+            input {
+                margin-left: 36px;
+            }
+        }
+        &.ad-button {
+            &>.ad-btn {
+                position: absolute;
+                right: 16px;
+                opacity: 0.7;
+                padding-right: 0;
+                top: 0;
+            }
+            &>.ad-btn-group {
+                position: absolute;
+                right: 16px;
+                opacity: 0.7;
+                padding-right: 0;
+                top: 0;
+            }
+        } //Item Type
+        &.ad-round {
+            border-radius: 30px;
+            margin: 3px;
+        }
+        &.ad-flat {
+            box-shadow: none;
+            text-shadow: none;
+            border: none;
             &:before {
                 background-color: transparent;
             }
         }
-    }
-    &.ad-round {
-        .ad-item {
-            border-radius: 30px;
-            margin: 3px;
-        }
-    } // Color
-    &.ad-strip {
-        .ad-item {
-            &:nth-child(even) {
-                background-color: rgba($dark, .1);
+    } // Avatar
+    .ad-avatar {
+        @extend .ad-item;
+        &.ad-button {
+            &>.ad-btn {
+                top: auto;
+            }
+            &>.ad-btn-group {
+                top: auto;
             }
         }
-    }
-    &.ad-strip-white {
-        .ad-item {
-            &:nth-child(even) {
-                background-color: rgba(white, .1);
-            }
+        img {
+            margin: 0;
+            margin-right: 16px;
+            display: inline-block;
+            vertical-align: top; // background-color:$dark;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            @include shadow(0px, 1px, 0.5px, 0.5px, rgba(black, 0.1));
         }
-    }
-}
-
-.ad-item {
-    display: block;
-    position: relative;
-    list-style: none;
-    padding: 16px;
-    margin: 0;
-    @include transEase(0.3s);
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: normal;
-        padding: 0;
-        // background-color: red;
-        margin: 0;
-    }
-    &:before {
-        content: '';
-        position: absolute;
-        display: block;
-        bottom: 0;
-        left: 16px;
-        right: 16px;
-        height: 1px;
-        background-color: rgba(black, 0.2);
-    }
-    &.ad-hover {
-        cursor: pointer;
-        &:after {
-            content: '';
-            position: absolute;
-            display: block;
-            bottom: 0;
-            left: 16px;
-            right: 100%; // width:0%;
-            height: 2px;
-            background-color: $prim;
-            @include transEase(.3s);
-        }
-        &:hover {
-            &:after {
-                right: 16px;
-            }
-        }
-    }
-    &.ad-avatar:before,
-    &.ad-thumbnail:before {
-        left: 74px;
-        right: 16px;
-    }
-    &.ad-avatar.ad-hover:after,
-    &.ad-thumbnail.ad-hover:after {
-        left: 74px; // right: 16px;
-    }
-    i {
-        margin-right: 16px;
-    }
-    &.ad-badge {
-        .badge {
-            position: absolute;
-            right: 16px;
-            font-size: $baseFontSize - 2;
-            opacity: 0.7;
-            color: inherit;
-            &.clear {
-                background-color: transparent;
-            }
-            &.date {
-                padding-top: 10px;
-            }
-        }
-    }
-    &.ad-icon {
-        i {
+        h2 {
+            // color:$baseFontColor;
             display: inline-block;
             vertical-align: top;
+            margin: 0;
+            text-transform: none;
+            font-weight: normal;
+            position: absolute;
+            font-size: $baseFontSize;
+            &+p {
+                top: 20px;
+            }
+        }
+        p {
+            opacity: 0.6;
+            display: inline-block;
+            margin: 0;
+            padding: 0 !important;
+            position: relative;
+            left: 0;
+            max-width: 85%;
+            font-size: $baseFontSize - 2;
+        }
+        &.ad-block {
+            &>img {
+                border-radius: 0;
+            }
+        }
+    } // Thumbnail
+    .ad-thumbnail {
+        @extend .ad-item;
+        &.ad-button {
+            &>.ad-btn {
+                top: auto;
+                // line-height: 58px;
+                margin-top:20px;
+            }
+            &>.ad-btn-group {
+                top: auto;
+                margin-top:20px;
+            }
+        }
+        .ad-index {
+            display: inline-block;
+            vertical-align: top;
+            width: 30px;
+            background-color: rgba(0, 0, 0, 0.2);
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            /* line-height: 100%; */
+            text-align: center;
+            line-height: 100px;
+            &+.ad-img,
+            &+img {
+                margin-left: 30px;
+            }
+        }
+        .ad-img {
+            display: inline-block;
+            vertical-align: top;
+            width: 70px;
+            height: 70px;
+            background: white;
+            margin: 0;
+            padding: 0;
+            margin-right: 16px;
+            border-radius: 3px;
+            overflow: hidden;
+            @include shadow(0, 1px, 2px, 2px, rgba(black, 0.1));
+            img {
+                width: 100%;
+            }
+        }
+        &>img {
+            margin-right: 16px;
+            display: inline-block;
+            vertical-align: top; // background-color:$dark;
+            width: 70px;
+            height: 70px;
+            border-radius: 3px;
+            overflow: hidden;
+            @include shadow(0, 1px, 2px, 2px, rgba(black, 0.1));
+        }
+        h2 {
             color: inherit;
-            opacity: 0.8;
-            width: 20px; // background-color:red;
-            // position:absolute;
-        }
-        input {
-            margin-left: 36px;
-        }
-    }
-    &.ad-button {
-        &>.ad-btn {
+            display: inline-block;
+            vertical-align: top;
             position: absolute;
-            right: 16px;
-            opacity: 0.7;
-            padding-right: 0;
-            top: 0;
+            margin: 0;
+            text-transform: none;
+            font-weight: normal;
+            font-size: $baseFontSize + 2;
+            &~p {
+                top: 20px;
+            }
         }
-        &>.ad-btn-group {
-            position: absolute;
-            right: 16px;
-            opacity: 0.7;
-            padding-right: 0;
-            top: 0;
+        p {
+            opacity: 0.6;
+            display: inline-block;
+            margin: 0;
+            padding: 0 !important;
+            position: relative;
+            left: 0;
+            max-width: 85%;
+            font-size: $baseFontSize - 2;
         }
-    } //Item Type
-    &.ad-round {
-        border-radius: 30px;
-        margin: 3px;
-    }
-    &.ad-flat {
-        box-shadow: none;
-        text-shadow: none;
-        border: none;
-        &:before {
-            background-color: transparent;
+        &.ad-block {
+            &>img,
+            &>.ad-img {
+                border-radius: 0;
+            }
         }
-    }
-} // Avatar
-.ad-avatar {
-    @extend .ad-item;
-    &.ad-button {
-        &>.ad-btn {
-            top: auto;
+        &.ad-round {
+            &>img,
+            &>.ad-img {
+                border-radius: 8px;
+            }
         }
-        &>.ad-btn-group {
-            top: auto;
+    } // hover line color
+    .ad-list.ad-hover {
+        &.hover-prim {
+            .ad-item,
+            .ad-avatar,
+            .ad-thumbnail {
+                @include itemHoverColor($prim);
+            }
         }
-    }
-    img {
-        margin: 0;
-        margin-right: 16px;
-        display: inline-block;
-        vertical-align: top; // background-color:$dark;
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        overflow: hidden;
-        @include shadow(0px, 1px, 0.5px, 0.5px, rgba(black, 0.1));
-    }
-    h2 {
-        // color:$baseFontColor;
-        display: inline-block;
-        vertical-align: top;
-        margin: 0;
-        text-transform: none;
-        font-weight: normal;
-        position: absolute;
-        font-size: $baseFontSize;
-        &+p {
-            top: 20px;
+        &.hover-pink {
+            .ad-item,
+            .ad-avatar,
+            .ad-thumbnail {
+                @include itemHoverColor($pink);
+            }
         }
-    }
-    p {
-        opacity: 0.6;
-        display: inline-block;
-        margin: 0;
-        padding: 0 !important;
-        position: relative;
-        left: 0;
-        max-width: 85%;
-        font-size: $baseFontSize - 2;
-    }
-} // Thumbnail
-.ad-thumbnail {
-    @extend .ad-item;
-    &.ad-button {
-        &>.ad-btn {
-            top: auto;
+        &.hover-tgreen {
+            .ad-item,
+            .ad-avatar,
+            .ad-thumbnail {
+                @include itemHoverColor($tGreen);
+            }
         }
-        &>.ad-btn-group {
-            top: auto;
+        &.hover-yellow {
+            .ad-item,
+            .ad-avatar,
+            .ad-thumbnail {
+                @include itemHoverColor($yellow);
+            }
         }
-    }
-    img {
-        margin-right: 16px;
-        display: inline-block;
-        vertical-align: top; // background-color:$dark;
-        height: 40px;
-        width: 40px;
-        border-radius: 3px;
-        overflow: hidden;
-        @include shadow(0, 1px, 2px, 2px, rgba(black, 0.1));
-    }
-    h2 {
-        color: inherit;
-        display: inline-block;
-        vertical-align: top;
-        position: absolute;
-        margin: 0;
-        text-transform: none;
-        font-weight: normal;
-        font-size: $baseFontSize + 1;
-        &~p {
-            top: 20px;
+        &.hover-blue {
+            .ad-item,
+            .ad-avatar,
+            .ad-thumbnail {
+                @include itemHoverColor($blue);
+            }
+        }
+        &.hover-red {
+            .ad-item,
+            .ad-avatar,
+            .ad-thumbnail {
+                @include itemHoverColor($red);
+            }
+        }
+        &.hover-green {
+            .ad-item,
+            .ad-avatar,
+            .ad-thumbnail {
+                @include itemHoverColor($green);
+            }
+        }
+        &.hover-dark {
+            .ad-item,
+            .ad-avatar,
+            .ad-thumbnail {
+                @include itemHoverColor($dark);
+            }
+        }
+        &.hover-white {
+            .ad-item,
+            .ad-avatar,
+            .ad-thumbnail {
+                @include itemHoverColor(white);
+            }
         }
     }
-    p {
-        opacity: 0.6;
-        display: inline-block;
-        margin: 0;
-        padding: 0 !important;
-        position: relative;
-        left: 0;
-        max-width: 85%;
-        font-size: $baseFontSize - 2;
-    }
-} // hover line color
-.ad-list.ad-hover {
-    &.hover-prim {
-        .ad-item,
-        .ad-avatar,
-        .ad-thumbnail {
+
+    .ad-item.ad-hover,
+    .ad-avatar.ad-hover,
+    .ad-thumbnail.ad-hover {
+        &.hover-prim {
             @include itemHoverColor($prim);
         }
-    }
-    &.hover-pink {
-        .ad-item,
-        .ad-avatar,
-        .ad-thumbnail {
+        &.hover-pink {
             @include itemHoverColor($pink);
         }
-    }
-    &.hover-tgreen {
-        .ad-item,
-        .ad-avatar,
-        .ad-thumbnail {
+        &.hover-tgreen {
             @include itemHoverColor($tGreen);
         }
-    }
-    &.hover-yellow {
-        .ad-item,
-        .ad-avatar,
-        .ad-thumbnail {
+        &.hover-yellow {
             @include itemHoverColor($yellow);
         }
-    }
-    &.hover-blue {
-        .ad-item,
-        .ad-avatar,
-        .ad-thumbnail {
+        &.hover-blue {
             @include itemHoverColor($blue);
         }
-    }
-    &.hover-red {
-        .ad-item,
-        .ad-avatar,
-        .ad-thumbnail {
+        &.hover-red {
             @include itemHoverColor($red);
         }
-    }
-    &.hover-green {
-        .ad-item,
-        .ad-avatar,
-        .ad-thumbnail {
+        &.hover-green {
             @include itemHoverColor($green);
         }
-    }
-    &.hover-dark {
-        .ad-item,
-        .ad-avatar,
-        .ad-thumbnail {
+        &.hover-dark {
             @include itemHoverColor($dark);
         }
-    }
-    &.hover-white {
-        .ad-item,
-        .ad-avatar,
-        .ad-thumbnail {
+        &.hover-white {
             @include itemHoverColor(white);
         }
     }
-}
-
-.ad-item.ad-hover,
-.ad-avatar.ad-hover,
-.ad-thumbnail.ad-hover {
-    &.hover-prim {
-        @include itemHoverColor($prim);
-    }
-    &.hover-pink {
-        @include itemHoverColor($pink);
-    }
-    &.hover-tgreen {
-        @include itemHoverColor($tGreen);
-    }
-    &.hover-yellow {
-        @include itemHoverColor($yellow);
-    }
-    &.hover-blue {
-        @include itemHoverColor($blue);
-    }
-    &.hover-red {
-        @include itemHoverColor($red);
-    }
-    &.hover-green {
-        @include itemHoverColor($green);
-    }
-    &.hover-dark {
-        @include itemHoverColor($dark);
-    }
-    &.hover-white {
-        @include itemHoverColor(white);
-    }
-}

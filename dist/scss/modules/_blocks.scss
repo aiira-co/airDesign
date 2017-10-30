@@ -41,6 +41,7 @@
     }
 }
 
+// REMOVE THIS -- add to interactive repo
 .ad-file {
     .ad-fab {
         top: -30px;
@@ -123,6 +124,7 @@
     }
 }
 
+// Modify it if posible. the animation is wrong
 .ad-loading {
     display: block;
     position: fixed;
@@ -154,6 +156,34 @@
     }
 }
 
+.is-loading {
+    position: relative;
+    &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: red;
+        content: '';
+        animation: isLoading 0.9s alternate-reverse infinite;
+    }
+}
+
+@keyframes isLoading {
+    from {
+        background-color: $pink;
+        left: 0;
+    }
+    to {
+        left: 100%;
+        background-color: $tGreen;
+    }
+}
+
+// Use SVG anime for this
+// .ad-spinner{
+// }
 // //Loading Divs
 //
 //
@@ -198,7 +228,7 @@
 // 	}
 // }
 //
-//File Loader
+//File Loader --Remove THIS, interactive repo
 .ad-loading-f[ad-count] {
     background-color: rgba($dark, .4);
     display: inline-block;
@@ -238,14 +268,14 @@
         background-color: royalblue;
     }
     50% {
-        background-color: $prim - 20;
+        background-color: darken($prim, 6);
     }
     100% {
         background-color: royalblue;
     }
 }
 
-//Image Loader
+//Image Loader --Remove THIS, interactive repo
 .ad-loading-i[ad-count] {
     position: relative;
     width: 100%;
@@ -293,7 +323,7 @@
     }
 }
 
-//flower Loader
+//flower Loader --Remove THIS, interactive repo
 .ad-loading-flower[ad-count] {
     max-width: 160px;
     height: 40px; // background-color:red;

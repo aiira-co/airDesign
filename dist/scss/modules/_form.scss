@@ -198,7 +198,7 @@ label {
         select {
             width: 100%;
         }
-        textarea{
+        textarea {
             padding-top: 8px;
         }
     } //Floating
@@ -228,7 +228,7 @@ label {
             }
             &:focus {
                 &+label {
-                    color: $prim - 20;
+                    color: darken($prim, 20);
                     font-size: 12px;
                     font-weight: normal;
                     opacity: 1;
@@ -273,9 +273,7 @@ label {
             // background-color:green;
             // position:absolute;
         }
-        input {
-            // margin-left: 36px;
-        }
+        
     }
     &.ad-button {
         .ad-btn {
@@ -340,11 +338,11 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-    background: grey + 50;
+    background: lighten(grey, 10);
 }
 
 input[type=range]::-ms-fill-upper {
-    background: grey + 70;
+    background: lighten(grey, 15);
 }
 
 input[type=range]::-ms-thumb {
@@ -352,11 +350,11 @@ input[type=range]::-ms-thumb {
 }
 
 input[type=range]:focus::-ms-fill-lower {
-    background: grey + 50;
+    background: lighten(grey, 10);
 }
 
 input[type=range]:focus::-ms-fill-upper {
-    background: grey + 100;
+    background: lighten(grey, 20);
 } ///Toggle CheckBox
 .ad-toggle {
     position: relative;
@@ -458,8 +456,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 [type="checkbox"]:checked+.ad-checkbox:before {
-    border-color: $prim - 50 !important; // opacity: 0;
-    background-color: $prim - 50;
+    border-color: darken($prim, 10) !important; // opacity: 0;
+    background-color: darken($prim, 10);
 }
 
 [type="checkbox"]:checked+.ad-checkbox:after {
@@ -473,8 +471,8 @@ input[type=range]:focus::-ms-fill-upper {
 [type="checkbox"]:disabled:not(:checked)+.ad-checkbox:before,
 [type="checkbox"]:disabled:checked+.ad-checkbox:before {
     box-shadow: none;
-    border-color: $prim - 50;
-    background-color: $prim - 50;
+    border-color: darken($prim, 10);
+    background-color: darken($prim, 10);
     pointer-events: none;
 }
 
@@ -491,14 +489,14 @@ input[type=range]:focus::-ms-fill-upper {
 
 [type="checkbox"]:checked:focus+.ad-checkbox:before,
 [type="checkbox"]:not(:checked):focus+.ad-checkbox:before {
-    border-color: $prim - 50;
+    border-color: darken($prim, 10);
 }
 
 
 /* hover style just for information */
 
 .ad-checkbox:hover:before {
-    border-color: $prim - 50 !important;
+    border-color: darken($prim, 10) !important;
 }
 
 //Radio Button
@@ -546,7 +544,7 @@ input[type=range]:focus::-ms-fill-upper {
     width: 17px;
     height: 17px; // font-size: 18px;
     line-height: 0.8;
-    color: $prim - 50; // background-color:$prim - 50;
+    color: darken($prim, 10); // background-color:$prim - 50;
     transition: all .2s;
 }
 
@@ -559,7 +557,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 [type="radio"]:checked+.ad-radio:before {
-    border-color: $prim - 50 !important; // opacity: 0;
+    border-color: darken($prim, 10) !important; // opacity: 0;
 }
 
 [type="radio"]:checked+.ad-radio:after {
@@ -573,8 +571,8 @@ input[type=range]:focus::-ms-fill-upper {
 [type="radio"]:disabled:not(:checked)+.ad-radio:before,
 [type="radio"]:disabled:checked+.ad-radio:before {
     box-shadow: none;
-    border-color: $prim - 50;
-    background-color: $prim - 50;
+    border-color: darken($prim, 10);
+    background-color: darken($prim, 10);
     pointer-events: none;
 }
 
@@ -591,17 +589,17 @@ input[type=range]:focus::-ms-fill-upper {
 
 [type="radio"]:checked:focus+.ad-radio:before,
 [type="radio"]:not(:checked):focus+.ad-radio:before {
-    border-color: $prim - 50;
+    border-color: darken($prim, 10);
 }
 
 
 /* hover style just for information */
 
 .ad-radio:hover:before {
-    border-color: $prim - 50 !important;
+    border-color: darken($prim, 10) !important;
 } //CheckBox Or RadioBTNs
 input[type="checkbox"]:checked~.ad-toggle {
-    background: $prim - 10;
+    background: darken($prim, 10);
     &:after {
         left: 42px; // background: $prim - 60;
     }

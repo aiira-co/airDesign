@@ -11,12 +11,12 @@ footer {
         bottom: 0;
         width: 40px;
         height: 40px;
-        background-color: $prim - 20;
+        background-color: darken($prim,20);
         color: white;
         text-align: center;
         cursor: pointer!important;
         &:hover {
-            background-color: $prim - 40;
+            background-color: darken($prim,40);
         }
         i {
             margin-top: 15px;
@@ -26,8 +26,8 @@ footer {
 }
 
 .mod-footer {
-    background-color: $dark - 20;
-    color: $smoke - 30;
+    background-color: darken($dark,20);
+    color: darken($smoke,30);
     h4 {
         padding-left: 4px;
     }

@@ -35,33 +35,50 @@
     &.ad-shadow{
         @extend .ad-shadow;
     }
+
+    
     
     // Outline-Color
-    &.outline-prim {
-        outline-style: solid;
-        outline-width: 1px;
-        outline-color: $prim;
+
+    &.outline{
+        position: relative;
+        &:before{
+            position: absolute;
+            border: 1px solid rgba(0,0,0,.3);
+            border-radius: inherit;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+        }
+        &.outline-prim {
+            &:before{
+                border-color:rgba($prim,.3);
+            }
+        }
+        &.outline-pink {
+            &:before{
+                border-color:rgba($pink,.3);
+            }
+        }
+        &.outline-yellow {
+            &:before{
+                border-color:rgba($yellow,.3);
+            }
+        }
+        &.outline-tgreen {
+            &:before{
+                border-color:rgba($tGreen,.3);
+            }
+        }
+        &.outline-white {
+            &:before{
+                border-color:rgba(white,.3);
+            }
+        } 
     }
-    &.outline-pink {
-        outline-style: solid;
-        outline-width: 1px;
-        outline-color: $pink;
-    }
-    &.outline-yellow {
-        outline-style: solid;
-        outline-width: 1px;
-        outline-color: $yellow;
-    }
-    &.outline-tgreen {
-        outline-style: solid;
-        outline-width: 1px;
-        outline-color: $tGreen;
-    }
-    &.outline-dark {
-        outline-style: solid;
-        outline-width: 1px;
-        outline-color: $dark;
-    } // Card Contents
+    // Card Contents
     p {
         padding: 16px;
     }
@@ -75,9 +92,7 @@
     }
     &>.ad-btn {
         margin-left: 16px;
-        &.ad-full {
-            // margin:auto 16px;
-        }
+
     }
     .ad-input {
         margin: 16px;

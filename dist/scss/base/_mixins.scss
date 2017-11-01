@@ -5,11 +5,18 @@
     transition: all $time ease-out $delay;
 }
 
+@mixin transformOrigin($x, $y) {
+    -webkit-transform-origin: $x $y;
+    -moz-transform-origin: $x $y;
+    -o-transform-origin: $x $y;
+    transform-origin: $x $y;
+}
+
 @mixin transform($skew) {
     -webkit-transform: skew($skew);
     -moz-transform: skew($skew);
     -o-transform: skew($skew);
-    transition: skew($skew);
+    transform: skew($skew);
 }
 
 @mixin scale($value) {

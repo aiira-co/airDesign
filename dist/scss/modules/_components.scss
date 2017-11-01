@@ -199,12 +199,31 @@
     position: relative;
     display: inline-block; // background-color: red;
     .ad-content {
-        display: block;
         position: absolute;
         min-width: 200px; // background-color: blue;
         top: 50%;
-        z-index: 500;
+        z-index: 100;
         display: none;
+        // visibility: collapse;
+        // display: block;
+        @include transEase(.3s);
+       @include transformOrigin(50%, 0);
+        &.ad-show {
+            animation: anim-dropdown 0.3s ease-out 0s 1;
+                // background: red;
+                
+          
+        }
+    }
+}
+
+@keyframes anim-dropdown{
+    from{
+        @include scale(.8);
+    }
+
+    to{
+        @include scale(1);
     }
 }
 
@@ -379,8 +398,8 @@
             i {
                 @include rotate(180deg);
             }
-
-            & + .ad-body{
+            &+.ad-body {
+                animation: anim-accordian 0.3s ease-out 0s 1;
                 max-height: 1000px;
             }
         }
@@ -396,6 +415,17 @@
         p {
             padding: 16px;
         }
+    }
+}
+
+
+@keyframes anim-accordian{
+    from{
+        max-height:0;
+    }
+
+    to{
+        max-height:100px;
     }
 }
 

@@ -28,8 +28,8 @@ $(document).ready(function () {
     // Nav
 
     function checkNav() {
-        if ($('.ad-nav').length != 0) {
-            console.log('nav found');
+        if ($('.ad-nav #menuTrigger').length != 0) {
+            // console.log('nav found menuTrigger found');
             var adLogo = $('.ad-nav .ad-logo').html();
             var adMenu = $('.ad-nav .ad-menu').html();
             wrapper.prepend('<div class="menuTriggered"><div class="ad-logo">' + adLogo + '</div>' + adMenu + '</div>');

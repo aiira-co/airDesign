@@ -132,7 +132,7 @@
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: 8px;
+    height: 4px;
     z-index: 1000;
     background-color: rgba($prim, .2);
     &::after {
@@ -140,18 +140,29 @@
         left: -5%;
         content: ' '; // right:0;
         width: 10%;
-        height: 8px;
+        height: 4px;
         bottom: 0;
-        background-color: $prim;
-        animation: adLoading 1.5s infinite alternate ease-in;
+        background-color: $prim; // animation: adLoading 1.5s infinite alternate ease-in;
+        animation: anim-adLoading 1.5s ease-in-out 0s alternate infinite;
     }
 }
 
-@keyframes adLoading {
-    from {
+@keyframes anim-adLoading {
+    0% {
         left: -5%;
+        background-color: $prim;
     }
-    to {
+    30% {
+        background-color: $pink;
+    }
+    50% {
+        background-color: $blue;
+    }
+    70% {
+        background-color: $pink;
+    }
+    100% {
+        background-color: $prim;
         left: 95%;
     }
 }
@@ -166,18 +177,25 @@
         height: 2px;
         background-color: red;
         content: '';
-        animation: isLoading 0.9s alternate-reverse infinite;
+        display: block;
+        opacity: 1 !important;
+        animation: isLoading 1.2s ease-in-out 0s alternate infinite;
     }
 }
 
 @keyframes isLoading {
-    from {
-        background-color: $pink;
-        left: 0;
+    0% {
+        background-color: rgba($pink, .7);
+        left: 16px;
+        right: 80%;
     }
-    to {
-        left: 100%;
-        background-color: $tGreen;
+    50% {
+        background-color: rgba($yellow, .7);
+    }
+    100% {
+        left: 80%;
+        right: 16px;
+        background-color: rgba($pink, .7);
     }
 }
 

@@ -244,6 +244,16 @@
 }
 
 //Button Colors
+.btn-default {
+    @include btnColor(white,$dark);
+}
+
+.btn-grey {
+    @include btnColor(darken($smoke,10),$dark);
+}
+
+
+
 .btn-prim {
     @include btnColor($prim);
 }

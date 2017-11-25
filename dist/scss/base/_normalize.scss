@@ -130,19 +130,19 @@ a {
 }
 
 //BACKGROUND COLORS HERE
-.whiteBG {
+.bg-white {
     @include cardColor(#fff, $dark);
 }
 
-.tqBG {
+.bg-tq {
     @include cardColor(#227586);
 }
 
-.greenBG {
+.bg-green {
     @include cardColor(#00796B, white);
 }
 
-.purpleBG {
+.bg-purple {
     @include cardColor(#871E6A);
 }
 
@@ -150,11 +150,11 @@ a {
     @include cardColor(#AB1656);
 }
 
-.blueBG {
+.bg-blue {
     @include cardColor($blue, white);
 }
 
-.darkBG {
+.bg-dark {
     @include cardColor($dark, white);
     .ad-input {
         input {
@@ -173,41 +173,45 @@ a {
     }
 }
 
-.pinkBG {
+.bg-pink {
     @include cardColor($pink, white);
 }
 
-.primBG {
+.bg-prim {
     @include cardColor($prim, white);
 }
 
-.tgreenBG {
+.bg-tgreen {
     @include cardColor($tGreen);
 }
 
-.yellowBG {
+.bg-yellow {
     @include cardColor($yellow, $dark);
 }
 
 
 /*//COLORS*/
 
-.colorPink {
+.color-pink {
     color: $pink;
 }
 
-.colorDark {
+.color-dark {
     color: $dark;
 }
 
-.colorPrim {
+.color-prim {
     color: $prim;
 }
 
-.colorTgreen {
+.color-tgreen {
     color: $tGreen;
 }
 
-.colorYellow {
+.color-yellow {
     color: $yellow;
+}
+
+.color-blue {
+    color: $blue;
 }

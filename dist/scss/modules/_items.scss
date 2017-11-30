@@ -223,6 +223,11 @@
                 border-radius: 0;
                 width: 100%;
             }
+
+            &.ad-icon-letter{
+                line-height: 40px;
+
+            }
         }
         h2 {
             // color:$baseFontColor;
@@ -248,9 +253,10 @@
             font-size: $baseFontSize - 2;
         }
         &.ad-block {
-            &>img {
+            &>img,&>.ad-img {
                 border-radius: 0;
             }
+
         }
     } // Thumbnail
     .ad-thumbnail {

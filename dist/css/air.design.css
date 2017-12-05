@@ -2964,11 +2964,15 @@ ad-thumbnail.ad-hover.hover-white:after {
 
 .ad-modal, ad-modal {
   position: fixed;
-  width: 60%;
+  display: block;
   max-width: 630px;
   min-width: 320px;
   height: auto;
-  transform: scale(0.5);
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   z-index: 300 !important;
   visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -2987,12 +2991,18 @@ ad-thumbnail.ad-hover.hover-white:after {
     background-color: red; }
   .ad-modal.ad-show, ad-modal.ad-show {
     top: 50%;
-    left: 50%;
-    -webkit-transform: scale(1) translateX(-50%) translateY(-50%);
-    -moz-transform: scale(1) translateX(-50%) translateY(-50%);
-    -ms-transform: scale(1) translateX(-50%) translateY(-50%);
-    transform: scale(1) translateX(-50%) translateY(-50%); }
+    animation: anim-modal .5s 0s ease 1; }
+    .ad-modal.ad-show.ad-closemodal, ad-modal.ad-show.ad-closemodal {
+      animation-direction: reverse;
+      animation: anim-modal .5s 0s ease 1; }
 
+@keyframes anim-modal {
+  from {
+    top: 0;
+    opacity: 0; }
+  to {
+    top: 50%;
+    opacity: 1; } }
 .ad-show {
   visibility: visible; }
   .ad-show + .ad-overlay {
@@ -3012,7 +3022,7 @@ ad-thumbnail.ad-hover.hover-white:after {
   bottom: 0;
   z-index: 100 !important;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;

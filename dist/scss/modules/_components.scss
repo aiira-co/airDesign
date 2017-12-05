@@ -310,11 +310,18 @@
 
 .ad-modal {
     position: fixed; // background-color: red;
-    width: 60%;
+    // width: 60%;
+    display: block;
     max-width: 630px;
     min-width: 320px;
     height: auto;
-    transform: scale(.5);
+
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
     z-index: 300 !important;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -335,14 +342,27 @@
     }
     &.ad-show {
         top: 50%;
-        left: 50%;
-        -webkit-transform: scale(1) translateX(-50%) translateY(-50%);
-        -moz-transform: scale(1) translateX(-50%) translateY(-50%);
-        -ms-transform: scale(1) translateX(-50%) translateY(-50%);
-        transform: scale(1) translateX(-50%) translateY(-50%);
+        animation: anim-modal .5s 0s ease 1;
+        
+        &.ad-closemodal{
+            animation-direction: reverse;
+            animation: anim-modal .5s 0s ease 1;
+        }
     }
+
 }
 
+@keyframes anim-modal{
+    from{
+        top:0;
+        opacity: 0;
+    }
+
+    to{
+        top:50%;
+        opacity: 1;
+    }
+}
 .ad-show {
     visibility: visible;
     &+.ad-overlay {
@@ -366,7 +386,7 @@
     bottom: 0;
     z-index: 100 !important;
     opacity: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     @include transEase(0.3s);
 }
 

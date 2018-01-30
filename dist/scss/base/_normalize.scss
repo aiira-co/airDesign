@@ -160,6 +160,12 @@ a {
         input {
             background-color: rgba(white, .05);
         }
+
+        &.outline{
+            input{
+                border-color:rgba(white,.05);
+            }
+        }
         select {
             option {
                 color: white;

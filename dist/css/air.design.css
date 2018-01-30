@@ -188,6 +188,8 @@ ad-subheader h2, ad-header h2 {
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3); }
   .bg-dark .ad-input input, .bg-dark ad-input input, .bg-dark .ad-input select, .ad-input .bg-dark ad-input select, .bg-dark ad-input select, .bg-dark .ad-input textarea, .ad-input .bg-dark ad-input textarea, .bg-dark ad-input textarea {
     background-color: rgba(255, 255, 255, 0.05); }
+  .bg-dark .ad-input.outline input, .bg-dark ad-input.outline input, .bg-dark .ad-input.outline select, .bg-dark ad-input.outline .ad-input select, .ad-input .bg-dark ad-input.outline select, .bg-dark ad-input.outline select, .bg-dark .ad-input.outline textarea, .bg-dark ad-input.outline .ad-input textarea, .ad-input .bg-dark ad-input.outline textarea, .bg-dark ad-input.outline textarea {
+    border-color: rgba(255, 255, 255, 0.05); }
   .bg-dark .ad-input select option, .bg-dark ad-input select option {
     color: white;
     background-color: #222c37; }
@@ -3224,6 +3226,11 @@ label.output {
       padding: 0; }
     .ad-input span + input, ad-input span + input, .ad-input span + select, .ad-input ad-input span + select, ad-input span + select, .ad-input span + textarea, .ad-input ad-input span + textarea, ad-input span + textarea {
       text-indent: 40px; }
+  .ad-input.outline input, ad-input.outline input, .ad-input.outline select, ad-input.outline select, .ad-input.outline textarea, ad-input.outline textarea {
+    border: 2px solid rgba(34, 44, 55, 0.1);
+    margin-left: -2px;
+    margin-top: -1px;
+    background-color: rgba(34, 44, 55, 0.01); }
   .ad-input.ad-error > label, ad-input.ad-error > label {
     font-weight: bold;
     color: #F44336; }
@@ -3313,6 +3320,8 @@ label.output {
     border-radius: 16.5px;
     padding: 0 2%;
     width: 96%; }
+  .ad-input.ad-round.outline input, ad-input.ad-round.outline input, .ad-input.ad-round.outline select, ad-input.ad-round.outline select, .ad-input.ad-round.outline textarea, ad-input.ad-round.outline textarea {
+    border-radius: 18px; }
   .ad-input.ad-round select, ad-input.ad-round select {
     width: 100%; }
   .ad-input.ad-round textarea, ad-input.ad-round textarea {

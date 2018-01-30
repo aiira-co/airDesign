@@ -43,7 +43,19 @@ label {
             // padding-right: 0;
             text-indent: 40px;
         }
-    } //Dynamically(JavaScript) add this class to 
+    } 
+    
+    &.outline{
+        input{
+            border:2px solid rgba($dark,.1);
+            margin-left:-2px;
+            margin-top:-1px;
+            background-color:rgba($dark, .01);
+
+        }
+    }
+
+    //Dynamically(JavaScript) add this class to 
     //.ad-input to indicate error. i.e .ad-input.ad-error  
     &.ad-error {
         &>label {
@@ -165,6 +177,8 @@ label {
             opacity: .5;
         }
     }
+
+   
     select {
         @extend input; // background-color: transparent;
         padding-top: .465em !important;
@@ -194,6 +208,12 @@ label {
             border-radius: 16.5px;
             padding: 0 2%;
             width: 96%;
+        }
+        // Correct border-radius for input
+        &.outline{
+            input{
+                border-radius: 18px;
+            }
         }
         select {
             width: 100%;

@@ -134,66 +134,6 @@
     }
 }
 
-// CARD VIEW MUST GO WITH AD-LIST... REMOVE THIS OFF -- Make New Repo for this
-.ad-cardView {
-    .ad-data {
-        width: 160px;
-        height: 200px;
-        margin: 5px;
-        overflow: hidden;
-        display: inline-block;
-        vertical-align: top;
-        @include transEase(.2s); //FRONT OF CARD
-        .ad-front {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            top: 0; // background-color:green;
-            cursor: pointer;
-            @include transEase(.2s);
-            &.ad-slideUp {
-                margin-top: -240px;
-            }
-            .ad-image {
-                // background-color:$dark;
-                margin: 0;
-            }
-            .ad-detail {
-                margin-top: -10px; // background-color:red;
-                strong {
-                    font-size: $baseFontSize + 2;
-                    margin-bottom: 5px;
-                    display: block;
-                }
-                span {
-                    margin-bottom: 5px;
-                    display: block;
-                }
-            }
-        } //BACK OF CARD
-        .ad-back {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            top: 0; // background-color:pink;
-            @include transEase(.2s);
-            p {
-                margin-bottom: 0; // background-color:red;
-            }
-            .ad-btn {
-                margin-top: 0;
-            }
-        }
-        &:hover {
-            @include scale(1.05);
-        }
-    }
-}
-
 // dropdown
 .ad-dropdown {
     position: relative;
@@ -203,104 +143,23 @@
         min-width: 200px; // background-color: blue;
         top: 50%;
         z-index: 100;
-        display: none;
-        // visibility: collapse;
+        display: none; // visibility: collapse;
         // display: block;
         @include transEase(.3s);
-       @include transformOrigin(50%, 0);
+        @include transformOrigin(50%, 0);
         &.ad-show {
-            animation: anim-dropdown 0.3s ease-out 0s 1;
-                // background: red;
-                
-          
+            animation: anim-dropdown 0.3s ease-out 0s 1; // background: red;
         }
     }
 }
 
-@keyframes anim-dropdown{
-    from{
+@keyframes anim-dropdown {
+    from {
         @include scale(.8);
     }
-
-    to{
+    to {
         @include scale(1);
     }
-}
-
-//User Components.. REMOVE THIS OFF
-.ad-person {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    max-height: 150px;
-    height: 10vh;
-    min-height: 70px;
-    /*background-color:#CCB6AF;*/
-    .user {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 8px;
-        @include shadow(0, 2px, 4px, 4px, rgba(0, 0, 0, 0.1));
-        display: inline-block;
-        vertical-align: top;
-        img {
-            width: 100%;
-        }
-    }
-    .detail {
-        display: inline-block;
-        vertical-align: top;
-        padding: 0;
-        margin: 0;
-        width: 100px;
-        margin-top: 10px;
-        span {
-            padding: 2px;
-        }
-    }
-}
-
-.ad-user {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: inline-block;
-    &[ad-count] {
-        // position: static;
-        &+span {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            color: white;
-            background: $pink;
-            position: absolute;
-            top: -100%;
-            left: 60%;
-            text-align: center;
-            line-height: 2em;
-            font-weight: bold;
-            font-size: 12px;
-            z-index: 1000;
-            clip-rule: 3;
-        }
-    }
-    &.ad-sm {
-        width: 50px;
-        height: 50px;
-        margin: 16px;
-        margin-bottom: 8;
-    }
-    img {
-        width: 100%;
-    }
-}
-
-.info {
-    width: 230px;
 }
 
 //PopUP Modal
@@ -315,13 +174,11 @@
     max-width: 630px;
     min-width: 320px;
     height: auto;
-
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-
     z-index: 300 !important;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -343,26 +200,24 @@
     &.ad-show {
         top: 50%;
         animation: anim-modal .5s 0s ease 1;
-        
-        &.ad-closemodal{
+        &.ad-closemodal {
             animation-direction: reverse;
             animation: anim-modal .5s 0s ease 1;
         }
     }
-
 }
 
-@keyframes anim-modal{
-    from{
-        top:0;
+@keyframes anim-modal {
+    from {
+        top: 0;
         opacity: 0;
     }
-
-    to{
-        top:50%;
+    to {
+        top: 50%;
         opacity: 1;
     }
 }
+
 .ad-show {
     visibility: visible;
     &+.ad-overlay {
@@ -370,7 +225,7 @@
         visibility: visible;
     }
     &+.ad-body,
-    {
+        {
         max-height: 500px;
     }
 }
@@ -438,14 +293,12 @@
     }
 }
 
-
-@keyframes anim-accordian{
-    from{
-        max-height:0;
+@keyframes anim-accordian {
+    from {
+        max-height: 0;
     }
-
-    to{
-        max-height:100px;
+    to {
+        max-height: 100px;
     }
 }
 
@@ -453,52 +306,72 @@
 .ad-tab-group {
     // background-color: red;
     display: block;
-    width: 100%;
-    .ad-head {
+    overflow: hidden; // width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 100;
+    &>.ad-head {
         // background-color: yellow;
         display: block;
-        width: 100%;
-        height: auto;
+        width: 100%; // height: 30px;
         list-style: none;
         margin: 0;
         padding: 0;
+        position: relative;
+        span.tab-line {
+            background-color: $prim;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            width: 100px;
+            @include transEase(0.3s);
+        }
         ul {
             margin: 0;
             padding: 0;
             list-style: none;
+            display: flex; // width: 200%;
         }
         li {
             background-color: transparent;
             border-radius: 3px 3px 0 0;
             border-bottom: 2px solid transparent;
-            opacity: .5;
-            display: inline-block;
+            opacity: .5; // display: inline-block;
             line-height: 2.4em;
-            padding: 0 1.2em;
+            padding: 0 16px;
             margin: 0;
             vertical-align: top;
+            outline: none !important;
             cursor: pointer;
             @include transEase(0.3s);
             &.active {
-                // background-color: rgba(white, .5);
-                border-bottom: 2px solid $prim;
+                
                 opacity: 1;
             }
         }
     }
-    .ad-tab,
-    ad-tab {
+    &>.ad-content {
+        display: flex; // flex-wrap: wrap;
+        width: 400%;
         margin: 0;
         padding: 0;
-        border-top: 1px solid rgba($dark, .2);
-        margin-top: -1px;
-        opacity: 0;
-        display: none;
         @include transEase(0.3s);
-        &.ad-show {
-            // background-color: rgba(white, .5);
-            display: flex;
-            opacity: 1;
+        .ad-tab,
+        ad-tab {
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid rgba($dark, .2);
+            margin-top: -1px; // opacity: 0;
+            // display: none;
+            width: 100%;
+            @include transEase(0.3s);
+            &.ad-show {
+                // background-color: rgba(white, .5);
+                display: flex;
+                opacity: 1;
+            }
         }
     }
     &.ad-block {
@@ -533,55 +406,5 @@
                 background-color: transparent;
             }
         }
-    }
-}
-
-// Code OUTPUT... REMOVE THIS INTO A NEW REPO ..ifpossible.
-.ad-code {
-    display: block;
-    border-left: 5px solid $tGreen;
-    background-color: $dark;
-    min-width: 300px;
-    max-width: 700px;
-    width: 80%;
-    margin: 40px auto;
-    /*margin-top:  40px;*/
-    min-height: 50px;
-    position: relative;
-    color: whitesmoke;
-    text-align: left;
-    padding: 0;
-    code {
-        /*background-color:blue;*/
-        display: inline-block;
-        width: 98%;
-        height: auto;
-        overflow: auto !important;
-        padding-top: 40px;
-        position: relative;
-        transform: translateX(-190px);
-        color: $pink;
-        .class {
-            color: $yellow;
-        }
-        .id {
-            color: $prim;
-        }
-        .word {
-            color: white;
-        }
-    }
-    &:before {
-        position: absolute;
-        color: white;
-        content: 'html';
-        text-align: center;
-        line-height: 70px;
-        top: -35px;
-        left: -35px;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        background-color: $tGreen;
     }
 }

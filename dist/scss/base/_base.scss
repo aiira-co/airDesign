@@ -19,14 +19,17 @@ body {
     @include transEase(.3s);
 }
 
- ::-webkit-scrollbar:hover {
+::-webkit-scrollbar:hover {
     width: 10px;
     box-shadow: 0 0 2px 2px rgba($dark, .4);
     opacity: 1;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     // border-radius: 2.5px;
     background-color: rgba($dark, .8);
+}
 
+[routerLink]{
+    outline:none;
 }

@@ -56,16 +56,13 @@
                     height: auto;
                     background-color: rgba($dark, .9);
                     margin: 0; // margin-top: 4px;
-                    border-radius: 5px;
-                    // padding: 0 !important;
+                    border-radius: 5px; // padding: 0 !important;
                     @include transEase(.3s);
                     li {
                         display: block;
                         clear: both;
-                        margin: 0;
-                        // padding: 0 !important;
-                        width: 100%;
-                        // background: red;
+                        margin: 0; // padding: 0 !important;
+                        width: 100%; // background: red;
                         a {
                             display: block;
                             padding: 10px;

@@ -7,24 +7,21 @@
 @media only screen and (max-width: 980px) {}
 
 @media only screen and (max-width: 768px) {
-    .ad-nav{
-        .ad-logo{
-            float:left;
-            // background-color:yellow;
+    .ad-nav {
+        .ad-logo {
+            float: left; // background-color:yellow;
         }
-        .ad-menu{
+        .ad-menu {
             display: none !important;
         }
-        #menuTrigger{
-            display: inline-block;
-            // position: absolute;
+        #menuTrigger {
+            display: inline-block; // position: absolute;
             // right:0;
         }
     }
-
-    .menuTriggered{
-        &.ad-show{
-            right:0;
+    .menuTriggered {
+        &.ad-show {
+            right: 0;
         }
     }
 }
@@ -38,10 +35,9 @@
 @media only screen and (max-width: 500px) {}
 
 @media only screen and (max-width: 360px) {
-
-    .menuTriggered{
-        &.ad-show{
-            width:100%;
+    .menuTriggered {
+        &.ad-show {
+            width: 100%;
         }
     }
 }

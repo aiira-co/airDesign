@@ -148,25 +148,35 @@ $(document).ready(function () {
             if ($(this).find('.ad-head').length == 0) {
 
                 let adTab = $(this).find('.ad-tab[label], ad-tab[label]');
-
+                var adTabSize = adTab.length;
                 let list = '';
-                adTab.each(function () {
-                    // console.log($(this).attr('label'));
+                adTab.each(function (e) {
+                    // $(this).attr('tabIndex', e);
                     if ($(this).hasClass('ad-show')) {
-                        list += '<li class="active">' + $(this).attr('label') + '</li>';
+                        list += '<li class="active" tabIndex="' + e + '">' + $(this).attr('label') + '</li>';
+
                     } else {
 
-                        list += '<li>' + $(this).attr('label') + '</li>';
+                        list += '<li tabIndex="' + e + '">' + $(this).attr('label') + '</li>';
                     }
 
                 });
-
-                let head = '<div class="ad-head"><ul>' + list + '</ul></div>';
+                // console.log('size of tabl is:', adTabSize);
+                // construct the head
+                let head = '<div class="ad-head"><span class="tab-line"></span><ul style="width:' + (100 * adTabSize) + '%">' + list + '</ul></div>';
                 $(this).prepend(head);
+
+                // Set width for default line
+                $(this).find('.ad-head span.tab-line').css('width', $(this).find('.ad-head li.active').width() + 32 + 'px');
+
+                // wrapp all .ad-tab with a content div to make it flex
+                let tabContainer = $('<div class="ad-content" style="width:' + (100 * adTabSize) + '%"></div>');
+                $('.ad-tab[label], ad-tab[label]').wrapAll(tabContainer);
             }
 
 
             // Mark as Constructed
+            $(this).attr('tabs', adTabSize);
             $(this).attr('ad_constructed', true);
 
         });
@@ -174,24 +184,31 @@ $(document).ready(function () {
 
 
 
-    wrapper.on('click', '.ad-tab-group .ad-head li, ad-tab-group .ad-head li', function () {
-        var $this = $(this);
-        $this.parents('.ad-tab-group, ad-tab-group').find('.ad-head li').removeClass('active');
-        $this.addClass('active');
-        $this.parents('.ad-tab-group, ad-tab-group').find('.ad-tab.ad-show, ad-tab.ad-show').removeClass('ad-show');
+    wrapper.on('click', '.ad-tab-group > .ad-head li, ad-tab-group > .ad-head li', function () {
 
-        // check Matching ad-tab label
+        // console.log('tab clicked', $(this).width());
+        slideTab($(this).parents('.ad-tab-group, ad-tab-group'), $(this).attr('tabIndex'), 1);
+        // $this.parents('.ad-tab-group, ad-tab-group').find('.ad-head li').removeClass('active');
+        // $this.addClass('active');
+        // $this.parents('.ad-tab-group, ad-tab-group').find('.ad-tab.ad-show, ad-tab.ad-show').removeClass('ad-show');
 
-        $this.parents('.ad-tab-group, ad-tab-group')
-            .find('.ad-tab, ad-tab').each(function () {
-                if ($(this).attr('label') == $this.text()) {
-                    $(this).addClass('ad-show');
-                }
-            })
+        // // check Matching ad-tab label
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        $(this).parent().siblings('span.tab-line').css({
+            'width': $(this).width() + 32 + 'px',
+            'margin-left': $(this).attr('tabIndex') * ($(this).width() + 32) + 'px'
+        });
+
 
 
     });
 
+    function slideTab(tab, index, direction) {
+        // console.log('slide function activated', (-100 * parseInt(index)));
+        tab.find('.ad-content').css('margin-left', (-100 * parseInt(index)) + '%');
+    }
 
 
 

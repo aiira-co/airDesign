@@ -43,20 +43,20 @@ label {
             // padding-right: 0;
             text-indent: 40px;
         }
-    } 
-    
+    }
+
     &.outline{
         input{
-            border:2px solid rgba($dark,.1);
-            margin-left:-2px;
-            margin-top:-1px;
+            border:1px solid rgba($dark,.1);
+            margin-left:-1px;
+            // margin-top:-1px;
             background-color:rgba($dark, .01);
 
         }
     }
 
-    //Dynamically(JavaScript) add this class to 
-    //.ad-input to indicate error. i.e .ad-input.ad-error  
+    //Dynamically(JavaScript) add this class to
+    //.ad-input to indicate error. i.e .ad-input.ad-error
     &.ad-error {
         &>label {
             font-weight: bold;
@@ -66,8 +66,8 @@ label {
             border-color: $red !important;
             color: $red;
         }
-    } //Dynamically(JavaScript) add this class to 
-    //.ad-input to indicate success. i.e .ad-input.ad-sucess  
+    } //Dynamically(JavaScript) add this class to
+    //.ad-input to indicate success. i.e .ad-input.ad-sucess
     &.ad-success {
         &>label {
             font-weight: bold;
@@ -178,7 +178,7 @@ label {
         }
     }
 
-   
+
     select {
         @extend input; // background-color: transparent;
         padding-top: .465em !important;
@@ -293,7 +293,7 @@ label {
             // background-color:green;
             // position:absolute;
         }
-        
+
     }
     &.ad-button {
         .ad-btn {

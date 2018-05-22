@@ -1,4 +1,5 @@
 # airDesign
+![alt text](https://raw.githubusercontent.com/air-Design/airUI-Design-and-Media-.Tutorial-Example/media/airnew.JPG)
 * Code Beautiful
 * For full documentation, visit http://airdesign.co.nf
 
@@ -31,4 +32,6 @@ Background-color:whitesmoke;
 
 ```
 For general website design, you might want to increase the font-size to 17px or 18px. The default 14px is optimal for web application and can sometimes be used for website like ours.
+![alt text](https://raw.githubusercontent.com/air-Design/airUI-Design-and-Media-.Tutorial-Example/media/freeStyle0.JPG)
+![alt text](https://raw.githubusercontent.com/air-Design/airUI-Design-and-Media-.Tutorial-Example/media/freeStyle.JPG)
 

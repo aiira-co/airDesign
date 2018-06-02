@@ -5,7 +5,7 @@
     margin: 0;
     position: relative;
     @include shadow(0px, 1px, 2px, 1px, rgba(160, 160, 160, .3));
-    .down {
+    &>.down {
         margin-top: 16px;
     }
     &.line:before {
@@ -18,18 +18,20 @@
         background-color: rgba(0, 0, 0, 0.2);
         bottom: 0;
     }
-    .title {
+    &>.title {
         @extend .ad-title;
     }
-    .ad-fab {
+    &>.ad-fab {
         // clear:both;
         position: absolute;
         top: 30px;
         &.ad-right {
             right: 0;
         }
-    }
-    .ad-btn {
+    } // input
+    &>.ad-input {}
+    // buttons
+    &>.ad-btn {
         background: transparent;
         color: inherit;
         padding: 16px !important;
@@ -40,7 +42,7 @@
             color: inherit;
         }
     }
-    .ad-logo {
+    &>.ad-logo {
         // background-color:red;
         display: inline-block;
         width: auto;
@@ -76,13 +78,13 @@
     color: inherit;
     @include shadow(0px, 1px, 2px, 1px, rgba(160, 160, 160, .5));
     padding: 0 16px;
-    h1,
-    h2 {
+    &>h1,
+    &>h2 {
         @extend .ad-title;
         margin: 0;
         padding-top: 8px;
     }
-    .ad-fab {
+    &>.ad-fab {
         position: absolute;
         top: 24px;
         &.rFloat {

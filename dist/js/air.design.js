@@ -29,7 +29,7 @@ $(document).ready(function () {
     function ScanDOM4Constructive() {
         // tab
 
-        if (wrapper.find('.ad-tab-group, ad-tab-group').not('[ad_constructed]').length !== 0) {
+        if (wrapper.find('.ad-tab-group, ad-tab-group').not('[_adconstructed]').length !== 0) {
 
             constructTab();
         }
@@ -177,7 +177,7 @@ $(document).ready(function () {
 
             // Mark as Constructed
             $(this).attr('tabs', adTabSize);
-            $(this).attr('ad_constructed', true);
+            $(this).attr('_adconstructed', true);
 
         });
     }

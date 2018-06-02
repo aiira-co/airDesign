@@ -106,9 +106,7 @@ a {
   -mz-box-shadow: 0px 5px 16px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 5px 16px 3px rgba(0, 0, 0, 0.1); }
 
-.ad-title, .ad-header .title, .ad-header-fixed .title, .ad-header-responsive .title, ad-header .title, .ad-subheader h1, ad-subheader h1,
-.ad-subheader h2,
-ad-subheader h2, ad-header h2 {
+.ad-title, .ad-header > .title, .ad-header-fixed > .title, .ad-header-responsive > .title, ad-header > .title, .ad-subheader > h1, ad-subheader > h1, .ad-subheader > h2, ad-subheader > h2, ad-header h2 {
   font-size: 18px;
   color: inherit;
   margin: 0;
@@ -1092,7 +1090,7 @@ body {
   -o-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.3);
   -mz-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.3);
   box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.3); }
-  .ad-header .down, .ad-header-fixed .down, .ad-header-responsive .down, ad-header .down {
+  .ad-header > .down, .ad-header-fixed > .down, .ad-header-responsive > .down, ad-header > .down {
     margin-top: 16px; }
   .ad-header.line:before, .line.ad-header-fixed:before, .line.ad-header-responsive:before, ad-header.line:before {
     content: '';
@@ -1103,21 +1101,21 @@ body {
     height: 1px;
     background-color: rgba(0, 0, 0, 0.2);
     bottom: 0; }
-  .ad-header .ad-fab, .ad-header-fixed .ad-fab, .ad-header-responsive .ad-fab, ad-header .ad-fab {
+  .ad-header > .ad-fab, .ad-header-fixed > .ad-fab, .ad-header-responsive > .ad-fab, ad-header > .ad-fab {
     position: absolute;
     top: 30px; }
-    .ad-header .ad-fab.ad-right, .ad-header-fixed .ad-fab.ad-right, .ad-header-responsive .ad-fab.ad-right, ad-header .ad-fab.ad-right, .ad-header ad-right.ad-fab, .ad-header-fixed ad-right.ad-fab, .ad-header-responsive ad-right.ad-fab, ad-header ad-right.ad-fab {
+    .ad-header > .ad-fab.ad-right, .ad-header-fixed > .ad-fab.ad-right, .ad-header-responsive > .ad-fab.ad-right, ad-header > .ad-fab.ad-right, .ad-header > ad-right.ad-fab, .ad-header-fixed > ad-right.ad-fab, .ad-header-responsive > ad-right.ad-fab, ad-header > ad-right.ad-fab {
       right: 0; }
-  .ad-header .ad-btn, .ad-header-fixed .ad-btn, .ad-header-responsive .ad-btn, ad-header .ad-btn {
+  .ad-header > .ad-btn, .ad-header-fixed > .ad-btn, .ad-header-responsive > .ad-btn, ad-header > .ad-btn {
     background: transparent;
     color: inherit;
     padding: 16px !important;
     margin-top: 5px;
     opacity: 0.7; }
-    .ad-header .ad-btn:hover, .ad-header-fixed .ad-btn:hover, .ad-header-responsive .ad-btn:hover, ad-header .ad-btn:hover {
+    .ad-header > .ad-btn:hover, .ad-header-fixed > .ad-btn:hover, .ad-header-responsive > .ad-btn:hover, ad-header > .ad-btn:hover {
       opacity: 1;
       color: inherit; }
-  .ad-header .ad-logo, .ad-header-fixed .ad-logo, .ad-header-responsive .ad-logo, ad-header .ad-logo {
+  .ad-header > .ad-logo, .ad-header-fixed > .ad-logo, .ad-header-responsive > .ad-logo, ad-header > .ad-logo {
     display: inline-block;
     width: auto;
     height: 40px;
@@ -1125,7 +1123,7 @@ body {
     margin-top: 8px;
     margin-right: 16px;
     overflow: hidden; }
-    .ad-header .ad-logo img, .ad-header-fixed .ad-logo img, .ad-header-responsive .ad-logo img, ad-header .ad-logo img {
+    .ad-header > .ad-logo img, .ad-header-fixed > .ad-logo img, .ad-header-responsive > .ad-logo img, ad-header > .ad-logo img {
       height: 100%;
       width: auto; }
 
@@ -1149,15 +1147,13 @@ body {
   -mz-box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.5);
   box-shadow: 0px 1px 2px 1px rgba(160, 160, 160, 0.5);
   padding: 0 16px; }
-  .ad-subheader h1, ad-subheader h1,
-  .ad-subheader h2,
-  ad-subheader h2 {
+  .ad-subheader > h1, ad-subheader > h1, .ad-subheader > h2, ad-subheader > h2 {
     margin: 0;
     padding-top: 8px; }
-  .ad-subheader .ad-fab, ad-subheader .ad-fab {
+  .ad-subheader > .ad-fab, ad-subheader > .ad-fab {
     position: absolute;
     top: 24px; }
-    .ad-subheader .ad-fab.rFloat, ad-subheader .ad-fab.rFloat {
+    .ad-subheader > .ad-fab.rFloat, ad-subheader > .ad-fab.rFloat {
       right: 16px; }
 
 .ad-nav, ad-nav {
@@ -2993,6 +2989,16 @@ ad-thumbnail.ad-hover.hover-white:after {
   padding: 0;
   position: relative;
   z-index: 100; }
+  .ad-tab-group > *, ad-tab-group > * {
+    display: none;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+  .ad-tab-group[_adconstructed] > *, ad-tab-group[_adconstructed] > * {
+    display: block;
+    opacity: 1; }
   .ad-tab-group > .ad-head, ad-tab-group > .ad-head, .ad-tab-group > ad-head, ad-tab-group > ad-head {
     display: block;
     width: 100%;

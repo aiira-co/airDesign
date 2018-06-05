@@ -128,7 +128,7 @@
         padding-right: 0;
     }
     &.ad-block {
-        border-radius: 0;
+        border-radius: 0 !important;
     } //Button Colors
     &.ad-default {
         color: $dark;
@@ -138,9 +138,9 @@
         }
     } //Button Type
     &.ad-round {
-        border-radius: 30px;
+        border-radius: 30px !important;
         &.ad-icon {
-            border-radius: 50%;
+            border-radius: 50% !important;
         }
     }
     &.ad-flat {
@@ -251,7 +251,7 @@
 }
 
 .btn-grey {
-    @include btnColor(darken($smoke, 10), $dark);
+    @include btnColor(darken($smoke, 2), $dark);
 }
 
 .btn-prim {
